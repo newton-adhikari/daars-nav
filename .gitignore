@@ -5,6 +5,11 @@ __pycache__/
 dist/
 build/
 
+# ROS 2 build artifacts
+install/
+log/
+build/
+
 # Models and large files
 results/models/
 results/models_v2/
