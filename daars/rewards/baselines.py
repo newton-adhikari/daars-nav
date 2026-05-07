@@ -50,7 +50,7 @@ def task_reward(info: dict, cfg: dict) -> float:
     Used with PPO-Lagrangian and SAC-Lagrangian, where safety is enforced
     via an explicit cost constraint rather than reward shaping.  Providing
     the Lagrangian baselines with the same task reward as static.
-    
+
     """
     if info["reached_goal"]:
         return float(cfg["goal_reward"])
@@ -65,5 +65,35 @@ def task_reward(info: dict, cfg: dict) -> float:
     return r_prog + r_vel - 0.1
 
 # 3. Ablation: α-only (progress suppression, static safety weight)
+def alpha_only_reward(info: dict, cfg: dict) -> float:
+    """Adaptive α on progress; static weight on safety.
+
+    We are trying to test whether *suppressing progress near obstacles* 
+    alone (without amplifying the safety penalty) is 
+    sufficient for safe navigation.
+    """
+    if info["reached_goal"]:
+        return float(cfg["goal_reward"])
+    if info["collision"]:
+        return float(cfg["collision_penalty"])
+    if info["timeout"]:
+        return float(cfg["timeout_penalty"])
+
+    d_obs  = float(info["min_obs_dist"])
+    dsafe  = float(cfg["dsafe"])
+    a      = max(0.3, min(d_obs / dsafe, 1.0))
+
+    r_prog = (float(info["prev_goal_dist"]) - float(info["goal_dist"])) \
+             * float(cfg["progress_scale"])
+    r_vel  = 0.5 * max(float(info["v_linear"]), 0.0)
+
+    if d_obs < dsafe:
+        proximity = 1.0 - d_obs / dsafe
+        r_safe = float(cfg["safety_penalty_scale"]) * proximity * proximity
+    else:
+        r_safe = 0.0
+
+    ws = float(cfg["static_safety_weight"])
+    return a * (r_prog + r_vel) + ws * r_safe - 0.1
 
 # 4. Ablation: β-only (safety amplification, static progress weight)
