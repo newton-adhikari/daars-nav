@@ -1,0 +1,20 @@
+# Core RL
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+torch>=2.2.0
+
+# Safety benchmarks
+safety-gymnasium==1.1.0      
+
+# Numerics / stats
+numpy==1.26.4
+scipy==1.14.0
+pandas==2.2.2
+
+# Plots
+matplotlib==3.9.0
+seaborn==0.13.2
+
+# Config / utils
+pyyaml==6.0.1
+tqdm==4.66.4
