@@ -64,4 +64,15 @@ evaluation:
   num_episodes: 100
   scenarios: ["simple", "complex", "dynamic"]
   test_seed: 42
+
+safety_gym:
+  enable: false
+
+ablation:
+  ks_values:    [0.3, 0.5, 0.8, 1.2, 1.5]
+  dsafe_values: [0.5, 0.8, 1.0, 1.2, 1.5]
+  eval_episodes: 50
+  eval_scenario: "complex"
+  num_envs: 4
+  num_ablation_seeds: 5
  
