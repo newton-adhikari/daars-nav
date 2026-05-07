@@ -97,3 +97,36 @@ def alpha_only_reward(info: dict, cfg: dict) -> float:
     return a * (r_prog + r_vel) + ws * r_safe - 0.1
 
 # 4. Ablation: β-only (safety amplification, static progress weight)
+def beta_only_reward(info: dict, cfg: dict) -> float:
+    """Static weight on progress; adaptive β on safety.
+
+    We are trying to test whether *amplifying the safety penalty near obstacles* 
+    alone (without suppressing progress) is sufficient.
+    """
+    if info["reached_goal"]:
+        return float(cfg["goal_reward"])
+    if info["collision"]:
+        return float(cfg["collision_penalty"])
+    if info["timeout"]:
+        return float(cfg["timeout_penalty"])
+
+    d_obs   = float(info["min_obs_dist"])
+    ks      = float(cfg["ks"])
+    epsilon = float(cfg["epsilon"])
+    dsafe   = float(cfg["dsafe"])
+
+    raw = math.exp(ks / (d_obs + epsilon)) - math.exp(ks / (d_obs + epsilon + 2.0))
+    b   = min(raw, 5.0)
+
+    r_prog = (float(info["prev_goal_dist"]) - float(info["goal_dist"])) \
+             * float(cfg["progress_scale"])
+    r_vel  = 0.5 * max(float(info["v_linear"]), 0.0)
+
+    if d_obs < dsafe:
+        proximity = 1.0 - d_obs / dsafe
+        r_safe = float(cfg["safety_penalty_scale"]) * proximity * proximity
+    else:
+        r_safe = 0.0
+
+    wg = float(cfg["static_goal_weight"])
+    return wg * (r_prog + r_vel) + b * r_safe - 0.1
