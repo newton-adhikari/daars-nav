@@ -36,3 +36,50 @@ def beta(d_obs: float, ks: float, epsilon: float) -> float:
     BETA_MAX = 5.0          
     raw = math.exp(ks / (d_obs + epsilon)) - math.exp(ks / (d_obs + epsilon + 2.0))
     return min(raw, BETA_MAX)
+
+
+def daars_reward(info: dict, cfg: dict,
+                 ks: float | None = None,
+                 dsafe: float | None = None) -> float:
+    """Compute one-step DAARS reward.
+
+    Formula
+    -------
+        R = α(d) · (r_prog + r_vel) + β(d) · r_safe + r_time
+
+    where:
+        r_prog  = (d_prev − d_goal) · progress_scale   [potential shaping]
+        r_vel   = 0.5 · max(v, 0)                      [forward-motion bonus]
+        r_safe  = safety_penalty_scale · (1 − d/d_s)²  [quadratic proximity]
+        r_time  = −0.1                                  [time penalty]
+    """
+    # Terminal signals take priority
+    if info["reached_goal"]:
+        return float(cfg["goal_reward"])
+    if info["collision"]:
+        return float(cfg["collision_penalty"])
+    if info["timeout"]:
+        return float(cfg["timeout_penalty"])
+
+    ks_val    = float(ks    if ks    is not None else cfg["ks"])
+    dsafe_val = float(dsafe if dsafe is not None else cfg["dsafe"])
+    epsilon   = float(cfg["epsilon"])
+    d_obs     = float(info["min_obs_dist"])
+
+    a = alpha(d_obs, dsafe_val)
+    b = beta(d_obs, ks_val, epsilon)
+
+    ### Dense components
+    r_prog = (float(info["prev_goal_dist"]) - float(info["goal_dist"])) \
+             * float(cfg["progress_scale"])
+    r_vel  = 0.5 * max(float(info["v_linear"]), 0.0)
+
+    if d_obs < dsafe_val:
+        proximity = 1.0 - d_obs / dsafe_val
+        r_safe = float(cfg["safety_penalty_scale"]) * proximity * proximity
+    else:
+        r_safe = 0.0
+
+    r_time = -0.1
+
+    return a * (r_prog + r_vel) + b * r_safe + r_time
