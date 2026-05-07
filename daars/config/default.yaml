@@ -1,0 +1,78 @@
+# DAARS: Distance-Aware Adaptive Reward Shaping
+
+environment:
+  arena_size: 8.0
+  max_steps: 500
+  dt: 0.1
+  robot_radius: 0.18
+  max_linear_vel: 0.22
+  max_angular_vel: 2.0
+  num_lidar_rays: 36
+  lidar_max_range: 3.5
+  goal_threshold: 0.3
+  simple_obstacles:  [4, 6]
+  complex_obstacles: [12, 16]
+  dynamic_obstacles: [4, 6]
+  obstacle_radius_range: [0.25, 0.7]
+  dynamic_obstacle_speed: 0.2
+  domain_randomisation:
+    enable: true
+    lidar_noise_std: 0.02
+    lidar_dropout_rate: 0.01
+    vel_noise_std: 0.005
+    arena_size_range: [7.0, 9.0]
+    action_delay_steps: [0, 3]
+    vel_smoothing_alpha: [0.3, 1.0]
+
+reward:
+  goal_reward: 500.0
+  collision_penalty: -200.0
+  timeout_penalty: -50.0
+  progress_scale: 100.0
+  safety_penalty_scale: -20.0
+  static_goal_weight: 1.0
+  static_safety_weight: 1.0
+  static_progress_weight: 1.0
+  ks: 0.5
+  epsilon: 0.1
+  dsafe: 0.8
+
+training:
+  algorithm: "PPO"
+  total_timesteps: 500000     
+  num_envs: 8                 # SubprocVecEnv [trying to run parallely]
+  num_seeds: 20               # using 20 seeds
+  learning_rate: 0.0003
+  n_steps: 512                
+  batch_size: 256
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.005
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  policy_layers: [128, 128]
+  max_parallel_jobs: 3        # to train simultaneously
+  lagrangian:
+    init_lambda: 0.5
+    lambda_lr: 0.005
+    cost_limit: 0.15
+    lambda_max: 5.0
+
+evaluation:
+  num_episodes: 100
+  scenarios: ["simple", "complex", "dynamic"]
+  test_seed: 42
+
+safety_gym:
+  enable: false
+
+ablation:
+  ks_values:    [0.3, 0.5, 0.8, 1.2, 1.5]
+  dsafe_values: [0.5, 0.8, 1.0, 1.2, 1.5]
+  eval_episodes: 50
+  eval_scenario: "complex"
+  num_envs: 4
+  num_ablation_seeds: 5
+ 
