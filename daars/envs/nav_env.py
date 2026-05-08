@@ -8,20 +8,59 @@ import gymnasium as gym
 import numpy as np
 from gymnasium import spaces
 
+from .obstacles import ObstacleField
+
 
 class RobotNavEnv(gym.Env):
     """2-D navigation with LiDAR, domain randomisation, and cost signals."""
 
     def __init__(
         self,
-        config: dict,    ):
+        config: dict,
+        reward_fn=None,
+        cost_fn=None,
+        scenario: str = "simple",
+        render_mode=None,
+        seed: int | None = None,
+        domain_rand: bool = True,   
+    ):
         super().__init__()
         self.cfg       = config["environment"]
         self.rcfg      = config["reward"]
+        self.reward_fn = reward_fn
+        self.cost_fn   = cost_fn
+        self.scenario  = scenario
+        self.render_mode = render_mode
+        self.domain_rand = domain_rand and self.cfg.get("domain_randomisation", {}).get("enable", False)
+        self.rng = np.random.default_rng(seed)
 
         # Base env parameters
         self._base_arena   = float(self.cfg["arena_size"])
-        
+        self.dt            = float(self.cfg["dt"])
+        self.max_steps     = int(self.cfg["max_steps"])
+        self.robot_radius  = float(self.cfg["robot_radius"])
+        self.goal_threshold = float(self.cfg["goal_threshold"])
+        self.num_rays      = int(self.cfg["num_lidar_rays"])
+        self.lidar_range   = float(self.cfg["lidar_max_range"])
+        self._max_lin      = float(self.cfg["max_linear_vel"])
+        self._max_ang      = float(self.cfg["max_angular_vel"])
+
+        # Domain rand bounds
+        dr = self.cfg.get("domain_randomisation", {})
+        self._lidar_noise_std    = float(dr.get("lidar_noise_std", 0.0))
+        self._lidar_dropout_rate = float(dr.get("lidar_dropout_rate", 0.0))
+        self._vel_noise_std      = float(dr.get("vel_noise_std", 0.0))
+        arena_range              = dr.get("arena_size_range", [self._base_arena] * 2)
+        self._arena_range        = (float(arena_range[0]), float(arena_range[1]))
+
+        # Dynamics domain randomisation this is for (sim-to-real transfer)
+        self._action_delay_range = tuple(dr.get("action_delay_steps", [0, 3]))
+        self._vel_smoothing_range = tuple(dr.get("vel_smoothing_alpha", [0.3, 1.0]))
+        self._action_delay_steps = 0
+        self._vel_smooth_alpha   = 1.0
+        self._action_buffer      = []
+        self._smooth_v_lin       = 0.0
+        self._smooth_v_ang       = 0.0
 
         # Spaces
         self.action_space = spaces.Box(
@@ -31,6 +70,15 @@ class RobotNavEnv(gym.Env):
         obs_dim = self.num_rays + 4  # lidar + goal_dist + goal_angle + v_lin + v_ang
         self.observation_space = spaces.Box(
             low=-np.inf, high=np.inf, shape=(obs_dim,), dtype=np.float32
+        )
+
+        # Obstacle field (arena size set at reset)
+        self.obstacle_field = ObstacleField(
+            arena_size=self._base_arena,
+            robot_radius=self.robot_radius,
+            obstacle_radius_range=tuple(self.cfg["obstacle_radius_range"]),
+            dynamic_speed=float(self.cfg.get("dynamic_obstacle_speed", 0.15)),
+            rng=self.rng,
         )
 
         # buffers
