@@ -299,6 +299,50 @@ class RobotNavEnv(gym.Env):
         dists -= self._obs_radii
         return min(float(np.min(dists)), wall_min)
     
+    def _lidar(self) -> np.ndarray:
+        # Vectorised ray-cast LiDAR with sensor noise
+        angles  = self._base_angles + self.robot_theta
+        cos_a   = np.cos(angles)
+        sin_a   = np.sin(angles)
+        ranges  = self._ranges_buf
+        ranges[:] = self.lidar_range
+        rx, ry  = self.robot_pos[0], self.robot_pos[1]
+
+        if self._has_obstacles:
+            fx = rx - self._obs_positions[:, 0]
+            fy = ry - self._obs_positions[:, 1]
+            b  = 2.0 * (np.outer(fx, cos_a) + np.outer(fy, sin_a))
+            c  = fx * fx + fy * fy - self._obs_radii_sq
+            disc = b * b - 4.0 * c[:, np.newaxis]
+            mask  = disc >= 0
+            sqrt_d = np.sqrt(np.where(mask, disc, 0.0))
+            t = np.where(mask, (-b - sqrt_d) * 0.5, self.lidar_range)
+            t = np.where(t > 0, t, self.lidar_range)
+            np.minimum(ranges, np.min(t, axis=0), out=ranges)
+
+        with np.errstate(divide="ignore", invalid="ignore"):
+            t_r = (self.arena - rx) / cos_a
+            t_l = -rx / cos_a
+            t_t = (self.arena - ry) / sin_a
+            t_b = -ry / sin_a
+
+        m = (cos_a > 1e-6) & (t_r > 0) & (t_r < ranges); ranges[m] = t_r[m]
+        m = (cos_a < -1e-6) & (t_l > 0) & (t_l < ranges); ranges[m] = t_l[m]
+        m = (sin_a > 1e-6) & (t_t > 0) & (t_t < ranges); ranges[m] = t_t[m]
+        m = (sin_a < -1e-6) & (t_b > 0) & (t_b < ranges); ranges[m] = t_b[m]
+
+        # Domain rand: additive Gaussian noise + random dropouts
+        if self.domain_rand:
+            if self._lidar_noise_std > 0:
+                ranges += self.rng.normal(0, self._lidar_noise_std,
+                                          size=self.num_rays)
+                np.clip(ranges, 0, self.lidar_range, out=ranges)
+            if self._lidar_dropout_rate > 0:
+                drop = self.rng.random(self.num_rays) < self._lidar_dropout_rate
+                ranges[drop] = self.lidar_range  # simulate max-range dropout
+
+        return ranges
+    
     def _obs(self) -> np.ndarray:
         ranges = self._lidar()
         buf    = self._obs_buf
