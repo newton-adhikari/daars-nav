@@ -113,11 +113,18 @@ class RobotNavEnv(gym.Env):
 
     # Gymnasium interface
 
-    def reset(self, seed=None):
+    def reset(self, seed=None, options=None):
         if seed is not None:
             self.rng = np.random.default_rng(seed)
 
-        
+        # Domain randomise arena size
+        if self.domain_rand:
+            self.arena = float(self.rng.uniform(*self._arena_range))
+            self.obstacle_field.arena_size = self.arena
+        else:
+            self.arena = self._base_arena
+
+        self._inv_arena_diag = 1.0 / (self.arena * np.sqrt(2))
 
         margin = 1.5
         # Robot start
@@ -125,7 +132,106 @@ class RobotNavEnv(gym.Env):
         self.robot_theta = self.rng.uniform(-np.pi, np.pi)
         self.robot_vel[:] = 0.0
 
+        # Goal — at least 3 m from robot
+        for _ in range(200):
+            self.goal_pos = self.rng.uniform(margin, self.arena - margin, size=2)
+            if np.linalg.norm(self.goal_pos - self.robot_pos) > 3.0:
+                break
+
+        # Store straight-line distance at episode start (used for path efficiency)
+        self.start_goal_dist = float(np.linalg.norm(self.goal_pos - self.robot_pos))
+
+        # Obstacles
+        n_static, n_dynamic = self._obstacle_counts()
+        self.obstacle_field.rng = self.rng
+        self.obstacle_field.generate(
+            n_static, n_dynamic,
+            robot_pos=self.robot_pos,
+            goal_pos=self.goal_pos,
+        )
+        self._cache_obstacles()
+
+        self.step_count              = 0
+        self.prev_goal_dist          = self.start_goal_dist
+        self.episode_min_clearance   = float("inf")
+        self.episode_path_length     = 0.0
+        self.episode_cost_sum        = 0.0
+        self.prev_pos[:] = self.robot_pos
+
+        # Dynamics domain randomisation: randomise per episode
+        if self.domain_rand:
+            lo, hi = self._action_delay_range
+            self._action_delay_steps = int(self.rng.integers(lo, hi + 1))
+            lo, hi = self._vel_smoothing_range
+            self._vel_smooth_alpha = float(self.rng.uniform(lo, hi))
+        else:
+            self._action_delay_steps = 0
+            self._vel_smooth_alpha = 1.0
+        self._action_buffer = []
+        self._smooth_v_lin = 0.0
+        self._smooth_v_ang = 0.0
+
+        return self._obs(), self._info()
+
     def step(self, action):
         action = np.clip(action, self.action_space.low, self.action_space.high)
 
+    # create helpers
+
+    def _obstacle_counts(self) -> tuple[int, int]:
+        c = self.cfg
+        if self.scenario == "simple":
+            lo, hi = c["simple_obstacles"]
+            return int(self.rng.integers(lo, hi + 1)), 0
+        if self.scenario == "complex":
+            lo, hi = c["complex_obstacles"]
+            return int(self.rng.integers(lo, hi + 1)), 0
+        if self.scenario == "dynamic":
+            sl, sh = c["simple_obstacles"]
+            dl, dh = c["dynamic_obstacles"]
+            return (int(self.rng.integers(sl, sh + 1)),
+                    int(self.rng.integers(dl, dh + 1)))
+        return 3, 0
     
+    def _cache_obstacles(self):
+        self._obs_positions, self._obs_radii = \
+            self.obstacle_field.get_positions_and_radii()
+        self._has_obstacles = len(self._obs_positions) > 0
+        if self._has_obstacles:
+            self._obs_radii_sq = self._obs_radii ** 2
+
+    def _min_obs_dist(self) -> float:
+        rx, ry = self.robot_pos
+        wall_min = min(rx, ry, self.arena - rx, self.arena - ry)
+        if not self._has_obstacles:
+            return wall_min
+        dists = np.linalg.norm(self._obs_positions - self.robot_pos, axis=1)
+        dists -= self._obs_radii
+        return min(float(np.min(dists)), wall_min)
+    
+    def _obs(self) -> np.ndarray:
+        ranges = self._lidar()
+        buf    = self._obs_buf
+        nr     = self.num_rays
+        buf[:nr] = ranges * self._inv_lidar
+
+        gx = self.goal_pos[0] - self.robot_pos[0]
+        gy = self.goal_pos[1] - self.robot_pos[1]
+        buf[nr]     = np.sqrt(gx*gx + gy*gy) * self._inv_arena_diag
+        ga          = np.arctan2(gy, gx) - self.robot_theta
+        buf[nr + 1] = ((ga + np.pi) % (2 * np.pi) - np.pi) * self._inv_pi
+        buf[nr + 2] = self.robot_vel[0] / self._max_lin
+        buf[nr + 3] = self.robot_vel[1] / self._max_ang
+        return buf.copy()
+    
+    def _info(self, reached_goal=False, collision=False) -> dict:
+        return {
+            "goal_dist":         float(np.linalg.norm(self.goal_pos - self.robot_pos)),
+            "min_clearance":     self.episode_min_clearance,
+            "path_length":       self.episode_path_length,
+            "start_goal_dist":   self.start_goal_dist,   # ← correct for efficiency
+            "cumulative_cost":   self.episode_cost_sum,
+            "reached_goal":      reached_goal,
+            "collision":         collision,
+            "steps":             self.step_count,
+        }
