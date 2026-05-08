@@ -14,6 +14,8 @@ from .obstacles import ObstacleField
 class RobotNavEnv(gym.Env):
     """2-D navigation with LiDAR, domain randomisation, and cost signals."""
 
+    metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 10}
+
     def __init__(
         self,
         config: dict,
