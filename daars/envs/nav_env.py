@@ -176,6 +176,94 @@ class RobotNavEnv(gym.Env):
     def step(self, action):
         action = np.clip(action, self.action_space.low, self.action_space.high)
 
+        # Add action noise (domain randomisation)
+        if self.domain_rand and self._vel_noise_std > 0:
+            action = action + self.rng.normal(0, self._vel_noise_std, size=2)
+            action = np.clip(action, self.action_space.low, self.action_space.high)
+
+        # Action delay: buffer actions, execute delayed (simulates ROS latency)
+        if self.domain_rand and self._action_delay_steps > 0:
+            self._action_buffer.append(action.copy())
+            if len(self._action_buffer) > self._action_delay_steps:
+                action = self._action_buffer.pop(0)
+            else:
+                action = np.zeros(2)
+
+        v_lin_cmd = float(action[0])
+        v_ang_cmd = float(action[1])
+
+        # Velocity smoothing: EMA simulating inertia
+        alpha = self._vel_smooth_alpha
+        self._smooth_v_lin = alpha * v_lin_cmd + (1 - alpha) * self._smooth_v_lin
+        self._smooth_v_ang = alpha * v_ang_cmd + (1 - alpha) * self._smooth_v_ang
+        v_lin = self._smooth_v_lin
+        v_ang = self._smooth_v_ang
+
+        # Differential-drive kinematics
+        self.robot_theta += v_ang * self.dt
+        self.robot_theta  = (self.robot_theta + np.pi) % (2 * np.pi) - np.pi
+        dx = v_lin * np.cos(self.robot_theta) * self.dt
+        dy = v_lin * np.sin(self.robot_theta) * self.dt
+        self.robot_pos[0] += dx
+        self.robot_pos[1] += dy
+        self.robot_vel[0]  = v_lin
+        self.robot_vel[1]  = v_ang
+
+        # Wall collision (clamp + flag)
+        prev_pos_snap = self.robot_pos.copy()
+        np.clip(self.robot_pos, self.robot_radius,
+                self.arena - self.robot_radius, out=self.robot_pos)
+        wall_hit = not np.allclose(self.robot_pos, prev_pos_snap)
+
+        # Dynamic obstacles
+        if any(o.is_dynamic for o in self.obstacle_field.obstacles):
+            self.obstacle_field.step(self.dt)
+            self._cache_obstacles()
+
+        # Distances
+        goal_dist   = float(np.linalg.norm(self.goal_pos - self.robot_pos))
+        min_obs_dist = self._min_obs_dist()
+
+        # Tracking
+        min_obs_dist = min(min_obs_dist, 0.0 if wall_hit else float("inf"))
+        if min_obs_dist < self.episode_min_clearance:
+            self.episode_min_clearance = min_obs_dist
+        self.episode_path_length += float(np.linalg.norm(self.robot_pos - self.prev_pos))
+        self.prev_pos[:] = self.robot_pos
+        self.step_count  += 1
+
+        # Terminal conditions
+        reached_goal = goal_dist < self.goal_threshold
+        collision    = (min_obs_dist < self.robot_radius) or wall_hit
+        timeout      = self.step_count >= self.max_steps
+        terminated   = reached_goal or collision
+        truncated    = timeout and not terminated
+
+        # Reward and cost
+        step_info = {
+            "goal_dist":      goal_dist,
+            "prev_goal_dist": self.prev_goal_dist,
+            "min_obs_dist":   max(min_obs_dist, 0.0),
+            "reached_goal":   reached_goal,
+            "collision":      collision,
+            "timeout":        timeout,
+            "v_linear":       v_lin,
+            "lidar_ranges":   self._ranges_buf.copy(),
+            "goal_angle":     float(((np.arctan2(
+                self.goal_pos[1] - self.robot_pos[1],
+                self.goal_pos[0] - self.robot_pos[0])
+                - self.robot_theta + np.pi) % (2 * np.pi) - np.pi)),
+        }
+        reward = self.reward_fn(step_info, self.rcfg) if self.reward_fn else 0.0
+        cost   = self.cost_fn(step_info, self.rcfg)   if self.cost_fn  else 0.0
+        self.episode_cost_sum += cost
+        self.prev_goal_dist    = goal_dist
+
+        info = self._info(reached_goal=reached_goal, collision=collision)
+        info["cost"] = cost   # for lagrangian agents they need to read cost 
+
+        return self._obs(), reward, terminated, truncated, info
+
     # create helpers
 
     def _obstacle_counts(self) -> tuple[int, int]:
