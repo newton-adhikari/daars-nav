@@ -2,7 +2,9 @@
 
 def train_agent(
     config: dict,
-    reward_type: str
+    reward_type: str,
+    seed: int,
+    scenario: str = "simple",
 ) -> dict:
     # let's train one agent first
 
