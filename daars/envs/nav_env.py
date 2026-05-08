@@ -22,7 +22,7 @@ class RobotNavEnv(gym.Env):
         scenario: str = "simple",
         render_mode=None,
         seed: int | None = None,
-        domain_rand: bool = True,   
+        domain_rand: bool = True,
     ):
         super().__init__()
         self.cfg       = config["environment"]
@@ -98,11 +98,17 @@ class RobotNavEnv(gym.Env):
         self.arena              = self._base_arena
         self.step_count         = 0
         self.prev_goal_dist     = 0.0
-        self.start_goal_dist    = 0.0   
+        self.start_goal_dist    = 0.0   # straight-line dist at reset
         self.episode_min_clearance = float("inf")
         self.episode_path_length   = 0.0
         self.prev_pos           = np.zeros(2)
         self.episode_cost_sum   = 0.0
+
+        # Obstacle cache
+        self._obs_positions  = np.empty((0, 2))
+        self._obs_radii      = np.empty(0)
+        self._obs_radii_sq   = np.empty(0)
+        self._has_obstacles  = False
 
 
     # Gymnasium interface
