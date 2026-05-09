@@ -215,6 +215,23 @@ def run_ablation(config, output_dir, max_workers=None):
         for e in errors: print(f"   {e}")
     return abl
 
+# Safety-Gymnasium benchmark phase [will be added later if our method passes all benchmark]
+
+
+# plots
+
+def run_plotting(config, output_dir):
+    curves  = _load(os.path.join(output_dir, "training_curves.json"))
+    results = _load(os.path.join(output_dir, "eval_results.json"))
+    ablation= _load(os.path.join(output_dir, "ablation_results.json"))
+    if not results:
+        print("No evaluation results — run evaluate first.")
+        return
+    stats = compute_statistics(results)
+    _save(stats, os.path.join(output_dir, "statistics.json"))
+    generate_all_figures(stats, curves, ablation,
+                         os.path.join(output_dir, "figures"), config=config)
+    print_results_table(stats)
 
 def main():
     parser = argparse.ArgumentParser(description="DAARS pipeline")
@@ -231,6 +248,31 @@ def main():
     args = parser.parse_args()
 
     config = load_config(args.config)
+
+    os.makedirs(args.output, exist_ok=True)
+
+    if args.fast:
+        config["training"]["num_seeds"]       = 2
+        config["training"]["total_timesteps"] = 20_000
+        config["training"]["n_steps"]         = 512
+        config["training"]["num_envs"]        = 2
+        config["training"]["max_parallel_jobs"] = 2
+        config["evaluation"]["num_episodes"]  = 10
+        config["ablation"]["ks_values"]       = [1.0, 1.5]
+        config["ablation"]["dsafe_values"]    = [0.8, 1.0]
+        config["ablation"]["eval_episodes"]   = 5
+        print("*** FAST MODE (smoke test) ***\n")
+
+    if args.phase in ("all", "train"):
+        run_training(config, args.output, args.workers, args.envs)
+    if args.phase in ("all", "evaluate"):
+        run_evaluation(config, args.output, args.workers)
+    if args.phase in ("all", "ablation"):
+        run_ablation(config, args.output, args.workers)
+    if args.phase in ("all", "plot"):
+        run_plotting(config, args.output)
+
+    print("\nDone.")
 
 if __name__ == "__main__":
     main()
