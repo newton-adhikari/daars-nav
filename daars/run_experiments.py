@@ -4,15 +4,21 @@
 DAARS Experiment Pipeline
 """
 
+from __future__ import annotations
+
 import os
 import json
 import argparse
+import traceback
 
 import numpy as np
 import yaml
+from tqdm import tqdm
 
 from daars.training.train      import train_agent, train_all_parallel
-
+from daars.evaluation.evaluate import evaluate_agent
+from daars.analysis.statistics import compute_statistics, print_results_table
+from daars.analysis.plots      import generate_all_figures
 
 # these are the baselines
 ALL_METHODS = ["static", "alpha_only", "daars", "beta_only", "ppo_lag"]
@@ -73,6 +79,142 @@ def run_training(config, output_dir, max_workers=None, num_envs=None):
     return curves
 
 # project entry point
+
+def _eval_worker(args):
+    """Worker for parallel evaluation."""
+    config, model_path, method, scenario, n_ep = args
+    try:
+        r = evaluate_agent(config, model_path, reward_type=method,
+                           scenario=scenario, num_episodes=n_ep)
+        return {"result": r, "method": method, "scenario": scenario, "error": None}
+    except Exception as e:
+        traceback.print_exc()
+        return {"result": None, "method": method, "scenario": scenario,
+                "error": str(e)}
+
+
+def run_evaluation(config, output_dir, max_workers=None):
+    scenarios = config["evaluation"]["scenarios"]
+    seeds     = list(range(int(config["training"]["num_seeds"])))
+    n_ep      = int(config["evaluation"]["num_episodes"])
+    model_dir = os.path.join(output_dir, "models")
+    res_path  = os.path.join(output_dir, "eval_results.json")
+    results   = _load(res_path)
+
+    for m in ALL_METHODS:
+        results.setdefault(m, {sc: [] for sc in scenarios})
+
+    # Build list of jobs, skipping already-completed ones
+    jobs = []
+    job_seeds = []
+    for method in ALL_METHODS:
+        for scenario in scenarios:
+            existing = len(results[method].get(scenario, []))
+            for si, seed in enumerate(seeds):
+                if si < existing:
+                    continue
+                mp = os.path.join(model_dir, f"{method}_seed{seed}")
+                if not os.path.exists(mp + ".zip"):
+                    continue
+                jobs.append((config, mp, method, scenario, n_ep))
+                job_seeds.append((method, scenario, seed))
+
+    total_skipped = len(ALL_METHODS) * len(scenarios) * len(seeds) - len(jobs)
+    if not jobs:
+        print("   All evaluations already done.")
+        return results
+
+    max_w = max_workers or 4  # eval is inference-only, safe to parallelize
+    print(f"\n>> Parallel evaluation: {len(jobs)} jobs  "
+          f"max_workers={max_w}  ({total_skipped} skipped)\n")
+
+    import multiprocessing as mp_mod
+    from concurrent.futures import ProcessPoolExecutor, as_completed
+    ctx = mp_mod.get_context("spawn")
+
+    errors = []
+    done_count = 0
+    with ProcessPoolExecutor(max_workers=max_w, mp_context=ctx) as pool:
+        futures = {pool.submit(_eval_worker, j): (j, js)
+                   for j, js in zip(jobs, job_seeds)}
+        for fut in as_completed(futures):
+            _, (method, scenario, seed) = futures[fut]
+            res = fut.result()
+            done_count += 1
+            if res["error"] is None:
+                results[res["method"]][res["scenario"]].append(res["result"])
+                _save(results, res_path)
+                print(f"   ✓ [{done_count}/{len(jobs)}] "
+                      f"{method}/{scenario}/seed{seed}")
+            else:
+                errors.append(f"{method}/{scenario}/s{seed}: {res['error']}")
+                print(f"   ✗ [{done_count}/{len(jobs)}] "
+                      f"{method}/{scenario}/seed{seed}: {res['error']}")
+
+    if errors:
+        print(f"\n!! {len(errors)} evaluation errors:")
+        for e in errors: print(f"   {e}")
+    return results
+
+
+
+# Ablation phase
+
+def run_ablation(config, output_dir, max_workers=None):
+    ks_vals    = config["ablation"]["ks_values"]
+    ds_vals    = config["ablation"]["dsafe_values"]
+    n_ep       = int(config["ablation"].get("eval_episodes", 50))
+    sc         = config["ablation"].get("eval_scenario", "complex")
+    n_envs_abl = int(config["ablation"].get("num_envs", 4))
+    n_abl_seeds = int(config["ablation"].get("num_ablation_seeds", 5))
+    model_dir  = os.path.join(output_dir, "models")
+    abl_path   = os.path.join(output_dir, "ablation_results.json")
+
+    abl = _load(abl_path) or {
+        "ks_values":    ks_vals, "dsafe_values": ds_vals,
+        "collision_rate_grid": [[None]*len(ds_vals) for _ in ks_vals],
+        "success_rate_grid":   [[None]*len(ds_vals) for _ in ks_vals],
+        "num_seeds": n_abl_seeds,
+    }
+
+    total  = len(ks_vals) * len(ds_vals)
+    errors = []
+    pbar   = tqdm(total=total, desc="Ablation")
+
+    for i, ks in enumerate(ks_vals):
+        for j, dsafe in enumerate(ds_vals):
+            pbar.set_postfix(ks=ks, ds=dsafe)
+            if abl["collision_rate_grid"][i][j] is not None:
+                pbar.update(1); continue
+            cr_seeds, sr_seeds = [], []
+            for seed in range(n_abl_seeds):
+                mn = f"daars_ks{ks}_ds{dsafe}_seed{seed}"
+                try:
+                    if not _model_exists(model_dir, mn):
+                        train_agent(config, "daars", seed, "simple", model_dir,
+                                    daars_ks=ks, daars_dsafe=dsafe,
+                                    num_envs=n_envs_abl)
+                    r = evaluate_agent(
+                        config, os.path.join(model_dir, mn),
+                        reward_type="daars", scenario=sc,
+                        num_episodes=n_ep, daars_ks=ks, daars_dsafe=dsafe)
+                    cr_seeds.append(r["summary"]["collision_rate"])
+                    sr_seeds.append(r["summary"]["success_rate"])
+                except Exception as e:
+                    errors.append(f"ks={ks} ds={dsafe} s{seed}: {e}")
+                    traceback.print_exc()
+            if cr_seeds:
+                abl["collision_rate_grid"][i][j] = float(np.mean(cr_seeds))
+                abl["success_rate_grid"][i][j]   = float(np.mean(sr_seeds))
+                _save(abl, abl_path)
+            pbar.update(1)
+
+    pbar.close()
+    if errors:
+        print(f"\n!! {len(errors)} ablation errors:")
+        for e in errors: print(f"   {e}")
+    return abl
+
 
 def main():
     parser = argparse.ArgumentParser(description="DAARS pipeline")
