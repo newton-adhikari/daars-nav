@@ -11,6 +11,8 @@ import argparse
 import numpy as np
 import yaml
 
+from daars.training.train      import train_agent, train_all_parallel
+
 
 # these are the baselines
 ALL_METHODS = ["static", "alpha_only", "daars", "beta_only", "ppo_lag"]
@@ -38,6 +40,37 @@ def _serial(o):
 def _model_exists(d, name):
     return os.path.exists(os.path.join(d, name + ".zip"))
 
+
+# training starts
+def run_training(config, output_dir, max_workers=None, num_envs=None):
+    """Train all methods × seeds using parallel launcher."""
+    if num_envs is not None:
+        config["training"]["num_envs"] = num_envs
+
+    model_dir   = os.path.join(output_dir, "models")
+    curves_path = os.path.join(output_dir, "training_curves.json")
+    curves      = _load(curves_path)
+    for m in ALL_METHODS:
+        curves.setdefault(m, [])
+
+    # Parallel training
+    all_results = train_all_parallel(
+        config, ALL_METHODS, model_dir,
+        scenario="simple",
+        max_workers=max_workers,
+    )
+
+    # Merge training curves
+    for method, res_list in all_results.items():
+        for res in res_list:
+            seed = res["seed"]
+            while len(curves[method]) <= seed:
+                curves[method].append(None)
+            curves[method][seed] = res["training_curves"]
+    _save(curves, curves_path)
+
+    print(f"\n   Training curves → {curves_path}")
+    return curves
 
 # project entry point
 
