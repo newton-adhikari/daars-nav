@@ -137,3 +137,46 @@ def compute_statistics(all_results: dict) -> dict:
     return output
 
 
+
+# Console table
+def print_results_table(stats: dict) -> None:
+    """Print a formatted results table to stdout."""
+    methods   = sorted(stats.get("per_method", {}).keys())
+    scenarios = ["simple", "complex", "dynamic"]
+    metrics   = ["success_rate", "collision_rate", "path_efficiency",
+                 "avg_min_clearance"]
+
+    for sc in scenarios:
+        print(f"\n{'='*90}")
+        print(f"  Scenario: {sc.upper()}")
+        print(f"{'='*90}")
+        hdr = f"  {'Method':<14}"
+        for m in metrics:
+            hdr += f"  {m:<22}"
+        print(hdr)
+        print("-" * 90)
+        for method in methods:
+            d = stats["per_method"].get(method, {}).get(sc, {})
+            row = f"  {method:<14}"
+            for m in metrics:
+                md = d.get(m, {})
+                mn = md.get("mean", 0.0)
+                sd = md.get("std",  0.0)
+                row += f"  {mn:.3f} ± {sd:.3f}         "
+            print(row)
+
+    # Significance table
+    if stats.get("comparisons"):
+        print(f"\n\n{'='*90}")
+        print("  Statistical Significance (Wilcoxon signed-rank, two-sided)")
+        print(f"{'='*90}")
+        for comp, sc_data in stats["comparisons"].items():
+            print(f"\n  {comp}")
+            for sc, m_data in sc_data.items():
+                for metric, result in m_data.items():
+                    print(
+                        f"    {sc:10s}  {metric:30s}  "
+                        f"p={result['p_wilcoxon']:.4f}  "
+                        f"d={result['cohens_d']:+.3f}  "
+                        f"{result['sig_label']}"
+                    )
