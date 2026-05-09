@@ -7,6 +7,8 @@ DAARS Experiment Pipeline
 import os
 import json
 import argparse
+
+import numpy as np
 import yaml
 
 
@@ -18,6 +20,23 @@ def load_config(path=None):
         path = os.path.join(os.path.dirname(__file__), "config", "default.yaml")
     with open(path) as f:
         return yaml.safe_load(f)
+    
+def _load(p):
+    return json.load(open(p)) if os.path.exists(p) else {}
+
+def _save(obj, p):
+    with open(p, "w") as f:
+        json.dump(obj, f, indent=2, default=_serial)
+
+def _serial(o):
+    if isinstance(o, (np.floating,)):  return float(o)
+    if isinstance(o, (np.integer,)):   return int(o)
+    if isinstance(o, (np.bool_,)):     return bool(o)
+    if isinstance(o, (np.ndarray,)):   return o.tolist()
+    raise TypeError(f"Not serialisable: {type(o)}")
+
+def _model_exists(d, name):
+    return os.path.exists(os.path.join(d, name + ".zip"))
 
 
 # project entry point
