@@ -218,6 +218,13 @@ def run_ablation(config, output_dir, max_workers=None):
 # Safety-Gymnasium benchmark phase [will be added later if our method passes all benchmark]
 
 
+# verify the novelty
+def run_theory(config, output_dir):
+    from daars.theory.analysis import run_all_proofs
+    r = run_all_proofs(config)
+    _save(r, os.path.join(output_dir, "theory_verification.json"))
+    return r
+
 # plots
 
 def run_plotting(config, output_dir):
@@ -269,6 +276,8 @@ def main():
         run_evaluation(config, args.output, args.workers)
     if args.phase in ("all", "ablation"):
         run_ablation(config, args.output, args.workers)
+    if args.phase in ("all", "theory"):
+        run_theory(config, args.output)
     if args.phase in ("all", "plot"):
         run_plotting(config, args.output)
 
