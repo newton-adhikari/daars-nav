@@ -57,7 +57,7 @@ training:
   lagrangian:
     init_lambda: 0.5
     lambda_lr: 0.005
-    cost_limit: 0.15
+    cost_limit: 0.08
     lambda_max: 5.0
 
 evaluation:
