@@ -83,3 +83,20 @@ def daars_reward(info: dict, cfg: dict,
     r_time = -0.1
 
     return a * (r_prog + r_vel) + b * r_safe + r_time
+
+# cost signal for larangian baseline
+def daars_cost(info: dict, cfg: dict) -> float:
+    """Binary safety cost c_t ∈ {0, 1}.
+
+    c_t = 1 if the robot is within d_safe of any obstacle, else 0.
+    The Lagrangian baselines constrain E[Σ c_t / T] ≤ cost_limit.
+
+    here, separating the cost from the reward allows Lagrangian methods to
+    optimise task performance subject to an explicit safety constraint,
+    which is the standard CPO / SAC-Lag formulation.
+    """
+    if info["collision"]:
+        return 1.0
+    d_obs = float(info["min_obs_dist"])
+    dsafe = float(cfg["dsafe"])
+    return 1.0 if d_obs < dsafe else 0.0
