@@ -19,6 +19,8 @@ class NavCallback(BaseCallback):
         log_interval: int = 10_000,
         verbose: int = 0,
     ):
+        super().__init__(verbose)
+        
         self.reward_type     = reward_type
         self.total_timesteps = total_timesteps
         self.log_interval    = log_interval

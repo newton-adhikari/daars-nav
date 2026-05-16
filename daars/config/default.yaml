@@ -53,7 +53,7 @@ training:
   vf_coef: 0.5
   max_grad_norm: 0.5
   policy_layers: [128, 128]
-  max_parallel_jobs: 3        # to train simultaneously
+  max_parallel_jobs: 8        # to train simultaneously
   lagrangian:
     init_lambda: 0.5
     lambda_lr: 0.005
