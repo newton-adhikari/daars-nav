@@ -1,0 +1,1039 @@
+[2026-05-24 14:41:55] Shutting down Gazebo...
+[2026-05-24 14:41:58] Configuration:
+[2026-05-24 14:41:58]   Methods:  daars static alpha_only beta_only ppo_lag focops
+[2026-05-24 14:41:58]   Seeds:    0 1 2 3 4
+[2026-05-24 14:41:58]   Episodes: 20/seed
+[2026-05-24 14:41:58]   Output:   /home/toor/gitProjects/daars-nav/results/gazebo/
+[2026-05-24 14:41:58] 
+
+════════════════════════════════════════════════════════════════
+  DAARS Gazebo Evaluation (headless)
+  Methods: daars static alpha_only beta_only ppo_lag focops
+  Seeds:   0 1 2 3 4
+  Eps/seed: 20
+  Output:  /home/toor/gitProjects/daars-nav/results/gazebo/
+════════════════════════════════════════════════════════════════
+
+[2026-05-24 14:41:58] Starting Gazebo server (headless)...
+[2026-05-24 14:41:58] Waiting for Gazebo to be ready...
+Gazebo multi-robot simulator, version 11.10.2
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+[1;33m[Wrn] [gazebo_ros_init.cpp:178] [0m[1;33m
+#     # ####### ####### ###  #####  #######
+##    # #     #    #     #  #     # #
+# #   # #     #    #     #  #       #
+#  #  # #     #    #     #  #       #####
+#   # # #     #    #     #  #       #
+#    ## #     #    #     #  #     # #
+#     # #######    #    ###  #####  #######
+
+This version of Gazebo, now called Gazebo classic, reaches end-of-life
+in January 2025. Users are highly encouraged to migrate to the new Gazebo
+using our migration guides (https://gazebosim.org/docs/latest/gazebo_classic_migration?utm_source=gazebo_ros_pkgs&utm_medium=cli)
+
+[0m[1;33m
+[0m[1;33m[0m[1;33m[0m[2026-05-24 14:42:03] Gazebo ready (4s)
+[INFO] [1779613023.412525243] [robot_state_publisher]: got segment ${namespace}base_footprint
+[INFO] [1779613023.412724333] [robot_state_publisher]: got segment ${namespace}base_link
+[INFO] [1779613023.412759479] [robot_state_publisher]: got segment ${namespace}base_scan
+[INFO] [1779613023.412767293] [robot_state_publisher]: got segment ${namespace}caster_back_link
+[INFO] [1779613023.412772343] [robot_state_publisher]: got segment ${namespace}imu_link
+[INFO] [1779613023.412777222] [robot_state_publisher]: got segment ${namespace}wheel_left_link
+[INFO] [1779613023.412781860] [robot_state_publisher]: got segment ${namespace}wheel_right_link
+[2026-05-24 14:42:04] Spawning TurtleBot3...
+[INFO] [1779613025.163746663] [turtlebot3_imu]: <initial_orientation_as_reference> is unset, using default value of false to comply with REP 145 (world as orientation reference)
+[INFO] [1779613025.413181200] [turtlebot3_diff_drive]: Wheel pair 1 separation set to [0.160000m]
+[INFO] [1779613025.413283491] [turtlebot3_diff_drive]: Wheel pair 1 diameter set to [0.066000m]
+[INFO] [1779613025.415305065] [turtlebot3_diff_drive]: Subscribed to [/cmd_vel]
+[INFO] [1779613025.420481205] [turtlebot3_diff_drive]: Advertise odometry on [/odom]
+[INFO] [1779613025.424978093] [turtlebot3_diff_drive]: Publishing odom transforms between [odom] and [base_footprint]
+[INFO] [1779613025.442418297] [turtlebot3_joint_state]: Going to publish joint [wheel_left_joint]
+[INFO] [1779613025.442510449] [turtlebot3_joint_state]: Going to publish joint [wheel_right_joint]
+[2026-05-24 14:42:07] LiDAR topic active
+[2026-05-24 14:42:08] 
+[2026-05-24 14:42:08] Starting 30 evaluation jobs...
+
+[2026-05-24 14:42:08] ── Method: daars ──
+[2026-05-24 14:42:08]   [1/30] RUN daars/seed0 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[14:42:13] Creating env (fast_mode=True)
+[14:42:13] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed0
+[14:42:16] Running 20 episodes...
+[14:42:28] ep   1/20 OK clr=0.194m steps=196 t=11.9s | SR=1.00 CR=0.00 ETA=227s
+[14:42:45] ep   2/20 OK clr=0.050m steps=307 t=17.4s | SR=1.00 CR=0.00 ETA=264s
+[14:43:16] ep   3/20 T/O clr=0.055m steps=500 t=30.5s | SR=0.67 CR=0.00 ETA=339s
+[14:43:26] ep   4/20 OK clr=0.153m steps=172 t=10.3s | SR=0.75 CR=0.00 ETA=281s
+[14:43:44] ep   5/20 OK clr=0.028m steps=324 t=18.3s | SR=0.80 CR=0.00 ETA=266s
+[14:43:57] ep   6/20 OK clr=0.196m steps=217 t=12.7s | SR=0.83 CR=0.00 ETA=236s
+[14:44:13] ep   7/20 OK clr=0.085m steps=205 t=15.4s | SR=0.86 CR=0.00 ETA=217s
+[14:44:42] ep   8/20 T/O clr=0.078m steps=500 t=29.8s | SR=0.75 CR=0.00 ETA=220s
+[14:45:00] ep   9/20 COL clr=-0.019m steps=315 t=17.8s | SR=0.67 CR=0.11 ETA=201s
+[14:45:30] ep  10/20 OK clr=0.025m steps=482 t=29.6s | SR=0.70 CR=0.10 ETA=194s
+[14:45:41] ep  11/20 OK clr=0.148m steps=183 t=10.8s | SR=0.73 CR=0.09 ETA=167s
+[14:46:06] ep  12/20 COL clr=-0.006m steps=405 t=25.7s | SR=0.67 CR=0.17 ETA=154s
+[14:46:24] ep  13/20 COL clr=-0.009m steps=265 t=18.0s | SR=0.62 CR=0.23 ETA=134s
+[14:46:44] ep  14/20 OK clr=0.148m steps=354 t=19.9s | SR=0.64 CR=0.21 ETA=115s
+[14:47:11] ep  15/20 OK clr=0.025m steps=431 t=27.1s | SR=0.67 CR=0.20 ETA=98s
+[14:47:39] ep  16/20 OK clr=0.050m steps=444 t=27.7s | SR=0.69 CR=0.19 ETA=81s
+[14:48:07] ep  17/20 T/O clr=0.104m steps=500 t=27.6s | SR=0.65 CR=0.18 ETA=62s
+[14:48:24] ep  18/20 COL clr=-0.018m steps=252 t=17.6s | SR=0.61 CR=0.22 ETA=41s
+[14:48:48] ep  19/20 COL clr=-0.025m steps=365 t=23.6s | SR=0.58 CR=0.26 ETA=21s
+[14:49:16] ep  20/20 T/O clr=0.037m steps=500 t=27.8s | SR=0.55 CR=0.25 ETA=0s
+
+[14:49:16] DONE in 420s (21.0s/ep)
+  SR=0.550  CR=0.250  Clearance=0.065m  SuccClearance=0.100m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed0.json
+[2026-05-24 14:49:17]   ✓ Done in 429s | Total elapsed: 429s | ETA: ~12441s
+
+[2026-05-24 14:49:17]   [2/30] RUN daars/seed1 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[14:49:22] Creating env (fast_mode=True)
+[14:49:22] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed1
+[14:49:24] Running 20 episodes...
+[14:49:42] ep   1/20 OK clr=0.038m steps=328 t=18.6s | SR=1.00 CR=0.00 ETA=354s
+[14:50:00] ep   2/20 OK clr=0.146m steps=254 t=17.6s | SR=1.00 CR=0.00 ETA=326s
+[14:50:17] ep   3/20 OK clr=0.078m steps=299 t=17.2s | SR=1.00 CR=0.00 ETA=302s
+[14:50:39] ep   4/20 OK clr=0.097m steps=324 t=21.6s | SR=1.00 CR=0.00 ETA=300s
+[14:50:49] ep   5/20 OK clr=0.258m steps=160 t=9.8s | SR=1.00 CR=0.00 ETA=254s
+[14:51:03] ep   6/20 OK clr=0.150m steps=257 t=14.9s | SR=1.00 CR=0.00 ETA=232s
+[14:51:34] ep   7/20 OK clr=0.069m steps=486 t=30.1s | SR=1.00 CR=0.00 ETA=241s
+[14:51:45] ep   8/20 COL clr=-0.005m steps=196 t=11.7s | SR=0.88 CR=0.12 ETA=212s
+[14:52:05] ep   9/20 OK clr=0.102m steps=354 t=20.0s | SR=0.89 CR=0.11 ETA=197s
+[14:52:23] ep  10/20 OK clr=0.045m steps=307 t=17.9s | SR=0.90 CR=0.10 ETA=179s
+[14:52:48] ep  11/20 COL clr=-0.007m steps=361 t=24.9s | SR=0.82 CR=0.18 ETA=167s
+[14:53:01] ep  12/20 OK clr=0.304m steps=213 t=12.6s | SR=0.83 CR=0.17 ETA=145s
+[14:53:28] ep  13/20 OK clr=0.043m steps=483 t=27.0s | SR=0.85 CR=0.15 ETA=131s
+[14:53:44] ep  14/20 OK clr=0.122m steps=284 t=16.4s | SR=0.86 CR=0.14 ETA=112s
+[14:53:55] ep  15/20 COL clr=-0.006m steps=140 t=10.9s | SR=0.80 CR=0.20 ETA=90s
+[14:54:08] ep  16/20 OK clr=0.287m steps=230 t=13.4s | SR=0.81 CR=0.19 ETA=71s
+[14:54:39] ep  17/20 T/O clr=0.045m steps=500 t=30.6s | SR=0.76 CR=0.18 ETA=56s
+[14:54:58] ep  18/20 OK clr=0.146m steps=290 t=19.4s | SR=0.78 CR=0.17 ETA=37s
+[14:55:10] ep  19/20 COL clr=-0.008m steps=204 t=12.1s | SR=0.74 CR=0.21 ETA=18s
+[14:55:27] ep  20/20 OK clr=0.058m steps=288 t=16.5s | SR=0.75 CR=0.20 ETA=0s
+
+[14:55:27] DONE in 363s (18.2s/ep)
+  SR=0.750  CR=0.200  Clearance=0.098m  SuccClearance=0.129m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed1.json
+[2026-05-24 14:55:28]   ✓ Done in 371s | Total elapsed: 800s | ETA: ~11200s
+
+[2026-05-24 14:55:28]   [3/30] RUN daars/seed2 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[14:55:33] Creating env (fast_mode=True)
+[14:55:33] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed2
+[14:55:35] Running 20 episodes...
+[14:55:51] ep   1/20 OK clr=0.088m steps=279 t=16.0s | SR=1.00 CR=0.00 ETA=304s
+[14:56:20] ep   2/20 OK clr=0.025m steps=462 t=28.7s | SR=1.00 CR=0.00 ETA=402s
+[14:56:50] ep   3/20 T/O clr=0.070m steps=500 t=30.6s | SR=0.67 CR=0.00 ETA=427s
+[14:57:02] ep   4/20 COL clr=-0.001m steps=211 t=12.3s | SR=0.50 CR=0.25 ETA=350s
+[14:57:28] ep   5/20 COL clr=-0.012m steps=404 t=25.6s | SR=0.40 CR=0.40 ETA=340s
+[14:57:59] ep   6/20 T/O clr=0.051m steps=500 t=30.6s | SR=0.33 CR=0.33 ETA=336s
+[14:58:29] ep   7/20 T/O clr=0.096m steps=500 t=30.8s | SR=0.29 CR=0.29 ETA=324s
+[14:58:54] ep   8/20 OK clr=0.101m steps=431 t=24.1s | SR=0.38 CR=0.25 ETA=298s
+[14:59:16] ep   9/20 OK clr=0.113m steps=347 t=22.5s | SR=0.44 CR=0.22 ETA=270s
+[14:59:21] ep  10/20 COL clr=-0.019m steps= 79 t=5.4s | SR=0.40 CR=0.30 ETA=227s
+[14:59:48] ep  11/20 OK clr=0.041m steps=424 t=26.6s | SR=0.45 CR=0.27 ETA=207s
+[15:00:02] ep  12/20 COL clr=-0.007m steps=244 t=14.2s | SR=0.42 CR=0.33 ETA=178s
+[15:00:20] ep  13/20 OK clr=0.024m steps=266 t=18.2s | SR=0.46 CR=0.31 ETA=154s
+[15:00:31] ep  14/20 OK clr=0.177m steps=168 t=10.1s | SR=0.50 CR=0.29 ETA=127s
+[15:00:46] ep  15/20 OK clr=0.108m steps=262 t=15.3s | SR=0.53 CR=0.27 ETA=104s
+[15:01:04] ep  16/20 OK clr=0.085m steps=255 t=17.7s | SR=0.56 CR=0.25 ETA=82s
+[15:01:34] ep  17/20 T/O clr=0.092m steps=500 t=30.9s | SR=0.53 CR=0.24 ETA=63s
+[15:01:53] ep  18/20 OK clr=0.089m steps=327 t=18.5s | SR=0.56 CR=0.22 ETA=42s
+[15:02:08] ep  19/20 OK clr=0.104m steps=206 t=15.1s | SR=0.58 CR=0.21 ETA=21s
+[15:02:39] ep  20/20 T/O clr=0.093m steps=500 t=30.7s | SR=0.55 CR=0.20 ETA=0s
+
+[15:02:39] DONE in 424s (21.2s/ep)
+  SR=0.550  CR=0.200  Clearance=0.066m  SuccClearance=0.087m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed2.json
+[2026-05-24 15:02:40]   ✓ Done in 432s | Total elapsed: 1232s | ETA: ~11070s
+
+[2026-05-24 15:02:40]   [4/30] RUN daars/seed3 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:02:42] Creating env (fast_mode=True)
+[15:02:43] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed3
+[15:02:44] Running 20 episodes...
+[15:02:55] ep   1/20 OK clr=0.011m steps=189 t=11.2s | SR=1.00 CR=0.00 ETA=213s
+[15:03:06] ep   2/20 COL clr=-0.006m steps=174 t=10.4s | SR=0.50 CR=0.50 ETA=194s
+[15:03:19] ep   3/20 OK clr=0.482m steps=170 t=13.1s | SR=0.67 CR=0.33 ETA=197s
+[15:03:23] ep   4/20 COL clr=-0.009m steps= 59 t=4.4s | SR=0.50 CR=0.50 ETA=156s
+[15:03:37] ep   5/20 COL clr=-0.012m steps=237 t=14.0s | SR=0.40 CR=0.60 ETA=159s
+[15:04:08] ep   6/20 T/O clr=0.066m steps=500 t=30.8s | SR=0.33 CR=0.50 ETA=196s
+[15:04:30] ep   7/20 OK clr=0.233m steps=340 t=22.2s | SR=0.43 CR=0.43 ETA=197s
+[15:04:58] ep   8/20 OK clr=0.208m steps=440 t=27.5s | SR=0.50 CR=0.38 ETA=200s
+[15:05:15] ep   9/20 COL clr=-0.002m steps=295 t=16.9s | SR=0.44 CR=0.44 ETA=184s
+[15:05:37] ep  10/20 OK clr=0.101m steps=352 t=22.8s | SR=0.50 CR=0.40 ETA=173s
+[15:05:57] ep  11/20 OK clr=0.105m steps=349 t=19.9s | SR=0.55 CR=0.36 ETA=158s
+[15:06:19] ep  12/20 OK clr=0.059m steps=333 t=21.8s | SR=0.58 CR=0.33 ETA=143s
+[15:06:24] ep  13/20 COL clr=-0.005m steps= 68 t=4.7s | SR=0.54 CR=0.38 ETA=118s
+[15:06:54] ep  14/20 T/O clr=0.027m steps=500 t=30.7s | SR=0.50 CR=0.36 ETA=107s
+[15:07:25] ep  15/20 T/O clr=0.091m steps=500 t=30.8s | SR=0.47 CR=0.33 ETA=94s
+[15:07:31] ep  16/20 COL clr=-0.018m steps= 91 t=6.1s | SR=0.44 CR=0.38 ETA=72s
+[15:07:48] ep  17/20 OK clr=0.202m steps=297 t=16.9s | SR=0.47 CR=0.35 ETA=54s
+[15:08:13] ep  18/20 OK clr=0.019m steps=393 t=25.1s | SR=0.50 CR=0.33 ETA=37s
+[15:08:31] ep  19/20 COL clr=-0.012m steps=249 t=17.3s | SR=0.47 CR=0.37 ETA=18s
+[15:08:50] ep  20/20 OK clr=0.148m steps=337 t=19.1s | SR=0.50 CR=0.35 ETA=0s
+
+[15:08:50] DONE in 366s (18.3s/ep)
+  SR=0.500  CR=0.350  Clearance=0.084m  SuccClearance=0.157m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed3.json
+[2026-05-24 15:08:51]   ✓ Done in 371s | Total elapsed: 1603s | ETA: ~10400s
+
+[2026-05-24 15:08:51]   [5/30] RUN daars/seed4 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:08:53] Creating env (fast_mode=True)
+[15:08:53] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed4
+[15:08:55] Running 20 episodes...
+[15:09:16] ep   1/20 COL clr=-0.001m steps=320 t=21.4s | SR=0.00 CR=1.00 ETA=406s
+[15:09:28] ep   2/20 OK clr=0.125m steps=198 t=11.7s | SR=0.50 CR=0.50 ETA=298s
+[15:09:37] ep   3/20 COL clr=-0.002m steps=105 t=9.6s | SR=0.33 CR=0.67 ETA=242s
+[15:09:43] ep   4/20 COL clr=-0.014m steps= 87 t=5.9s | SR=0.25 CR=0.75 ETA=194s
+[15:09:58] ep   5/20 OK clr=0.158m steps=249 t=14.4s | SR=0.40 CR=0.60 ETA=189s
+[15:10:09] ep   6/20 OK clr=0.346m steps=185 t=11.0s | SR=0.50 CR=0.50 ETA=173s
+[15:10:39] ep   7/20 T/O clr=0.001m steps=500 t=30.5s | SR=0.43 CR=0.43 ETA=194s
+[15:11:10] ep   8/20 T/O clr=0.033m steps=500 t=31.1s | SR=0.38 CR=0.38 ETA=203s
+[15:11:14] ep   9/20 COL clr=-0.004m steps= 53 t=4.2s | SR=0.33 CR=0.44 ETA=171s
+[15:11:42] ep  10/20 OK clr=0.081m steps=442 t=27.5s | SR=0.40 CR=0.40 ETA=167s
+[15:11:53] ep  11/20 OK clr=0.267m steps=182 t=11.1s | SR=0.45 CR=0.36 ETA=146s
+[15:12:04] ep  12/20 COL clr=-0.012m steps=121 t=10.5s | SR=0.42 CR=0.42 ETA=126s
+[15:12:19] ep  13/20 OK clr=0.212m steps=273 t=15.8s | SR=0.46 CR=0.38 ETA=110s
+[15:12:45] ep  14/20 OK clr=0.008m steps=397 t=25.3s | SR=0.50 CR=0.36 ETA=99s
+[15:12:55] ep  15/20 OK clr=0.016m steps=176 t=10.7s | SR=0.53 CR=0.33 ETA=80s
+[15:13:14] ep  16/20 COL clr=-0.004m steps=268 t=18.6s | SR=0.50 CR=0.38 ETA=65s
+[15:13:31] ep  17/20 OK clr=0.326m steps=301 t=17.2s | SR=0.53 CR=0.35 ETA=49s
+[15:13:47] ep  18/20 COL clr=-0.012m steps=223 t=16.0s | SR=0.50 CR=0.39 ETA=33s
+[15:13:58] ep  19/20 COL clr=-0.015m steps=193 t=11.4s | SR=0.47 CR=0.42 ETA=16s
+[15:14:26] ep  20/20 OK clr=0.087m steps=433 t=27.1s | SR=0.50 CR=0.40 ETA=0s
+
+[15:14:26] DONE in 331s (16.6s/ep)
+  SR=0.500  CR=0.400  Clearance=0.080m  SuccClearance=0.163m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed4.json
+[2026-05-24 15:14:27]   ✓ Done in 336s | Total elapsed: 1939s | ETA: ~9675s
+
+[2026-05-24 15:14:27] ── Method: static ──
+[2026-05-24 15:14:27]   [6/30] RUN static/seed0 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:14:29] Creating env (fast_mode=True)
+[15:14:29] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed0
+[15:14:31] Running 20 episodes...
+[15:14:43] ep   1/20 COL clr=-0.011m steps=209 t=12.4s | SR=0.00 CR=1.00 ETA=235s
+[15:15:14] ep   2/20 T/O clr=0.013m steps=500 t=30.9s | SR=0.00 CR=0.50 ETA=389s
+[15:15:36] ep   3/20 OK clr=0.030m steps=323 t=21.5s | SR=0.33 CR=0.33 ETA=367s
+[15:15:54] ep   4/20 OK clr=0.073m steps=327 t=18.8s | SR=0.50 CR=0.25 ETA=335s
+[15:16:00] ep   5/20 COL clr=-0.020m steps= 86 t=5.9s | SR=0.40 CR=0.40 ETA=269s
+[15:16:29] ep   6/20 OK clr=0.077m steps=450 t=28.2s | SR=0.50 CR=0.33 ETA=275s
+[15:16:46] ep   7/20 COL clr=-0.019m steps=247 t=17.3s | SR=0.43 CR=0.43 ETA=251s
+[15:17:00] ep   8/20 OK clr=0.225m steps=243 t=14.2s | SR=0.50 CR=0.38 ETA=224s
+[15:17:18] ep   9/20 COL clr=-0.009m steps=253 t=17.6s | SR=0.44 CR=0.44 ETA=204s
+[15:17:31] ep  10/20 COL clr=-0.008m steps=238 t=13.8s | SR=0.40 CR=0.50 ETA=181s
+[15:17:37] ep  11/20 COL clr=-0.037m steps= 79 t=5.4s | SR=0.36 CR=0.55 ETA=152s
+[15:17:53] ep  12/20 OK clr=0.299m steps=234 t=16.5s | SR=0.42 CR=0.50 ETA=135s
+[15:18:18] ep  13/20 OK clr=0.071m steps=436 t=24.4s | SR=0.46 CR=0.46 ETA=122s
+[15:18:43] ep  14/20 OK clr=0.123m steps=398 t=25.4s | SR=0.50 CR=0.43 ETA=108s
+[15:18:50] ep  15/20 COL clr=-0.001m steps=110 t=6.9s | SR=0.47 CR=0.47 ETA=86s
+[15:19:19] ep  16/20 OK clr=0.247m steps=467 t=28.9s | SR=0.50 CR=0.44 ETA=72s
+[15:19:43] ep  17/20 OK clr=0.108m steps=376 t=24.1s | SR=0.53 CR=0.41 ETA=55s
+[15:20:12] ep  18/20 OK clr=0.024m steps=463 t=28.7s | SR=0.56 CR=0.39 ETA=38s
+[15:20:24] ep  19/20 OK clr=0.305m steps=207 t=12.3s | SR=0.58 CR=0.37 ETA=19s
+[15:20:33] ep  20/20 COL clr=-0.012m steps=139 t=8.6s | SR=0.55 CR=0.40 ETA=0s
+
+[15:20:33] DONE in 362s (18.1s/ep)
+  SR=0.550  CR=0.400  Clearance=0.074m  SuccClearance=0.144m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed0.json
+[2026-05-24 15:20:34]   ✓ Done in 367s | Total elapsed: 2306s | ETA: ~9216s
+
+[2026-05-24 15:20:34]   [7/30] RUN static/seed1 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:20:36] Creating env (fast_mode=True)
+[15:20:36] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed1
+[15:20:37] Running 20 episodes...
+[15:20:55] ep   1/20 COL clr=-0.031m steps=259 t=18.0s | SR=0.00 CR=1.00 ETA=342s
+[15:21:11] ep   2/20 COL clr=-0.003m steps=263 t=15.2s | SR=0.00 CR=1.00 ETA=299s
+[15:21:22] ep   3/20 COL clr=-0.005m steps=146 t=11.9s | SR=0.00 CR=1.00 ETA=256s
+[15:21:46] ep   4/20 COL clr=-0.018m steps=406 t=23.0s | SR=0.00 CR=1.00 ETA=273s
+[15:22:04] ep   5/20 COL clr=-0.013m steps=267 t=18.3s | SR=0.00 CR=1.00 ETA=260s
+[15:22:23] ep   6/20 OK clr=0.166m steps=346 t=19.5s | SR=0.17 CR=0.83 ETA=248s
+[15:22:54] ep   7/20 T/O clr=0.092m steps=500 t=30.6s | SR=0.14 CR=0.71 ETA=254s
+[15:23:10] ep   8/20 OK clr=0.023m steps=224 t=16.0s | SR=0.25 CR=0.62 ETA=229s
+[15:23:22] ep   9/20 COL clr=-0.008m steps=204 t=12.0s | SR=0.22 CR=0.67 ETA=201s
+[15:23:53] ep  10/20 T/O clr=0.056m steps=500 t=30.7s | SR=0.20 CR=0.60 ETA=195s
+[15:24:23] ep  11/20 T/O clr=0.008m steps=500 t=30.5s | SR=0.18 CR=0.55 ETA=185s
+[15:24:28] ep  12/20 COL clr=-0.033m steps= 68 t=4.8s | SR=0.17 CR=0.58 ETA=154s
+[15:24:41] ep  13/20 OK clr=0.191m steps=224 t=13.3s | SR=0.23 CR=0.54 ETA=131s
+[15:24:58] ep  14/20 COL clr=-0.045m steps=230 t=16.5s | SR=0.21 CR=0.57 ETA=112s
+[15:25:14] ep  15/20 COL clr=-0.003m steps=283 t=16.2s | SR=0.20 CR=0.60 ETA=92s
+[15:25:34] ep  16/20 OK clr=0.158m steps=292 t=19.6s | SR=0.25 CR=0.56 ETA=74s
+[15:25:45] ep  17/20 OK clr=0.197m steps=195 t=11.5s | SR=0.29 CR=0.53 ETA=54s
+[15:25:57] ep  18/20 OK clr=0.168m steps=194 t=11.6s | SR=0.33 CR=0.50 ETA=35s
+[15:26:10] ep  19/20 COL clr=-0.029m steps=178 t=13.5s | SR=0.32 CR=0.53 ETA=18s
+[15:26:26] ep  20/20 COL clr=-0.018m steps=275 t=15.8s | SR=0.30 CR=0.55 ETA=0s
+
+[15:26:26] DONE in 349s (17.4s/ep)
+  SR=0.300  CR=0.550  Clearance=0.043m  SuccClearance=0.151m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed1.json
+[2026-05-24 15:26:27]   ✓ Done in 353s | Total elapsed: 2659s | ETA: ~8717s
+
+[2026-05-24 15:26:27]   [8/30] RUN static/seed2 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:26:29] Creating env (fast_mode=True)
+[15:26:29] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed2
+[15:26:31] Running 20 episodes...
+[15:27:02] ep   1/20 T/O clr=0.000m steps=500 t=30.7s | SR=0.00 CR=0.00 ETA=583s
+[15:27:21] ep   2/20 OK clr=0.029m steps=280 t=19.2s | SR=0.50 CR=0.00 ETA=449s
+[15:27:35] ep   3/20 COL clr=-0.003m steps=238 t=13.8s | SR=0.33 CR=0.33 ETA=361s
+[15:28:06] ep   4/20 T/O clr=0.153m steps=500 t=31.1s | SR=0.25 CR=0.25 ETA=379s
+[15:28:24] ep   5/20 OK clr=0.046m steps=266 t=18.4s | SR=0.40 CR=0.20 ETA=339s
+[15:28:44] ep   6/20 OK clr=0.165m steps=353 t=20.1s | SR=0.50 CR=0.17 ETA=311s
+[15:28:59] ep   7/20 OK clr=0.153m steps=205 t=15.1s | SR=0.57 CR=0.14 ETA=275s
+[15:29:27] ep   8/20 T/O clr=0.026m steps=500 t=28.0s | SR=0.50 CR=0.12 ETA=264s
+[15:29:41] ep   9/20 COL clr=-0.005m steps=185 t=14.0s | SR=0.44 CR=0.22 ETA=232s
+[15:29:55] ep  10/20 OK clr=0.210m steps=235 t=13.8s | SR=0.50 CR=0.20 ETA=204s
+[15:30:10] ep  11/20 OK clr=0.078m steps=210 t=15.3s | SR=0.55 CR=0.18 ETA=179s
+[15:30:28] ep  12/20 OK clr=0.009m steps=315 t=18.0s | SR=0.58 CR=0.17 ETA=158s
+[15:30:37] ep  13/20 COL clr=-0.003m steps=147 t=8.9s | SR=0.54 CR=0.23 ETA=133s
+[15:30:51] ep  14/20 COL clr=-0.021m steps=193 t=14.4s | SR=0.50 CR=0.29 ETA=112s
+[15:31:15] ep  15/20 OK clr=0.039m steps=411 t=23.1s | SR=0.53 CR=0.27 ETA=95s
+[15:31:42] ep  16/20 OK clr=0.006m steps=434 t=27.2s | SR=0.56 CR=0.25 ETA=78s
+[15:31:59] ep  17/20 OK clr=0.227m steps=252 t=17.5s | SR=0.59 CR=0.24 ETA=58s
+[15:32:27] ep  18/20 T/O clr=0.039m steps=500 t=27.8s | SR=0.56 CR=0.22 ETA=40s
+[15:32:47] ep  19/20 OK clr=0.040m steps=300 t=20.1s | SR=0.58 CR=0.21 ETA=20s
+[15:32:56] ep  20/20 COL clr=-0.017m steps=140 t=8.6s | SR=0.55 CR=0.25 ETA=0s
+
+[15:32:56] DONE in 385s (19.3s/ep)
+  SR=0.550  CR=0.250  Clearance=0.059m  SuccClearance=0.091m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed2.json
+[2026-05-24 15:32:57]   ✓ Done in 390s | Total elapsed: 3049s | ETA: ~8382s
+
+[2026-05-24 15:32:57]   [9/30] RUN static/seed3 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:32:59] Creating env (fast_mode=True)
+[15:33:00] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed3
+[15:33:01] Running 20 episodes...
+[15:33:28] ep   1/20 OK clr=0.145m steps=416 t=26.2s | SR=1.00 CR=0.00 ETA=498s
+[15:33:36] ep   2/20 COL clr=-0.002m steps=133 t=8.2s | SR=0.50 CR=0.50 ETA=310s
+[15:33:56] ep   3/20 OK clr=0.162m steps=304 t=20.2s | SR=0.67 CR=0.33 ETA=310s
+[15:34:22] ep   4/20 OK clr=0.101m steps=419 t=26.4s | SR=0.75 CR=0.25 ETA=324s
+[15:34:47] ep   5/20 OK clr=0.112m steps=446 t=24.9s | SR=0.80 CR=0.20 ETA=318s
+[15:35:07] ep   6/20 OK clr=0.149m steps=298 t=20.0s | SR=0.83 CR=0.17 ETA=294s
+[15:35:27] ep   7/20 OK clr=0.092m steps=300 t=20.2s | SR=0.86 CR=0.14 ETA=271s
+[15:35:42] ep   8/20 OK clr=0.180m steps=249 t=14.3s | SR=0.88 CR=0.12 ETA=241s
+[15:35:48] ep   9/20 COL clr=-0.021m steps= 91 t=6.0s | SR=0.78 CR=0.22 ETA=204s
+[15:36:04] ep  10/20 COL clr=-0.005m steps=227 t=16.2s | SR=0.70 CR=0.30 ETA=183s
+[15:36:32] ep  11/20 T/O clr=0.057m steps=500 t=27.7s | SR=0.64 CR=0.27 ETA=172s
+[15:36:41] ep  12/20 COL clr=-0.005m steps=102 t=9.5s | SR=0.58 CR=0.33 ETA=147s
+[15:36:59] ep  13/20 OK clr=0.027m steps=314 t=18.0s | SR=0.62 CR=0.31 ETA=128s
+[15:37:24] ep  14/20 OK clr=0.184m steps=385 t=24.6s | SR=0.64 CR=0.29 ETA=113s
+[15:37:55] ep  15/20 T/O clr=0.166m steps=500 t=30.7s | SR=0.60 CR=0.27 ETA=98s
+[15:38:19] ep  16/20 OK clr=0.154m steps=428 t=24.1s | SR=0.62 CR=0.25 ETA=79s
+[15:38:29] ep  17/20 COL clr=-0.007m steps=124 t=10.8s | SR=0.59 CR=0.29 ETA=58s
+[15:39:00] ep  18/20 T/O clr=0.004m steps=500 t=30.8s | SR=0.56 CR=0.28 ETA=40s
+[15:39:25] ep  19/20 OK clr=0.159m steps=437 t=24.5s | SR=0.58 CR=0.26 ETA=20s
+[15:39:52] ep  20/20 OK clr=0.092m steps=440 t=27.5s | SR=0.60 CR=0.25 ETA=0s
+
+[15:39:52] DONE in 411s (20.5s/ep)
+  SR=0.600  CR=0.250  Clearance=0.087m  SuccClearance=0.130m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed3.json
+[2026-05-24 15:39:53]   ✓ Done in 416s | Total elapsed: 3465s | ETA: ~8085s
+
+[2026-05-24 15:39:53]   [10/30] RUN static/seed4 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:39:56] Creating env (fast_mode=True)
+[15:39:56] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed4
+[15:39:58] Running 20 episodes...
+[15:40:20] ep   1/20 OK clr=0.144m steps=340 t=22.2s | SR=1.00 CR=0.00 ETA=422s
+[15:40:31] ep   2/20 OK clr=0.177m steps=195 t=11.5s | SR=1.00 CR=0.00 ETA=304s
+[15:40:52] ep   3/20 OK clr=0.157m steps=301 t=20.2s | SR=1.00 CR=0.00 ETA=306s
+[15:40:56] ep   4/20 COL clr=-0.004m steps= 64 t=4.7s | SR=0.75 CR=0.25 ETA=234s
+[15:41:08] ep   5/20 OK clr=0.187m steps=200 t=11.9s | SR=0.80 CR=0.20 ETA=211s
+[15:41:31] ep   6/20 OK clr=0.015m steps=355 t=22.9s | SR=0.83 CR=0.17 ETA=218s
+[15:42:02] ep   7/20 T/O clr=0.018m steps=500 t=30.7s | SR=0.71 CR=0.14 ETA=231s
+[15:42:30] ep   8/20 T/O clr=0.042m steps=500 t=28.2s | SR=0.62 CR=0.12 ETA=228s
+[15:42:35] ep   9/20 COL clr=-0.011m steps= 79 t=5.4s | SR=0.56 CR=0.22 ETA=193s
+[15:43:00] ep  10/20 COL clr=-0.002m steps=360 t=24.7s | SR=0.50 CR=0.30 ETA=182s
+[15:43:29] ep  11/20 OK clr=0.035m steps=457 t=28.5s | SR=0.55 CR=0.27 ETA=173s
+[15:43:46] ep  12/20 OK clr=0.059m steps=313 t=17.8s | SR=0.58 CR=0.25 ETA=152s
+[15:44:17] ep  13/20 T/O clr=0.005m steps=500 t=30.8s | SR=0.54 CR=0.23 ETA=140s
+[15:44:22] ep  14/20 COL clr=-0.033m steps= 68 t=4.8s | SR=0.50 CR=0.29 ETA=113s
+[15:44:41] ep  15/20 OK clr=0.029m steps=283 t=19.2s | SR=0.53 CR=0.27 ETA=94s
+[15:44:50] ep  16/20 COL clr=-0.007m steps=143 t=8.8s | SR=0.50 CR=0.31 ETA=73s
+[15:45:16] ep  17/20 OK clr=0.207m steps=432 t=26.2s | SR=0.53 CR=0.29 ETA=56s
+[15:45:40] ep  18/20 OK clr=0.003m steps=377 t=24.1s | SR=0.56 CR=0.28 ETA=38s
+[15:46:08] ep  19/20 T/O clr=0.126m steps=500 t=27.7s | SR=0.53 CR=0.26 ETA=19s
+[15:46:18] ep  20/20 COL clr=-0.002m steps=106 t=9.7s | SR=0.50 CR=0.30 ETA=0s
+
+[15:46:18] DONE in 380s (19.0s/ep)
+  SR=0.500  CR=0.300  Clearance=0.057m  SuccClearance=0.101m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed4.json
+[2026-05-24 15:46:19]   ✓ Done in 386s | Total elapsed: 3851s | ETA: ~7700s
+
+[2026-05-24 15:46:19] ── Method: alpha_only ──
+[2026-05-24 15:46:19]   [11/30] RUN alpha_only/seed0 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:46:21] Creating env (fast_mode=True)
+[15:46:21] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed0
+[15:46:23] Running 20 episodes...
+[15:46:38] ep   1/20 COL clr=-0.001m steps=256 t=14.9s | SR=0.00 CR=1.00 ETA=283s
+[15:46:55] ep   2/20 COL clr=-0.033m steps=250 t=17.4s | SR=0.00 CR=1.00 ETA=290s
+[15:47:21] ep   3/20 OK clr=0.139m steps=465 t=25.9s | SR=0.33 CR=0.67 ETA=329s
+[15:47:36] ep   4/20 OK clr=0.146m steps=211 t=15.3s | SR=0.50 CR=0.50 ETA=294s
+[15:48:02] ep   5/20 OK clr=0.124m steps=402 t=25.5s | SR=0.60 CR=0.40 ETA=297s
+[15:48:24] ep   6/20 OK clr=0.122m steps=395 t=22.2s | SR=0.67 CR=0.33 ETA=283s
+[15:48:46] ep   7/20 OK clr=0.148m steps=346 t=22.6s | SR=0.71 CR=0.29 ETA=267s
+[15:48:51] ep   8/20 COL clr=-0.006m steps= 67 t=4.9s | SR=0.62 CR=0.38 ETA=223s
+[15:49:13] ep   9/20 COL clr=-0.013m steps=329 t=21.6s | SR=0.56 CR=0.44 ETA=208s
+[15:49:31] ep  10/20 OK clr=0.205m steps=317 t=18.1s | SR=0.60 CR=0.40 ETA=188s
+[15:49:36] ep  11/20 COL clr=-0.015m steps= 65 t=4.7s | SR=0.55 CR=0.45 ETA=158s
+[15:49:42] ep  12/20 COL clr=-0.001m steps= 95 t=6.2s | SR=0.50 CR=0.50 ETA=133s
+[15:50:11] ep  13/20 OK clr=0.054m steps=472 t=29.1s | SR=0.54 CR=0.46 ETA=123s
+[15:50:16] ep  14/20 COL clr=-0.001m steps= 68 t=4.8s | SR=0.50 CR=0.50 ETA=100s
+[15:50:24] ep  15/20 COL clr=-0.039m steps= 72 t=7.9s | SR=0.47 CR=0.53 ETA=80s
+[15:50:39] ep  16/20 OK clr=0.229m steps=273 t=15.7s | SR=0.50 CR=0.50 ETA=64s
+[15:50:58] ep  17/20 OK clr=0.022m steps=282 t=18.9s | SR=0.53 CR=0.47 ETA=49s
+[15:51:26] ep  18/20 T/O clr=0.061m steps=500 t=27.6s | SR=0.50 CR=0.44 ETA=34s
+[15:51:35] ep  19/20 COL clr=-0.019m steps= 95 t=9.2s | SR=0.47 CR=0.47 ETA=16s
+[15:51:40] ep  20/20 COL clr=-0.001m steps= 68 t=4.8s | SR=0.45 CR=0.50 ETA=0s
+
+[15:51:40] DONE in 317s (15.9s/ep)
+  SR=0.450  CR=0.500  Clearance=0.056m  SuccClearance=0.132m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed0.json
+[2026-05-24 15:51:41]   ✓ Done in 322s | Total elapsed: 4173s | ETA: ~7201s
+
+[2026-05-24 15:51:41]   [12/30] RUN alpha_only/seed1 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:51:43] Creating env (fast_mode=True)
+[15:51:44] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed1
+[15:51:45] Running 20 episodes...
+[15:51:55] ep   1/20 COL clr=-0.015m steps=170 t=10.2s | SR=0.00 CR=1.00 ETA=193s
+[15:52:22] ep   2/20 OK clr=0.120m steps=430 t=27.1s | SR=0.50 CR=0.50 ETA=336s
+[15:52:34] ep   3/20 OK clr=0.279m steps=193 t=11.6s | SR=0.67 CR=0.33 ETA=277s
+[15:52:52] ep   4/20 COL clr=-0.012m steps=251 t=17.6s | SR=0.50 CR=0.50 ETA=266s
+[15:52:57] ep   5/20 COL clr=-0.027m steps= 79 t=5.4s | SR=0.40 CR=0.60 ETA=216s
+[15:53:05] ep   6/20 COL clr=-0.019m steps=135 t=8.4s | SR=0.33 CR=0.67 ETA=188s
+[15:53:20] ep   7/20 OK clr=0.030m steps=204 t=15.0s | SR=0.43 CR=0.57 ETA=177s
+[15:53:46] ep   8/20 COL clr=-0.018m steps=458 t=25.3s | SR=0.38 CR=0.62 ETA=181s
+[15:54:01] ep   9/20 OK clr=0.322m steps=206 t=15.0s | SR=0.44 CR=0.56 ETA=166s
+[15:54:22] ep  10/20 OK clr=0.039m steps=373 t=20.9s | SR=0.50 CR=0.50 ETA=157s
+[15:54:47] ep  11/20 OK clr=0.139m steps=392 t=25.0s | SR=0.55 CR=0.45 ETA=149s
+[15:55:17] ep  12/20 T/O clr=0.111m steps=500 t=30.4s | SR=0.50 CR=0.42 ETA=141s
+[15:55:45] ep  13/20 OK clr=0.192m steps=451 t=28.0s | SR=0.54 CR=0.38 ETA=129s
+[15:55:57] ep  14/20 COL clr=-0.005m steps=209 t=12.2s | SR=0.50 CR=0.43 ETA=108s
+[15:56:28] ep  15/20 T/O clr=0.078m steps=500 t=30.8s | SR=0.47 CR=0.40 ETA=94s
+[15:56:42] ep  16/20 OK clr=0.075m steps=245 t=14.1s | SR=0.50 CR=0.38 ETA=74s
+[15:57:02] ep  17/20 OK clr=0.186m steps=284 t=19.3s | SR=0.53 CR=0.35 ETA=56s
+[15:57:18] ep  18/20 OK clr=0.142m steps=297 t=16.9s | SR=0.56 CR=0.33 ETA=37s
+[15:57:43] ep  19/20 OK clr=0.155m steps=380 t=24.4s | SR=0.58 CR=0.32 ETA=19s
+[15:58:13] ep  20/20 T/O clr=0.062m steps=500 t=30.5s | SR=0.55 CR=0.30 ETA=0s
+
+[15:58:13] DONE in 388s (19.4s/ep)
+  SR=0.550  CR=0.300  Clearance=0.092m  SuccClearance=0.152m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed1.json
+[2026-05-24 15:58:14]   ✓ Done in 393s | Total elapsed: 4566s | ETA: ~6840s
+
+[2026-05-24 15:58:14]   [13/30] RUN alpha_only/seed2 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[15:58:17] Creating env (fast_mode=True)
+[15:58:17] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed2
+[15:58:18] Running 20 episodes...
+[15:58:47] ep   1/20 OK clr=0.098m steps=464 t=28.8s | SR=1.00 CR=0.00 ETA=547s
+[15:58:52] ep   2/20 COL clr=-0.000m steps= 72 t=5.0s | SR=0.50 CR=0.50 ETA=304s
+[15:59:10] ep   3/20 OK clr=0.222m steps=261 t=18.1s | SR=0.67 CR=0.33 ETA=294s
+[15:59:23] ep   4/20 OK clr=0.123m steps=211 t=12.6s | SR=0.75 CR=0.25 ETA=258s
+[15:59:46] ep   5/20 OK clr=0.284m steps=353 t=22.9s | SR=0.80 CR=0.20 ETA=262s
+[15:59:53] ep   6/20 COL clr=-0.031m steps=106 t=6.7s | SR=0.67 CR=0.33 ETA=220s
+[16:00:23] ep   7/20 T/O clr=0.022m steps=500 t=30.6s | SR=0.57 CR=0.29 ETA=232s
+[16:00:30] ep   8/20 COL clr=-0.029m steps=106 t=6.8s | SR=0.50 CR=0.38 ETA=197s
+[16:00:41] ep   9/20 OK clr=0.171m steps=184 t=10.9s | SR=0.56 CR=0.33 ETA=174s
+[16:00:51] ep  10/20 OK clr=0.128m steps=176 t=10.6s | SR=0.60 CR=0.30 ETA=153s
+[16:01:21] ep  11/20 OK clr=0.041m steps=474 t=29.4s | SR=0.64 CR=0.27 ETA=149s
+[16:01:44] ep  12/20 OK clr=0.039m steps=348 t=22.7s | SR=0.67 CR=0.25 ETA=137s
+[16:01:49] ep  13/20 COL clr=-0.043m steps= 76 t=5.2s | SR=0.62 CR=0.31 ETA=113s
+[16:02:20] ep  14/20 T/O clr=0.057m steps=500 t=30.8s | SR=0.57 CR=0.29 ETA=103s
+[16:02:31] ep  15/20 OK clr=0.129m steps=196 t=11.7s | SR=0.60 CR=0.27 ETA=84s
+[16:02:50] ep  16/20 OK clr=0.205m steps=292 t=18.6s | SR=0.62 CR=0.25 ETA=68s
+[16:03:17] ep  17/20 COL clr=-0.004m steps=438 t=27.4s | SR=0.59 CR=0.29 ETA=53s
+[16:03:37] ep  18/20 OK clr=0.204m steps=353 t=20.0s | SR=0.61 CR=0.28 ETA=35s
+[16:03:53] ep  19/20 COL clr=-0.012m steps=219 t=15.8s | SR=0.58 CR=0.32 ETA=18s
+[16:04:00] ep  20/20 COL clr=-0.008m steps=109 t=7.0s | SR=0.55 CR=0.35 ETA=0s
+
+[16:04:00] DONE in 342s (17.1s/ep)
+  SR=0.550  CR=0.350  Clearance=0.080m  SuccClearance=0.149m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed2.json
+[2026-05-24 16:04:01]   ✓ Done in 347s | Total elapsed: 4913s | ETA: ~6409s
+
+[2026-05-24 16:04:01]   [14/30] RUN alpha_only/seed3 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:04:03] Creating env (fast_mode=True)
+[16:04:04] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed3
+[16:04:05] Running 20 episodes...
+[16:04:29] ep   1/20 OK clr=0.123m steps=367 t=23.7s | SR=1.00 CR=0.00 ETA=449s
+[16:04:47] ep   2/20 OK clr=0.074m steps=325 t=18.5s | SR=1.00 CR=0.00 ETA=380s
+[16:05:11] ep   3/20 OK clr=0.221m steps=364 t=23.3s | SR=1.00 CR=0.00 ETA=371s
+[16:05:18] ep   4/20 COL clr=-0.027m steps=125 t=7.8s | SR=0.75 CR=0.25 ETA=293s
+[16:05:22] ep   5/20 COL clr=-0.015m steps= 53 t=4.0s | SR=0.60 CR=0.40 ETA=232s
+[16:05:37] ep   6/20 OK clr=0.173m steps=190 t=14.4s | SR=0.67 CR=0.33 ETA=214s
+[16:06:03] ep   7/20 OK clr=0.068m steps=476 t=26.5s | SR=0.71 CR=0.29 ETA=220s
+[16:06:12] ep   8/20 COL clr=-0.022m steps= 76 t=8.2s | SR=0.62 CR=0.38 ETA=190s
+[16:06:39] ep   9/20 T/O clr=0.028m steps=500 t=27.6s | SR=0.56 CR=0.33 ETA=188s
+[16:07:05] ep  10/20 OK clr=0.003m steps=418 t=26.3s | SR=0.60 CR=0.30 ETA=180s
+[16:07:36] ep  11/20 T/O clr=0.029m steps=500 t=30.5s | SR=0.55 CR=0.27 ETA=173s
+[16:07:48] ep  12/20 OK clr=0.045m steps=213 t=12.6s | SR=0.58 CR=0.25 ETA=149s
+[16:08:19] ep  13/20 T/O clr=0.066m steps=500 t=30.9s | SR=0.54 CR=0.23 ETA=137s
+[16:08:48] ep  14/20 OK clr=0.133m steps=458 t=28.4s | SR=0.57 CR=0.21 ETA=121s
+[16:08:52] ep  15/20 COL clr=-0.006m steps= 65 t=4.6s | SR=0.53 CR=0.27 ETA=96s
+[16:08:59] ep  16/20 COL clr=-0.001m steps= 99 t=6.4s | SR=0.50 CR=0.31 ETA=73s
+[16:09:05] ep  17/20 COL clr=-0.008m steps= 84 t=5.6s | SR=0.47 CR=0.35 ETA=53s
+[16:09:21] ep  18/20 COL clr=-0.016m steps=239 t=16.8s | SR=0.44 CR=0.39 ETA=35s
+[16:09:32] ep  19/20 COL clr=-0.021m steps=174 t=10.4s | SR=0.42 CR=0.42 ETA=17s
+[16:09:37] ep  20/20 COL clr=-0.007m steps= 72 t=5.0s | SR=0.40 CR=0.45 ETA=0s
+
+[16:09:37] DONE in 332s (16.6s/ep)
+  SR=0.400  CR=0.450  Clearance=0.042m  SuccClearance=0.105m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed3.json
+[2026-05-24 16:09:38]   ✓ Done in 337s | Total elapsed: 5250s | ETA: ~6000s
+
+[2026-05-24 16:09:38]   [15/30] RUN alpha_only/seed4 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:09:43] Creating env (fast_mode=True)
+[16:09:43] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed4
+[16:09:45] Running 20 episodes...
+[16:09:59] ep   1/20 OK clr=0.190m steps=241 t=14.0s | SR=1.00 CR=0.00 ETA=267s
+[16:10:03] ep   2/20 COL clr=-0.009m steps= 65 t=4.7s | SR=0.50 CR=0.50 ETA=168s
+[16:10:21] ep   3/20 OK clr=0.377m steps=241 t=17.4s | SR=0.67 CR=0.33 ETA=204s
+[16:10:41] ep   4/20 OK clr=0.062m steps=361 t=20.5s | SR=0.75 CR=0.25 ETA=226s
+[16:11:12] ep   5/20 COL clr=-0.005m steps=475 t=30.3s | SR=0.60 CR=0.40 ETA=261s
+[16:11:42] ep   6/20 OK clr=0.075m steps=486 t=30.7s | SR=0.67 CR=0.33 ETA=274s
+[16:11:47] ep   7/20 COL clr=-0.003m steps= 69 t=4.8s | SR=0.57 CR=0.43 ETA=227s
+[16:12:16] ep   8/20 OK clr=0.041m steps=464 t=29.4s | SR=0.62 CR=0.38 ETA=228s
+[16:12:48] ep   9/20 T/O clr=0.059m steps=500 t=31.3s | SR=0.56 CR=0.33 ETA=224s
+[16:13:19] ep  10/20 T/O clr=0.012m steps=500 t=31.2s | SR=0.50 CR=0.30 ETA=214s
+[16:13:36] ep  11/20 OK clr=0.255m steps=302 t=17.3s | SR=0.55 CR=0.27 ETA=189s
+[16:14:05] ep  12/20 OK clr=0.085m steps=452 t=29.0s | SR=0.58 CR=0.25 ETA=174s
+[16:14:37] ep  13/20 T/O clr=0.127m steps=500 t=31.7s | SR=0.54 CR=0.23 ETA=157s
+[16:14:51] ep  14/20 COL clr=-0.001m steps=236 t=13.9s | SR=0.50 CR=0.29 ETA=131s
+[16:15:09] ep  15/20 OK clr=0.028m steps=260 t=18.7s | SR=0.53 CR=0.27 ETA=108s
+[16:15:31] ep  16/20 OK clr=0.019m steps=379 t=21.4s | SR=0.56 CR=0.25 ETA=87s
+[16:16:02] ep  17/20 T/O clr=0.050m steps=500 t=31.4s | SR=0.53 CR=0.24 ETA=67s
+[16:16:19] ep  18/20 COL clr=-0.002m steps=229 t=16.9s | SR=0.50 CR=0.28 ETA=44s
+[16:16:35] ep  19/20 COL clr=-0.002m steps=281 t=16.2s | SR=0.47 CR=0.32 ETA=22s
+[16:16:59] ep  20/20 OK clr=0.057m steps=341 t=23.1s | SR=0.50 CR=0.30 ETA=0s
+
+[16:16:59] DONE in 434s (21.7s/ep)
+  SR=0.500  CR=0.300  Clearance=0.071m  SuccClearance=0.119m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed4.json
+[2026-05-24 16:17:00]   ✓ Done in 442s | Total elapsed: 5692s | ETA: ~5685s
+
+[2026-05-24 16:17:00] ── Method: beta_only ──
+[2026-05-24 16:17:00]   [16/30] RUN beta_only/seed0 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:17:02] Creating env (fast_mode=True)
+[16:17:02] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed0
+[16:17:04] Running 20 episodes...
+[16:17:20] ep   1/20 OK clr=0.102m steps=275 t=15.9s | SR=1.00 CR=0.00 ETA=302s
+[16:17:23] ep   2/20 COL clr=-0.002m steps= 49 t=3.8s | SR=0.50 CR=0.50 ETA=177s
+[16:17:39] ep   3/20 COL clr=-0.016m steps=203 t=15.6s | SR=0.33 CR=0.67 ETA=200s
+[16:18:08] ep   4/20 OK clr=0.051m steps=464 t=29.5s | SR=0.50 CR=0.50 ETA=259s
+[16:18:32] ep   5/20 COL clr=-0.034m steps=429 t=24.0s | SR=0.40 CR=0.60 ETA=266s
+[16:18:45] ep   6/20 COL clr=-0.018m steps=148 t=12.6s | SR=0.33 CR=0.67 ETA=237s
+[16:19:16] ep   7/20 T/O clr=0.006m steps=500 t=31.2s | SR=0.29 CR=0.57 ETA=246s
+[16:19:32] ep   8/20 OK clr=0.186m steps=283 t=16.2s | SR=0.38 CR=0.50 ETA=223s
+[16:20:04] ep   9/20 T/O clr=0.073m steps=500 t=31.2s | SR=0.33 CR=0.44 ETA=220s
+[16:20:11] ep  10/20 COL clr=-0.015m steps=114 t=7.2s | SR=0.30 CR=0.50 ETA=187s
+[16:20:17] ep  11/20 COL clr=-0.004m steps= 91 t=6.0s | SR=0.27 CR=0.55 ETA=158s
+[16:20:32] ep  12/20 OK clr=0.185m steps=200 t=15.4s | SR=0.33 CR=0.50 ETA=139s
+[16:20:42] ep  13/20 COL clr=-0.012m steps=161 t=9.8s | SR=0.31 CR=0.54 ETA=118s
+[16:21:13] ep  14/20 T/O clr=0.092m steps=500 t=31.3s | SR=0.29 CR=0.50 ETA=107s
+[16:21:25] ep  15/20 COL clr=-0.047m steps=201 t=11.8s | SR=0.27 CR=0.53 ETA=87s
+[16:21:46] ep  16/20 OK clr=0.097m steps=303 t=20.8s | SR=0.31 CR=0.50 ETA=71s
+[16:22:00] ep  17/20 COL clr=-0.018m steps=246 t=14.2s | SR=0.29 CR=0.53 ETA=52s
+[16:22:11] ep  18/20 COL clr=-0.011m steps=182 t=10.8s | SR=0.28 CR=0.56 ETA=34s
+[16:22:30] ep  19/20 OK clr=0.026m steps=267 t=18.9s | SR=0.32 CR=0.53 ETA=17s
+[16:22:54] ep  20/20 OK clr=0.033m steps=361 t=23.9s | SR=0.35 CR=0.50 ETA=0s
+
+[16:22:54] DONE in 350s (17.5s/ep)
+  SR=0.350  CR=0.500  Clearance=0.034m  SuccClearance=0.097m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed0.json
+[2026-05-24 16:22:55]   ✓ Done in 355s | Total elapsed: 6047s | ETA: ~5278s
+
+[2026-05-24 16:22:55]   [17/30] RUN beta_only/seed1 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:22:57] Creating env (fast_mode=True)
+[16:22:58] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed1
+[16:22:59] Running 20 episodes...
+[16:23:30] ep   1/20 T/O clr=0.099m steps=500 t=31.4s | SR=0.00 CR=0.00 ETA=596s
+[16:23:54] ep   2/20 COL clr=-0.003m steps=422 t=23.6s | SR=0.00 CR=0.50 ETA=495s
+[16:24:11] ep   3/20 OK clr=0.116m steps=236 t=17.4s | SR=0.33 CR=0.33 ETA=410s
+[16:24:33] ep   4/20 OK clr=0.034m steps=390 t=22.1s | SR=0.50 CR=0.25 ETA=378s
+[16:25:05] ep   5/20 T/O clr=0.122m steps=500 t=31.7s | SR=0.40 CR=0.20 ETA=379s
+[16:25:36] ep   6/20 T/O clr=0.116m steps=500 t=31.3s | SR=0.33 CR=0.17 ETA=368s
+[16:26:03] ep   7/20 OK clr=0.083m steps=409 t=26.2s | SR=0.43 CR=0.14 ETA=341s
+[16:26:34] ep   8/20 T/O clr=0.231m steps=500 t=31.6s | SR=0.38 CR=0.12 ETA=323s
+[16:27:05] ep   9/20 COL clr=-0.017m steps=480 t=30.5s | SR=0.33 CR=0.22 ETA=301s
+[16:27:33] ep  10/20 T/O clr=0.090m steps=500 t=27.7s | SR=0.30 CR=0.20 ETA=274s
+[16:27:50] ep  11/20 OK clr=0.138m steps=233 t=17.1s | SR=0.36 CR=0.18 ETA=238s
+[16:28:03] ep  12/20 OK clr=0.210m steps=224 t=13.1s | SR=0.42 CR=0.17 ETA=203s
+[16:28:31] ep  13/20 OK clr=0.170m steps=444 t=28.4s | SR=0.46 CR=0.15 ETA=179s
+[16:29:02] ep  14/20 T/O clr=0.082m steps=500 t=31.2s | SR=0.43 CR=0.14 ETA=156s
+[16:29:33] ep  15/20 T/O clr=0.122m steps=500 t=31.2s | SR=0.40 CR=0.13 ETA=132s
+[16:30:05] ep  16/20 T/O clr=0.012m steps=500 t=31.3s | SR=0.38 CR=0.12 ETA=106s
+[16:30:17] ep  17/20 COL clr=-0.008m steps=204 t=11.9s | SR=0.35 CR=0.18 ETA=77s
+[16:30:48] ep  18/20 T/O clr=0.207m steps=500 t=31.3s | SR=0.33 CR=0.17 ETA=52s
+[16:31:00] ep  19/20 OK clr=0.073m steps=205 t=12.0s | SR=0.37 CR=0.16 ETA=25s
+[16:31:13] ep  20/20 COL clr=-0.022m steps=160 t=13.2s | SR=0.35 CR=0.20 ETA=0s
+
+[16:31:13] DONE in 494s (24.7s/ep)
+  SR=0.350  CR=0.200  Clearance=0.093m  SuccClearance=0.118m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed1.json
+[2026-05-24 16:31:14]   ✓ Done in 499s | Total elapsed: 6546s | ETA: ~5005s
+
+[2026-05-24 16:31:14]   [18/30] RUN beta_only/seed2 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:31:17] Creating env (fast_mode=True)
+[16:31:20] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed2
+[16:31:21] Running 20 episodes...
+[16:31:37] ep   1/20 OK clr=0.163m steps=281 t=16.0s | SR=1.00 CR=0.00 ETA=304s
+[16:31:59] ep   2/20 OK clr=0.114m steps=330 t=22.2s | SR=1.00 CR=0.00 ETA=344s
+[16:32:20] ep   3/20 OK clr=0.128m steps=376 t=21.0s | SR=1.00 CR=0.00 ETA=336s
+[16:32:41] ep   4/20 OK clr=0.182m steps=303 t=20.7s | SR=1.00 CR=0.00 ETA=320s
+[16:33:12] ep   5/20 T/O clr=0.076m steps=500 t=31.2s | SR=0.80 CR=0.00 ETA=334s
+[16:33:23] ep   6/20 COL clr=-0.021m steps=185 t=11.0s | SR=0.67 CR=0.17 ETA=285s
+[16:33:31] ep   7/20 COL clr=-0.020m steps=133 t=8.3s | SR=0.57 CR=0.29 ETA=242s
+[16:33:49] ep   8/20 COL clr=-0.009m steps=234 t=17.1s | SR=0.50 CR=0.38 ETA=221s
+[16:34:15] ep   9/20 OK clr=0.070m steps=412 t=26.7s | SR=0.56 CR=0.33 ETA=213s
+[16:34:41] ep  10/20 OK clr=0.053m steps=465 t=25.9s | SR=0.60 CR=0.30 ETA=200s
+[16:35:02] ep  11/20 OK clr=0.006m steps=304 t=20.9s | SR=0.64 CR=0.27 ETA=181s
+[16:35:15] ep  12/20 OK clr=0.075m steps=215 t=12.7s | SR=0.67 CR=0.25 ETA=156s
+[16:35:38] ep  13/20 OK clr=0.149m steps=350 t=23.3s | SR=0.69 CR=0.23 ETA=138s
+[16:35:51] ep  14/20 OK clr=0.024m steps=215 t=12.7s | SR=0.71 CR=0.21 ETA=116s
+[16:36:22] ep  15/20 T/O clr=0.072m steps=500 t=31.3s | SR=0.67 CR=0.20 ETA=100s
+[16:36:49] ep  16/20 COL clr=-0.024m steps=411 t=26.5s | SR=0.62 CR=0.25 ETA=82s
+[16:36:56] ep  17/20 COL clr=-0.005m steps=117 t=7.4s | SR=0.59 CR=0.29 ETA=59s
+[16:37:01] ep  18/20 COL clr=-0.009m steps= 67 t=4.8s | SR=0.56 CR=0.33 ETA=38s
+[16:37:20] ep  19/20 OK clr=0.025m steps=271 t=19.2s | SR=0.58 CR=0.32 ETA=19s
+[16:37:51] ep  20/20 T/O clr=0.009m steps=500 t=31.4s | SR=0.55 CR=0.30 ETA=0s
+
+[16:37:51] DONE in 391s (19.5s/ep)
+  SR=0.550  CR=0.300  Clearance=0.053m  SuccClearance=0.090m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed2.json
+[2026-05-24 16:37:53]   ✓ Done in 399s | Total elapsed: 6945s | ETA: ~4620s
+
+[2026-05-24 16:37:53]   [19/30] RUN beta_only/seed3 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:37:55] Creating env (fast_mode=True)
+[16:37:55] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed3
+[16:37:57] Running 20 episodes...
+[16:38:00] ep   1/20 COL clr=-0.001m steps= 45 t=3.7s | SR=0.00 CR=1.00 ETA=71s
+[16:38:28] ep   2/20 OK clr=0.021m steps=441 t=28.1s | SR=0.50 CR=0.50 ETA=286s
+[16:38:43] ep   3/20 COL clr=-0.018m steps=258 t=14.9s | SR=0.33 CR=0.67 ETA=265s
+[16:39:10] ep   4/20 OK clr=0.001m steps=413 t=27.0s | SR=0.50 CR=0.50 ETA=295s
+[16:39:30] ep   5/20 COL clr=-0.007m steps=353 t=19.9s | SR=0.40 CR=0.60 ETA=281s
+[16:39:40] ep   6/20 COL clr=-0.001m steps= 87 t=9.3s | SR=0.33 CR=0.67 ETA=240s
+[16:39:47] ep   7/20 COL clr=-0.003m steps=114 t=7.2s | SR=0.29 CR=0.71 ETA=205s
+[16:40:02] ep   8/20 OK clr=0.029m steps=268 t=15.4s | SR=0.38 CR=0.62 ETA=188s
+[16:40:27] ep   9/20 OK clr=0.123m steps=375 t=24.6s | SR=0.44 CR=0.56 ETA=184s
+[16:40:50] ep  10/20 OK clr=0.063m steps=343 t=23.3s | SR=0.50 CR=0.50 ETA=174s
+[16:41:18] ep  11/20 T/O clr=0.123m steps=500 t=27.9s | SR=0.45 CR=0.45 ETA=165s
+[16:41:27] ep  12/20 COL clr=-0.000m steps= 75 t=8.6s | SR=0.42 CR=0.50 ETA=140s
+[16:41:32] ep  13/20 COL clr=-0.021m steps= 72 t=5.0s | SR=0.38 CR=0.54 ETA=116s
+[16:41:37] ep  14/20 COL clr=-0.012m steps= 84 t=5.6s | SR=0.36 CR=0.57 ETA=95s
+[16:41:49] ep  15/20 OK clr=0.122m steps=196 t=11.5s | SR=0.40 CR=0.53 ETA=77s
+[16:42:04] ep  16/20 OK clr=0.194m steps=193 t=15.1s | SR=0.44 CR=0.50 ETA=62s
+[16:42:21] ep  17/20 OK clr=0.222m steps=306 t=17.4s | SR=0.47 CR=0.47 ETA=47s
+[16:42:25] ep  18/20 COL clr=-0.044m steps= 50 t=3.9s | SR=0.44 CR=0.50 ETA=30s
+[16:42:56] ep  19/20 T/O clr=0.112m steps=500 t=30.7s | SR=0.42 CR=0.47 ETA=16s
+[16:43:19] ep  20/20 OK clr=0.187m steps=341 t=23.0s | SR=0.45 CR=0.45 ETA=0s
+
+[16:43:19] DONE in 322s (16.1s/ep)
+  SR=0.450  CR=0.450  Clearance=0.055m  SuccClearance=0.107m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed3.json
+[2026-05-24 16:43:20]   ✓ Done in 327s | Total elapsed: 7272s | ETA: ~4202s
+
+[2026-05-24 16:43:20]   [20/30] RUN beta_only/seed4 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:43:23] Creating env (fast_mode=True)
+[16:43:23] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed4
+[16:43:24] Running 20 episodes...
+[16:43:56] ep   1/20 T/O clr=0.153m steps=500 t=31.3s | SR=0.00 CR=0.00 ETA=595s
+[16:44:02] ep   2/20 COL clr=-0.006m steps=102 t=6.7s | SR=0.00 CR=0.50 ETA=342s
+[16:44:26] ep   3/20 OK clr=0.035m steps=348 t=23.4s | SR=0.33 CR=0.33 ETA=348s
+[16:44:33] ep   4/20 COL clr=-0.015m steps=106 t=7.0s | SR=0.25 CR=0.50 ETA=274s
+[16:45:04] ep   5/20 OK clr=0.088m steps=494 t=30.8s | SR=0.40 CR=0.40 ETA=297s
+[16:45:09] ep   6/20 COL clr=-0.014m steps= 72 t=5.1s | SR=0.33 CR=0.50 ETA=243s
+[16:45:29] ep   7/20 OK clr=0.127m steps=357 t=20.1s | SR=0.43 CR=0.43 ETA=231s
+[16:45:42] ep   8/20 OK clr=0.089m steps=162 t=13.6s | SR=0.50 CR=0.38 ETA=207s
+[16:46:04] ep   9/20 OK clr=0.085m steps=386 t=21.6s | SR=0.56 CR=0.33 ETA=195s
+[16:46:28] ep  10/20 OK clr=0.013m steps=366 t=24.2s | SR=0.60 CR=0.30 ETA=184s
+[16:46:54] ep  11/20 OK clr=0.045m steps=393 t=25.9s | SR=0.64 CR=0.27 ETA=172s
+[16:46:59] ep  12/20 COL clr=-0.011m steps= 72 t=4.9s | SR=0.58 CR=0.33 ETA=143s
+[16:47:16] ep  13/20 OK clr=0.080m steps=303 t=17.3s | SR=0.62 CR=0.31 ETA=125s
+[16:47:31] ep  14/20 OK clr=0.082m steps=188 t=14.7s | SR=0.64 CR=0.29 ETA=106s
+[16:47:48] ep  15/20 OK clr=0.235m steps=297 t=17.0s | SR=0.67 CR=0.27 ETA=88s
+[16:48:06] ep  16/20 OK clr=0.172m steps=255 t=18.2s | SR=0.69 CR=0.25 ETA=70s
+[16:48:38] ep  17/20 T/O clr=0.016m steps=500 t=31.4s | SR=0.65 CR=0.24 ETA=55s
+[16:49:05] ep  18/20 OK clr=0.023m steps=492 t=27.2s | SR=0.67 CR=0.22 ETA=38s
+[16:49:12] ep  19/20 COL clr=-0.009m steps= 42 t=7.1s | SR=0.63 CR=0.26 ETA=18s
+[16:49:18] ep  20/20 COL clr=-0.004m steps=102 t=6.6s | SR=0.60 CR=0.30 ETA=0s
+
+[16:49:18] DONE in 354s (17.7s/ep)
+  SR=0.600  CR=0.300  Clearance=0.059m  SuccClearance=0.090m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed4.json
+[2026-05-24 16:49:20]   ✓ Done in 360s | Total elapsed: 7632s | ETA: ~3810s
+
+[2026-05-24 16:49:20] ── Method: ppo_lag ──
+[2026-05-24 16:49:20]   [21/30] RUN ppo_lag/seed0 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:49:22] Creating env (fast_mode=True)
+[16:49:22] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed0
+[16:49:24] Running 20 episodes...
+[16:49:34] ep   1/20 COL clr=-0.002m steps=174 t=10.4s | SR=0.00 CR=1.00 ETA=198s
+[16:49:51] ep   2/20 OK clr=0.189m steps=242 t=17.5s | SR=0.50 CR=0.50 ETA=251s
+[16:50:03] ep   3/20 COL clr=-0.001m steps=186 t=11.0s | SR=0.33 CR=0.67 ETA=221s
+[16:50:26] ep   4/20 OK clr=0.045m steps=347 t=23.2s | SR=0.50 CR=0.50 ETA=249s
+[16:50:43] ep   5/20 COL clr=-0.004m steps=295 t=16.8s | SR=0.40 CR=0.60 ETA=237s
+[16:51:06] ep   6/20 OK clr=0.222m steps=359 t=23.8s | SR=0.50 CR=0.50 ETA=240s
+[16:51:18] ep   7/20 COL clr=-0.016m steps=197 t=11.7s | SR=0.43 CR=0.57 ETA=213s
+[16:51:39] ep   8/20 OK clr=0.123m steps=307 t=21.0s | SR=0.50 CR=0.50 ETA=203s
+[16:51:50] ep   9/20 OK clr=0.366m steps=182 t=10.8s | SR=0.56 CR=0.44 ETA=179s
+[16:52:01] ep  10/20 COL clr=-0.015m steps=194 t=11.5s | SR=0.50 CR=0.50 ETA=158s
+[16:52:22] ep  11/20 OK clr=0.114m steps=305 t=21.0s | SR=0.55 CR=0.45 ETA=146s
+[16:52:28] ep  12/20 COL clr=-0.003m steps= 83 t=5.7s | SR=0.50 CR=0.50 ETA=123s
+[16:52:52] ep  13/20 OK clr=0.086m steps=372 t=24.4s | SR=0.54 CR=0.46 ETA=112s
+[16:53:14] ep  14/20 OK clr=0.130m steps=383 t=21.4s | SR=0.57 CR=0.43 ETA=99s
+[16:53:27] ep  15/20 OK clr=0.199m steps=220 t=12.8s | SR=0.60 CR=0.40 ETA=81s
+[16:53:58] ep  16/20 OK clr=0.048m steps=451 t=31.1s | SR=0.62 CR=0.38 ETA=69s
+[16:54:02] ep  17/20 COL clr=-0.014m steps= 64 t=4.7s | SR=0.59 CR=0.41 ETA=49s
+[16:54:11] ep  18/20 COL clr=-0.011m steps=151 t=9.2s | SR=0.56 CR=0.44 ETA=32s
+[16:54:36] ep  19/20 COL clr=-0.006m steps=445 t=24.8s | SR=0.53 CR=0.47 ETA=16s
+[16:54:42] ep  20/20 COL clr=-0.003m steps= 80 t=5.4s | SR=0.50 CR=0.50 ETA=0s
+
+[16:54:42] DONE in 318s (15.9s/ep)
+  SR=0.500  CR=0.500  Clearance=0.072m  SuccClearance=0.152m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed0.json
+[2026-05-24 16:54:43]   ✓ Done in 323s | Total elapsed: 7955s | ETA: ~3402s
+
+[2026-05-24 16:54:43]   [22/30] RUN ppo_lag/seed1 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:54:49] Creating env (fast_mode=True)
+[16:54:49] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed1
+[16:54:50] Running 20 episodes...
+[16:55:18] ep   1/20 T/O clr=0.042m steps=500 t=28.0s | SR=0.00 CR=0.00 ETA=533s
+[16:55:23] ep   2/20 COL clr=-0.004m steps= 59 t=5.1s | SR=0.00 CR=0.50 ETA=298s
+[16:55:37] ep   3/20 OK clr=0.101m steps=244 t=14.2s | SR=0.33 CR=0.33 ETA=268s
+[16:55:53] ep   4/20 OK clr=0.072m steps=261 t=15.1s | SR=0.50 CR=0.25 ETA=250s
+[16:56:11] ep   5/20 COL clr=-0.022m steps=284 t=18.4s | SR=0.40 CR=0.40 ETA=242s
+[16:56:36] ep   6/20 OK clr=0.038m steps=388 t=25.1s | SR=0.50 CR=0.33 ETA=247s
+[16:56:49] ep   7/20 COL clr=-0.007m steps=219 t=12.9s | SR=0.43 CR=0.43 ETA=221s
+[16:57:07] ep   8/20 OK clr=0.058m steps=261 t=17.9s | SR=0.50 CR=0.38 ETA=205s
+[16:57:20] ep   9/20 COL clr=-0.018m steps=226 t=13.2s | SR=0.44 CR=0.44 ETA=183s
+[16:57:27] ep  10/20 COL clr=-0.002m steps=102 t=6.6s | SR=0.40 CR=0.50 ETA=156s
+[16:57:35] ep  11/20 COL clr=-0.004m steps=136 t=8.4s | SR=0.36 CR=0.55 ETA=135s
+[16:57:56] ep  12/20 OK clr=0.231m steps=318 t=21.0s | SR=0.42 CR=0.50 ETA=124s
+[16:58:20] ep  13/20 COL clr=-0.001m steps=370 t=23.8s | SR=0.38 CR=0.54 ETA=113s
+[16:58:36] ep  14/20 OK clr=0.282m steps=276 t=15.9s | SR=0.43 CR=0.50 ETA=97s
+[16:58:49] ep  15/20 COL clr=-0.001m steps=219 t=12.8s | SR=0.40 CR=0.53 ETA=79s
+[16:59:11] ep  16/20 COL clr=-0.037m steps=355 t=23.0s | SR=0.38 CR=0.56 ETA=65s
+[16:59:15] ep  17/20 COL clr=-0.006m steps= 46 t=3.6s | SR=0.35 CR=0.59 ETA=47s
+[16:59:24] ep  18/20 COL clr=-0.019m steps=144 t=8.8s | SR=0.33 CR=0.61 ETA=30s
+[16:59:38] ep  19/20 COL clr=-0.002m steps=193 t=14.4s | SR=0.32 CR=0.63 ETA=15s
+[17:00:09] ep  20/20 T/O clr=0.061m steps=500 t=30.7s | SR=0.30 CR=0.60 ETA=0s
+
+[17:00:09] DONE in 319s (15.9s/ep)
+  SR=0.300  CR=0.600  Clearance=0.038m  SuccClearance=0.130m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed1.json
+[2026-05-24 17:00:10]   ✓ Done in 327s | Total elapsed: 8282s | ETA: ~3008s
+
+[2026-05-24 17:00:10]   [23/30] RUN ppo_lag/seed2 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:00:12] Creating env (fast_mode=True)
+[17:00:12] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed2
+[17:00:14] Running 20 episodes...
+[17:00:32] ep   1/20 OK clr=0.179m steps=326 t=18.6s | SR=1.00 CR=0.00 ETA=353s
+[17:00:42] ep   2/20 COL clr=-0.018m steps=106 t=9.4s | SR=0.50 CR=0.50 ETA=252s
+[17:01:00] ep   3/20 OK clr=0.051m steps=310 t=17.8s | SR=0.67 CR=0.33 ETA=260s
+[17:01:24] ep   4/20 OK clr=0.170m steps=372 t=24.4s | SR=0.75 CR=0.25 ETA=281s
+[17:01:46] ep   5/20 OK clr=0.077m steps=384 t=21.9s | SR=0.80 CR=0.20 ETA=277s
+[17:01:56] ep   6/20 COL clr=-0.013m steps=112 t=10.1s | SR=0.67 CR=0.33 ETA=239s
+[17:02:27] ep   7/20 T/O clr=0.018m steps=500 t=30.9s | SR=0.57 CR=0.29 ETA=247s
+[17:02:32] ep   8/20 COL clr=-0.017m steps= 72 t=5.1s | SR=0.50 CR=0.38 ETA=207s
+[17:02:56] ep   9/20 OK clr=0.100m steps=423 t=23.6s | SR=0.56 CR=0.33 ETA=198s
+[17:03:25] ep  10/20 OK clr=0.174m steps=474 t=29.3s | SR=0.60 CR=0.30 ETA=191s
+[17:03:43] ep  11/20 OK clr=0.064m steps=250 t=17.6s | SR=0.64 CR=0.27 ETA=171s
+[17:03:57] ep  12/20 OK clr=0.103m steps=249 t=14.4s | SR=0.67 CR=0.25 ETA=149s
+[17:04:07] ep  13/20 COL clr=-0.004m steps=162 t=9.8s | SR=0.62 CR=0.31 ETA=125s
+[17:04:24] ep  14/20 OK clr=0.009m steps=237 t=16.7s | SR=0.64 CR=0.29 ETA=107s
+[17:04:33] ep  15/20 COL clr=-0.016m steps=147 t=9.0s | SR=0.60 CR=0.33 ETA=86s
+[17:04:51] ep  16/20 OK clr=0.158m steps=272 t=18.8s | SR=0.62 CR=0.31 ETA=69s
+[17:05:02] ep  17/20 COL clr=-0.009m steps=174 t=10.4s | SR=0.59 CR=0.35 ETA=51s
+[17:05:08] ep  18/20 COL clr=-0.003m steps= 94 t=6.2s | SR=0.56 CR=0.39 ETA=33s
+[17:05:27] ep  19/20 OK clr=0.125m steps=274 t=18.7s | SR=0.58 CR=0.37 ETA=16s
+[17:05:51] ep  20/20 OK clr=0.039m steps=437 t=24.3s | SR=0.60 CR=0.35 ETA=0s
+
+[17:05:51] DONE in 337s (16.9s/ep)
+  SR=0.600  CR=0.350  Clearance=0.059m  SuccClearance=0.104m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed2.json
+[2026-05-24 17:05:52]   ✓ Done in 342s | Total elapsed: 8624s | ETA: ~2618s
+
+[2026-05-24 17:05:52]   [24/30] RUN ppo_lag/seed3 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:05:54] Creating env (fast_mode=True)
+[17:05:55] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed3
+[17:05:56] Running 20 episodes...
+[17:06:07] ep   1/20 COL clr=-0.045m steps=128 t=11.1s | SR=0.00 CR=1.00 ETA=211s
+[17:06:30] ep   2/20 COL clr=-0.002m steps=413 t=23.1s | SR=0.00 CR=1.00 ETA=308s
+[17:06:47] ep   3/20 COL clr=-0.026m steps=238 t=16.7s | SR=0.00 CR=1.00 ETA=289s
+[17:07:05] ep   4/20 OK clr=0.067m steps=313 t=17.9s | SR=0.25 CR=0.75 ETA=276s
+[17:07:08] ep   5/20 COL clr=-0.013m steps= 42 t=3.4s | SR=0.20 CR=0.80 ETA=217s
+[17:07:16] ep   6/20 COL clr=-0.011m steps= 56 t=7.1s | SR=0.17 CR=0.83 ETA=185s
+[17:07:43] ep   7/20 T/O clr=0.019m steps=500 t=27.9s | SR=0.14 CR=0.71 ETA=199s
+[17:07:59] ep   8/20 OK clr=0.046m steps=226 t=15.6s | SR=0.25 CR=0.62 ETA=184s
+[17:08:04] ep   9/20 COL clr=-0.016m steps= 64 t=4.6s | SR=0.22 CR=0.67 ETA=156s
+[17:08:10] ep  10/20 COL clr=-0.016m steps= 94 t=6.2s | SR=0.20 CR=0.70 ETA=134s
+[17:08:37] ep  11/20 COL clr=-0.004m steps=419 t=27.5s | SR=0.18 CR=0.73 ETA=132s
+[17:09:08] ep  12/20 T/O clr=0.019m steps=500 t=30.9s | SR=0.17 CR=0.67 ETA=128s
+[17:09:21] ep  13/20 COL clr=-0.007m steps=223 t=13.0s | SR=0.15 CR=0.69 ETA=110s
+[17:09:41] ep  14/20 COL clr=-0.016m steps=294 t=19.8s | SR=0.14 CR=0.71 ETA=96s
+[17:09:47] ep  15/20 COL clr=-0.013m steps= 87 t=5.8s | SR=0.13 CR=0.73 ETA=77s
+[17:09:51] ep  16/20 COL clr=-0.041m steps= 61 t=4.4s | SR=0.12 CR=0.75 ETA=59s
+[17:09:59] ep  17/20 COL clr=-0.002m steps=118 t=7.4s | SR=0.12 CR=0.76 ETA=43s
+[17:10:04] ep  18/20 COL clr=-0.012m steps= 87 t=5.8s | SR=0.11 CR=0.78 ETA=28s
+[17:10:26] ep  19/20 COL clr=-0.014m steps=385 t=21.7s | SR=0.11 CR=0.79 ETA=14s
+[17:10:50] ep  20/20 OK clr=0.148m steps=345 t=24.2s | SR=0.15 CR=0.75 ETA=0s
+
+[17:10:50] DONE in 294s (14.7s/ep)
+  SR=0.150  CR=0.750  Clearance=0.003m  SuccClearance=0.087m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed3.json
+[2026-05-24 17:10:51]   ✓ Done in 299s | Total elapsed: 8923s | ETA: ~2226s
+
+[2026-05-24 17:10:51]   [25/30] RUN ppo_lag/seed4 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:10:54] Creating env (fast_mode=True)
+[17:10:54] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed4
+[17:10:56] Running 20 episodes...
+[17:11:04] ep   1/20 COL clr=-0.016m steps=135 t=8.5s | SR=0.00 CR=1.00 ETA=162s
+[17:11:08] ep   2/20 COL clr=-0.001m steps= 60 t=4.4s | SR=0.00 CR=1.00 ETA=116s
+[17:11:32] ep   3/20 COL clr=-0.003m steps=418 t=23.6s | SR=0.00 CR=1.00 ETA=207s
+[17:12:03] ep   4/20 T/O clr=0.020m steps=500 t=30.9s | SR=0.00 CR=0.75 ETA=270s
+[17:12:17] ep   5/20 OK clr=0.150m steps=243 t=14.0s | SR=0.20 CR=0.60 ETA=245s
+[17:12:47] ep   6/20 T/O clr=0.049m steps=500 t=30.0s | SR=0.17 CR=0.50 ETA=260s
+[17:13:10] ep   7/20 OK clr=0.005m steps=355 t=23.2s | SR=0.29 CR=0.43 ETA=250s
+[17:13:38] ep   8/20 T/O clr=0.010m steps=500 t=27.9s | SR=0.25 CR=0.38 ETA=244s
+[17:13:53] ep   9/20 COL clr=-0.013m steps=204 t=14.9s | SR=0.22 CR=0.44 ETA=217s
+[17:14:20] ep  10/20 COL clr=-0.012m steps=476 t=26.5s | SR=0.20 CR=0.50 ETA=204s
+[17:14:44] ep  11/20 OK clr=0.125m steps=358 t=24.6s | SR=0.27 CR=0.45 ETA=187s
+[17:15:09] ep  12/20 OK clr=0.045m steps=419 t=24.8s | SR=0.33 CR=0.42 ETA=169s
+[17:15:26] ep  13/20 OK clr=0.107m steps=295 t=16.9s | SR=0.38 CR=0.38 ETA=146s
+[17:15:30] ep  14/20 COL clr=-0.020m steps= 57 t=4.1s | SR=0.36 CR=0.43 ETA=118s
+[17:15:57] ep  15/20 OK clr=0.143m steps=458 t=26.9s | SR=0.40 CR=0.40 ETA=100s
+[17:16:09] ep  16/20 OK clr=0.204m steps=202 t=12.0s | SR=0.44 CR=0.38 ETA=78s
+[17:16:19] ep  17/20 COL clr=-0.010m steps=118 t=10.3s | SR=0.41 CR=0.41 ETA=57s
+[17:16:25] ep  18/20 COL clr=-0.004m steps= 91 t=6.0s | SR=0.39 CR=0.44 ETA=37s
+[17:16:35] ep  19/20 COL clr=-0.006m steps=170 t=10.2s | SR=0.37 CR=0.47 ETA=18s
+[17:16:43] ep  20/20 COL clr=-0.007m steps=129 t=8.0s | SR=0.35 CR=0.50 ETA=0s
+
+[17:16:43] DONE in 348s (17.4s/ep)
+  SR=0.350  CR=0.500  Clearance=0.038m  SuccClearance=0.111m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed4.json
+[2026-05-24 17:16:44]   ✓ Done in 353s | Total elapsed: 9276s | ETA: ~1855s
+
+[2026-05-24 17:16:44] ── Method: focops ──
+[2026-05-24 17:16:44]   [26/30] RUN focops/seed0 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:16:47] Creating env (fast_mode=True)
+[17:16:47] Loading model: /home/toor/gitProjects/daars-nav/results/models/focops_seed0
+[17:16:48] Running 20 episodes...
+[17:17:11] ep   1/20 OK clr=0.059m steps=356 t=23.0s | SR=1.00 CR=0.00 ETA=437s
+[17:17:31] ep   2/20 OK clr=0.041m steps=285 t=19.6s | SR=1.00 CR=0.00 ETA=383s
+[17:17:42] ep   3/20 OK clr=0.083m steps=196 t=11.7s | SR=1.00 CR=0.00 ETA=308s
+[17:18:10] ep   4/20 T/O clr=0.093m steps=500 t=27.7s | SR=0.75 CR=0.00 ETA=328s
+[17:18:16] ep   5/20 COL clr=-0.008m steps= 98 t=6.3s | SR=0.60 CR=0.20 ETA=265s
+[17:18:30] ep   6/20 COL clr=-0.003m steps=225 t=13.2s | SR=0.50 CR=0.33 ETA=237s
+[17:18:56] ep   7/20 OK clr=0.178m steps=475 t=26.6s | SR=0.57 CR=0.29 ETA=238s
+[17:19:10] ep   8/20 OK clr=0.002m steps=228 t=13.5s | SR=0.62 CR=0.25 ETA=212s
+[17:19:36] ep   9/20 COL clr=-0.008m steps=461 t=26.0s | SR=0.56 CR=0.33 ETA=205s
+[17:19:40] ep  10/20 COL clr=-0.003m steps= 48 t=3.8s | SR=0.50 CR=0.40 ETA=171s
+[17:20:01] ep  11/20 OK clr=0.058m steps=384 t=21.8s | SR=0.55 CR=0.36 ETA=158s
+[17:20:25] ep  12/20 OK clr=0.016m steps=419 t=23.9s | SR=0.58 CR=0.33 ETA=145s
+[17:20:43] ep  13/20 OK clr=0.015m steps=314 t=18.0s | SR=0.62 CR=0.31 ETA=127s
+[17:21:05] ep  14/20 OK clr=0.100m steps=373 t=21.2s | SR=0.64 CR=0.29 ETA=110s
+[17:21:10] ep  15/20 COL clr=-0.039m steps= 75 t=5.3s | SR=0.60 CR=0.33 ETA=87s
+[17:21:20] ep  16/20 COL clr=-0.001m steps=161 t=10.1s | SR=0.56 CR=0.38 ETA=68s
+[17:21:37] ep  17/20 OK clr=0.247m steps=301 t=17.2s | SR=0.59 CR=0.35 ETA=51s
+[17:21:47] ep  18/20 OK clr=0.193m steps=166 t=10.2s | SR=0.61 CR=0.33 ETA=33s
+[17:22:15] ep  19/20 T/O clr=0.026m steps=500 t=28.0s | SR=0.58 CR=0.32 ETA=17s
+[17:22:43] ep  20/20 T/O clr=0.005m steps=500 t=28.0s | SR=0.55 CR=0.30 ETA=0s
+
+[17:22:43] DONE in 355s (17.8s/ep)
+  SR=0.550  CR=0.300  Clearance=0.053m  SuccClearance=0.090m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/focops_seed0.json
+[2026-05-24 17:22:45]   ✓ Done in 361s | Total elapsed: 9637s | ETA: ~1480s
+
+[2026-05-24 17:22:45]   [27/30] RUN focops/seed1 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:22:47] Creating env (fast_mode=True)
+[17:22:47] Loading model: /home/toor/gitProjects/daars-nav/results/models/focops_seed1
+[17:22:49] Running 20 episodes...
+[17:22:56] ep   1/20 COL clr=-0.005m steps=109 t=7.1s | SR=0.00 CR=1.00 ETA=136s
+[17:23:12] ep   2/20 OK clr=0.253m steps=275 t=15.9s | SR=0.50 CR=0.50 ETA=207s
+[17:23:33] ep   3/20 COL clr=-0.002m steps=284 t=21.2s | SR=0.33 CR=0.67 ETA=251s
+[17:23:43] ep   4/20 COL clr=-0.002m steps=165 t=10.2s | SR=0.25 CR=0.75 ETA=218s
+[17:24:12] ep   5/20 T/O clr=0.025m steps=500 t=28.4s | SR=0.20 CR=0.60 ETA=249s
+[17:24:17] ep   6/20 COL clr=-0.015m steps= 78 t=5.5s | SR=0.17 CR=0.67 ETA=206s
+[17:24:31] ep   7/20 OK clr=0.170m steps=233 t=13.7s | SR=0.29 CR=0.57 ETA=190s
+[17:24:37] ep   8/20 COL clr=-0.017m steps= 86 t=5.9s | SR=0.25 CR=0.62 ETA=162s
+[17:24:54] ep   9/20 OK clr=0.189m steps=302 t=17.5s | SR=0.33 CR=0.56 ETA=153s
+[17:25:14] ep  10/20 OK clr=0.012m steps=267 t=19.3s | SR=0.40 CR=0.50 ETA=145s
+[17:25:43] ep  11/20 T/O clr=0.075m steps=500 t=29.2s | SR=0.36 CR=0.45 ETA=142s
+[17:26:10] ep  12/20 T/O clr=0.026m steps=500 t=27.7s | SR=0.33 CR=0.42 ETA=134s
+[17:26:42] ep  13/20 T/O clr=0.098m steps=500 t=31.0s | SR=0.31 CR=0.38 ETA=125s
+[17:26:47] ep  14/20 COL clr=-0.015m steps= 83 t=5.6s | SR=0.29 CR=0.43 ETA=102s
+[17:26:55] ep  15/20 COL clr=-0.022m steps= 68 t=7.7s | SR=0.27 CR=0.47 ETA=82s
+[17:27:02] ep  16/20 COL clr=-0.005m steps=103 t=6.7s | SR=0.25 CR=0.50 ETA=63s
+[17:27:21] ep  17/20 OK clr=0.079m steps=343 t=19.5s | SR=0.29 CR=0.47 ETA=48s
+[17:27:32] ep  18/20 COL clr=-0.027m steps=177 t=10.6s | SR=0.28 CR=0.50 ETA=31s
+[17:28:04] ep  19/20 T/O clr=0.062m steps=500 t=32.3s | SR=0.26 CR=0.47 ETA=17s
+[17:28:17] ep  20/20 COL clr=-0.003m steps=218 t=12.9s | SR=0.25 CR=0.50 ETA=0s
+
+[17:28:17] DONE in 328s (16.4s/ep)
+  SR=0.250  CR=0.500  Clearance=0.044m  SuccClearance=0.141m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/focops_seed1.json
+[2026-05-24 17:28:18]   ✓ Done in 333s | Total elapsed: 9970s | ETA: ~1107s
+
+[2026-05-24 17:28:18]   [28/30] RUN focops/seed2 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:28:21] Creating env (fast_mode=True)
+[17:28:21] Loading model: /home/toor/gitProjects/daars-nav/results/models/focops_seed2
+[17:28:23] Running 20 episodes...
+[17:28:35] ep   1/20 COL clr=-0.016m steps=199 t=12.0s | SR=0.00 CR=1.00 ETA=228s
+[17:28:58] ep   2/20 COL clr=-0.022m steps=368 t=22.7s | SR=0.00 CR=1.00 ETA=313s
+[17:29:09] ep   3/20 COL clr=-0.041m steps=195 t=11.6s | SR=0.00 CR=1.00 ETA=263s
+[17:29:26] ep   4/20 OK clr=0.240m steps=239 t=16.6s | SR=0.25 CR=0.75 ETA=252s
+[17:29:30] ep   5/20 COL clr=-0.033m steps= 57 t=4.1s | SR=0.20 CR=0.80 ETA=201s
+[17:29:48] ep   6/20 OK clr=0.145m steps=317 t=18.0s | SR=0.33 CR=0.67 ETA=199s
+[17:29:52] ep   7/20 COL clr=-0.016m steps= 45 t=3.6s | SR=0.29 CR=0.71 ETA=165s
+[17:30:17] ep   8/20 OK clr=0.024m steps=454 t=25.4s | SR=0.38 CR=0.62 ETA=171s
+[17:30:23] ep   9/20 COL clr=-0.026m steps= 87 t=5.9s | SR=0.33 CR=0.67 ETA=147s
+[17:30:35] ep  10/20 COL clr=-0.015m steps=196 t=11.8s | SR=0.30 CR=0.70 ETA=132s
+[17:30:50] ep  11/20 OK clr=0.246m steps=269 t=15.6s | SR=0.36 CR=0.64 ETA=121s
+[17:31:02] ep  12/20 COL clr=-0.006m steps=192 t=11.7s | SR=0.33 CR=0.67 ETA=106s
+[17:31:15] ep  13/20 OK clr=0.009m steps=225 t=13.3s | SR=0.38 CR=0.62 ETA=93s
+[17:31:26] ep  14/20 OK clr=0.127m steps=179 t=11.0s | SR=0.43 CR=0.57 ETA=79s
+[17:31:44] ep  15/20 COL clr=-0.008m steps=228 t=18.0s | SR=0.40 CR=0.60 ETA=67s
+[17:32:02] ep  16/20 OK clr=0.120m steps=306 t=17.5s | SR=0.44 CR=0.56 ETA=55s
+[17:32:14] ep  17/20 COL clr=-0.024m steps=211 t=12.5s | SR=0.41 CR=0.59 ETA=41s
+[17:32:19] ep  18/20 COL clr=-0.019m steps= 56 t=4.2s | SR=0.39 CR=0.61 ETA=26s
+[17:32:23] ep  19/20 COL clr=-0.004m steps= 57 t=4.2s | SR=0.37 CR=0.63 ETA=13s
+[17:32:29] ep  20/20 COL clr=-0.016m steps= 90 t=6.0s | SR=0.35 CR=0.65 ETA=0s
+
+[17:32:29] DONE in 246s (12.3s/ep)
+  SR=0.350  CR=0.650  Clearance=0.033m  SuccClearance=0.130m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/focops_seed2.json
+[2026-05-24 17:32:30]   ✓ Done in 252s | Total elapsed: 10222s | ETA: ~730s
+
+[2026-05-24 17:32:30]   [29/30] RUN focops/seed3 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:32:32] Creating env (fast_mode=True)
+[17:32:33] Loading model: /home/toor/gitProjects/daars-nav/results/models/focops_seed3
+[17:32:34] Running 20 episodes...
+[17:32:43] ep   1/20 COL clr=-0.005m steps=136 t=8.8s | SR=0.00 CR=1.00 ETA=167s
+[17:32:47] ep   2/20 COL clr=-0.005m steps= 49 t=3.8s | SR=0.00 CR=1.00 ETA=113s
+[17:32:52] ep   3/20 COL clr=-0.013m steps= 83 t=5.6s | SR=0.00 CR=1.00 ETA=103s
+[17:33:12] ep   4/20 OK clr=0.095m steps=349 t=19.6s | SR=0.25 CR=0.75 ETA=151s
+[17:33:17] ep   5/20 COL clr=-0.038m steps= 79 t=5.4s | SR=0.20 CR=0.80 ETA=130s
+[17:33:30] ep   6/20 COL clr=-0.014m steps=117 t=12.3s | SR=0.17 CR=0.83 ETA=130s
+[17:33:40] ep   7/20 OK clr=0.267m steps=180 t=10.8s | SR=0.29 CR=0.71 ETA=123s
+[17:33:48] ep   8/20 COL clr=-0.007m steps=113 t=7.4s | SR=0.25 CR=0.75 ETA=111s
+[17:33:59] ep   9/20 COL clr=-0.008m steps=165 t=10.7s | SR=0.22 CR=0.78 ETA=103s
+[17:34:05] ep  10/20 COL clr=-0.005m steps= 95 t=6.2s | SR=0.20 CR=0.80 ETA=91s
+[17:34:26] ep  11/20 OK clr=0.063m steps=378 t=21.2s | SR=0.27 CR=0.73 ETA=92s
+[17:34:49] ep  12/20 OK clr=0.039m steps=360 t=23.2s | SR=0.33 CR=0.67 ETA=90s
+[17:35:01] ep  13/20 OK clr=0.025m steps=205 t=12.3s | SR=0.38 CR=0.62 ETA=79s
+[17:35:19] ep  14/20 OK clr=0.058m steps=305 t=17.3s | SR=0.43 CR=0.57 ETA=71s
+[17:35:27] ep  15/20 COL clr=-0.001m steps=128 t=8.1s | SR=0.40 CR=0.60 ETA=58s
+[17:35:48] ep  16/20 OK clr=0.258m steps=274 t=20.8s | SR=0.44 CR=0.56 ETA=48s
+[17:36:02] ep  17/20 OK clr=0.063m steps=256 t=14.8s | SR=0.47 CR=0.53 ETA=37s
+[17:36:13] ep  18/20 COL clr=-0.001m steps=181 t=10.8s | SR=0.44 CR=0.56 ETA=24s
+[17:36:28] ep  19/20 OK clr=0.029m steps=259 t=15.2s | SR=0.47 CR=0.53 ETA=12s
+[17:36:47] ep  20/20 OK clr=0.069m steps=325 t=18.5s | SR=0.50 CR=0.50 ETA=0s
+
+[17:36:47] DONE in 253s (12.6s/ep)
+  SR=0.500  CR=0.500  Clearance=0.043m  SuccClearance=0.097m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/focops_seed3.json
+[2026-05-24 17:36:48]   ✓ Done in 258s | Total elapsed: 10480s | ETA: ~361s
+
+[2026-05-24 17:36:48]   [30/30] RUN focops/seed4 (20 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:36:52] Creating env (fast_mode=True)
+[17:36:52] Loading model: /home/toor/gitProjects/daars-nav/results/models/focops_seed4
+[17:36:54] Running 20 episodes...
+[17:37:20] ep   1/20 OK clr=0.128m steps=475 t=26.5s | SR=1.00 CR=0.00 ETA=503s
+[17:37:51] ep   2/20 T/O clr=0.423m steps=500 t=30.7s | SR=0.50 CR=0.00 ETA=514s
+[17:38:07] ep   3/20 OK clr=0.225m steps=287 t=16.4s | SR=0.67 CR=0.00 ETA=417s
+[17:38:20] ep   4/20 COL clr=-0.012m steps=130 t=12.5s | SR=0.50 CR=0.25 ETA=344s
+[17:38:35] ep   5/20 OK clr=0.163m steps=266 t=15.7s | SR=0.60 CR=0.20 ETA=305s
+[17:38:43] ep   6/20 COL clr=-0.019m steps=124 t=7.9s | SR=0.50 CR=0.33 ETA=256s
+[17:39:07] ep   7/20 OK clr=0.006m steps=412 t=23.6s | SR=0.57 CR=0.29 ETA=247s
+[17:39:37] ep   8/20 T/O clr=0.044m steps=500 t=30.7s | SR=0.50 CR=0.25 ETA=246s
+[17:40:04] ep   9/20 COL clr=-0.005m steps=440 t=26.2s | SR=0.44 CR=0.33 ETA=232s
+[17:40:31] ep  10/20 OK clr=0.044m steps=486 t=27.2s | SR=0.50 CR=0.30 ETA=217s
+[17:40:52] ep  11/20 OK clr=0.026m steps=336 t=21.3s | SR=0.55 CR=0.27 ETA=195s
+[17:41:23] ep  12/20 T/O clr=0.115m steps=500 t=30.7s | SR=0.50 CR=0.25 ETA=180s
+[17:41:37] ep  13/20 OK clr=0.037m steps=248 t=14.3s | SR=0.54 CR=0.23 ETA=153s
+[17:42:02] ep  14/20 OK clr=0.156m steps=380 t=24.4s | SR=0.57 CR=0.21 ETA=132s
+[17:42:10] ep  15/20 COL clr=-0.011m steps=141 t=8.6s | SR=0.53 CR=0.27 ETA=106s
+[17:42:25] ep  16/20 COL clr=-0.009m steps=208 t=15.2s | SR=0.50 CR=0.31 ETA=83s
+[17:42:45] ep  17/20 OK clr=0.054m steps=339 t=19.2s | SR=0.53 CR=0.29 ETA=62s
+[17:42:59] ep  18/20 COL clr=-0.032m steps=189 t=14.3s | SR=0.50 CR=0.33 ETA=41s
+[17:43:04] ep  19/20 COL clr=-0.003m steps= 68 t=4.8s | SR=0.47 CR=0.37 ETA=19s
+[17:43:14] ep  20/20 COL clr=-0.013m steps=164 t=9.8s | SR=0.45 CR=0.40 ETA=0s
+
+[17:43:14] DONE in 380s (19.0s/ep)
+  SR=0.450  CR=0.400  Clearance=0.066m  SuccClearance=0.093m
+  Saved → /home/toor/gitProjects/daars-nav/results/gazebo/focops_seed4.json
+[2026-05-24 17:43:15]   ✓ Done in 387s | Total elapsed: 10867s | ETA: ~0s
+
+
+[2026-05-24 17:43:15] ════════════════════════════════════════════════════════════════
+[2026-05-24 17:43:15]   EVALUATION COMPLETE
+[2026-05-24 17:43:15]   Total time:  10867s (181m)
+[2026-05-24 17:43:15]   Jobs run:    30
+[2026-05-24 17:43:15]   Skipped:     0
+[2026-05-24 17:43:15]   Failed:      0
+[2026-05-24 17:43:15]   Results:     /home/toor/gitProjects/daars-nav/results/gazebo/
+[2026-05-24 17:43:15]   Log:         /home/toor/gitProjects/daars-nav/results/gazebo/gazebo_eval.log
+[2026-05-24 17:43:15] ════════════════════════════════════════════════════════════════
+[2026-05-24 17:43:15] 
+[2026-05-24 17:43:15] Next step: python3 scripts/analyze_gazebo.py
+[2026-05-24 17:43:15] Shutting down Gazebo...
+[INFO] [1779623895.119213293] [rclcpp]: signal_handler(signum=15)
+[INFO] [1779623895.141836661] [rclcpp]: signal_handler(signum=15)

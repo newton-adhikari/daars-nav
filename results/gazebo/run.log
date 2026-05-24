@@ -1,0 +1,1299 @@
+=== Gazebo Run Started: Wed May 20 16:46:21 +0545 2026 ===
+[16:46:21] Starting Gazebo (headless)...
+[16:46:21] Waiting for Gazebo services...
+[16:46:32] Gazebo ready (6s)
+[16:46:34] LiDAR active
+[16:46:36] Running 25 evaluation jobs...
+[16:46:36] [1/25] daars/seed0 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:46:41] Creating GazeboNavEnv (fast_mode=True)
+[16:46:41] Creating GazeboNavEnv (fast_mode=True)
+[16:46:41] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed0
+[16:46:41] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed0
+[16:46:44] Running 10 episodes in Gazebo...
+[16:46:44] Running 10 episodes in Gazebo...
+[INFO] [1779274906.578755867] [daars_gazebo_env]: Respawned at (5.3, 6.9, yaw=1.18)
+[16:47:07]   ep   1/10  SUCCESS    clr=0.077m  steps=328  t=22.7s  SR=1.00  CR=0.00  ETA=204s
+[16:47:07]   ep   1/10  SUCCESS    clr=0.077m  steps=328  t=22.7s  SR=1.00  CR=0.00  ETA=204s
+[INFO] [1779274929.253217878] [daars_gazebo_env]: Respawned at (7.2, 6.0, yaw=2.54)
+[16:47:24]   ep   2/10  COLLISION  clr=-0.008m  steps=287  t=17.7s  SR=0.50  CR=0.50  ETA=162s
+[16:47:24]   ep   2/10  COLLISION  clr=-0.008m  steps=287  t=17.7s  SR=0.50  CR=0.50  ETA=162s
+[INFO] [1779274946.855480696] [daars_gazebo_env]: Respawned at (6.8, 5.9, yaw=-2.02)
+[16:47:46]   ep   3/10  SUCCESS    clr=0.030m  steps=307  t=21.4s  SR=0.67  CR=0.33  ETA=144s
+[16:47:46]   ep   3/10  SUCCESS    clr=0.030m  steps=307  t=21.4s  SR=0.67  CR=0.33  ETA=144s
+[INFO] [1779274968.305249265] [daars_gazebo_env]: Respawned at (1.3, 6.6, yaw=2.12)
+[16:47:58]   ep   4/10  COLLISION  clr=-0.024m  steps=185  t=12.3s  SR=0.50  CR=0.50  ETA=111s
+[16:47:58]   ep   4/10  COLLISION  clr=-0.024m  steps=185  t=12.3s  SR=0.50  CR=0.50  ETA=111s
+[INFO] [1779274980.474382453] [daars_gazebo_env]: Respawned at (4.8, 7.3, yaw=2.90)
+[16:48:24]   ep   5/10  SUCCESS    clr=0.025m  steps=390  t=25.6s  SR=0.60  CR=0.40  ETA=100s
+[16:48:24]   ep   5/10  SUCCESS    clr=0.025m  steps=390  t=25.6s  SR=0.60  CR=0.40  ETA=100s
+[INFO] [1779275006.050866140] [daars_gazebo_env]: Respawned at (3.0, 3.4, yaw=-1.06)
+[16:48:50]   ep   6/10  SUCCESS    clr=0.029m  steps=401  t=26.1s  SR=0.67  CR=0.33  ETA=84s
+[16:48:50]   ep   6/10  SUCCESS    clr=0.029m  steps=401  t=26.1s  SR=0.67  CR=0.33  ETA=84s
+[INFO] [1779275032.292098742] [daars_gazebo_env]: Respawned at (0.7, 0.6, yaw=0.68)
+[16:48:57]   ep   7/10  COLLISION  clr=-0.007m  steps= 98  t=7.7s  SR=0.57  CR=0.43  ETA=57s
+[16:48:57]   ep   7/10  COLLISION  clr=-0.007m  steps= 98  t=7.7s  SR=0.57  CR=0.43  ETA=57s
+[INFO] [1779275039.990582462] [daars_gazebo_env]: Respawned at (3.7, 7.0, yaw=-2.13)
+[16:49:11]   ep   8/10  COLLISION  clr=-0.007m  steps=215  t=13.8s  SR=0.50  CR=0.50  ETA=37s
+[16:49:11]   ep   8/10  COLLISION  clr=-0.007m  steps=215  t=13.8s  SR=0.50  CR=0.50  ETA=37s
+[INFO] [1779275053.767233393] [daars_gazebo_env]: Respawned at (1.4, 7.2, yaw=1.27)
+[16:49:43]   ep   9/10  TIMEOUT    clr=0.107m  steps=500  t=31.5s  SR=0.44  CR=0.44  ETA=20s
+[16:49:43]   ep   9/10  TIMEOUT    clr=0.107m  steps=500  t=31.5s  SR=0.44  CR=0.44  ETA=20s
+[INFO] [1779275085.203949866] [daars_gazebo_env]: Respawned at (4.2, 5.0, yaw=-1.36)
+[16:50:00]   ep  10/10  SUCCESS    clr=0.108m  steps=243  t=17.7s  SR=0.50  CR=0.40  ETA=0s
+[16:50:00]   ep  10/10  SUCCESS    clr=0.108m  steps=243  t=17.7s  SR=0.50  CR=0.40  ETA=0s
+[16:50:00] 
+[16:50:00] 
+[16:50:00]   DONE in 196s (19.6s/ep)
+[16:50:00]   DONE in 196s (19.6s/ep)
+[16:50:00]   SR=0.500  CR=0.400  Avg-clearance=0.033m
+[16:50:00]   SR=0.500  CR=0.400  Avg-clearance=0.033m
+[16:50:00]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed0.json
+[16:50:00]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed0.json
+[16:50:02]   Completed in 206s | Elapsed: 206s | ETA: ~4944s
+[16:50:02] [2/25] daars/seed1 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:50:04] Creating GazeboNavEnv (fast_mode=True)
+[16:50:04] Creating GazeboNavEnv (fast_mode=True)
+[16:50:04] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed1
+[16:50:04] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed1
+[16:50:06] Running 10 episodes in Gazebo...
+[16:50:06] Running 10 episodes in Gazebo...
+[INFO] [1779275108.359279922] [daars_gazebo_env]: Respawned at (2.5, 5.2, yaw=-2.65)
+[16:50:37]   ep   1/10  TIMEOUT    clr=0.075m  steps=500  t=31.7s  SR=0.00  CR=0.00  ETA=286s
+[16:50:37]   ep   1/10  TIMEOUT    clr=0.075m  steps=500  t=31.7s  SR=0.00  CR=0.00  ETA=286s
+[INFO] [1779275140.085759075] [daars_gazebo_env]: Respawned at (7.3, 4.9, yaw=-0.86)
+[16:51:09]   ep   2/10  TIMEOUT    clr=0.010m  steps=500  t=31.7s  SR=0.00  CR=0.00  ETA=253s
+[16:51:09]   ep   2/10  TIMEOUT    clr=0.010m  steps=500  t=31.7s  SR=0.00  CR=0.00  ETA=253s
+[INFO] [1779275171.621799651] [daars_gazebo_env]: Respawned at (6.4, 7.0, yaw=0.01)
+[16:51:28]   ep   3/10  COLLISION  clr=-0.023m  steps=313  t=19.0s  SR=0.00  CR=0.33  ETA=192s
+[16:51:28]   ep   3/10  COLLISION  clr=-0.023m  steps=313  t=19.0s  SR=0.00  CR=0.33  ETA=192s
+[INFO] [1779275190.616971496] [daars_gazebo_env]: Respawned at (7.0, 4.0, yaw=1.65)
+[16:51:33]   ep   4/10  COLLISION  clr=-0.004m  steps= 45  t=4.8s  SR=0.00  CR=0.50  ETA=131s
+[16:51:33]   ep   4/10  COLLISION  clr=-0.004m  steps= 45  t=4.8s  SR=0.00  CR=0.50  ETA=131s
+[INFO] [1779275195.373718921] [daars_gazebo_env]: Respawned at (3.4, 5.6, yaw=2.31)
+[16:52:00]   ep   5/10  SUCCESS    clr=0.060m  steps=378  t=26.7s  SR=0.20  CR=0.40  ETA=114s
+[16:52:00]   ep   5/10  SUCCESS    clr=0.060m  steps=378  t=26.7s  SR=0.20  CR=0.40  ETA=114s
+[INFO] [1779275223.148658143] [daars_gazebo_env]: Respawned at (2.0, 4.5, yaw=-2.06)
+[16:52:24]   ep   6/10  SUCCESS    clr=0.129m  steps=330  t=24.5s  SR=0.33  CR=0.33  ETA=92s
+[16:52:24]   ep   6/10  SUCCESS    clr=0.129m  steps=330  t=24.5s  SR=0.33  CR=0.33  ETA=92s
+[INFO] [1779275247.609964818] [daars_gazebo_env]: Respawned at (4.7, 6.7, yaw=-2.77)
+[16:52:58]   ep   7/10  COLLISION  clr=-0.022m  steps=499  t=34.1s  SR=0.29  CR=0.43  ETA=74s
+[16:52:58]   ep   7/10  COLLISION  clr=-0.022m  steps=499  t=34.1s  SR=0.29  CR=0.43  ETA=74s
+[INFO] [1779275281.486344927] [daars_gazebo_env]: Respawned at (0.6, 4.1, yaw=0.02)
+[16:53:32]   ep   8/10  TIMEOUT    clr=0.121m  steps=500  t=33.5s  SR=0.25  CR=0.38  ETA=51s
+[16:53:32]   ep   8/10  TIMEOUT    clr=0.121m  steps=500  t=33.5s  SR=0.25  CR=0.38  ETA=51s
+[INFO] [1779275315.114094671] [daars_gazebo_env]: Respawned at (6.0, 2.1, yaw=0.19)
+[16:54:06]   ep   9/10  TIMEOUT    clr=0.003m  steps=500  t=33.8s  SR=0.22  CR=0.33  ETA=27s
+[16:54:06]   ep   9/10  TIMEOUT    clr=0.003m  steps=500  t=33.8s  SR=0.22  CR=0.33  ETA=27s
+[INFO] [1779275348.902425642] [daars_gazebo_env]: Respawned at (7.1, 2.9, yaw=-0.53)
+[16:54:39]   ep  10/10  TIMEOUT    clr=0.027m  steps=500  t=33.4s  SR=0.20  CR=0.30  ETA=0s
+[16:54:39]   ep  10/10  TIMEOUT    clr=0.027m  steps=500  t=33.4s  SR=0.20  CR=0.30  ETA=0s
+[16:54:39] 
+[16:54:39] 
+[16:54:39]   DONE in 273s (27.3s/ep)
+[16:54:39]   DONE in 273s (27.3s/ep)
+[16:54:39]   SR=0.200  CR=0.300  Avg-clearance=0.038m
+[16:54:39]   SR=0.200  CR=0.300  Avg-clearance=0.038m
+[16:54:39]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed1.json
+[16:54:39]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed1.json
+[16:54:41]   Completed in 279s | Elapsed: 485s | ETA: ~5566s
+[16:54:41] [3/25] daars/seed2 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:54:45] Creating GazeboNavEnv (fast_mode=True)
+[16:54:45] Creating GazeboNavEnv (fast_mode=True)
+[16:54:45] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed2
+[16:54:45] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed2
+[16:54:48] Running 10 episodes in Gazebo...
+[16:54:48] Running 10 episodes in Gazebo...
+[INFO] [1779275390.592575287] [daars_gazebo_env]: Respawned at (3.0, 3.3, yaw=-0.45)
+[16:55:21]   ep   1/10  TIMEOUT    clr=0.150m  steps=500  t=33.1s  SR=0.00  CR=0.00  ETA=298s
+[16:55:21]   ep   1/10  TIMEOUT    clr=0.150m  steps=500  t=33.1s  SR=0.00  CR=0.00  ETA=298s
+[INFO] [1779275423.698969192] [daars_gazebo_env]: Respawned at (5.6, 6.7, yaw=0.88)
+[16:55:51]   ep   2/10  SUCCESS    clr=0.137m  steps=440  t=29.7s  SR=0.50  CR=0.00  ETA=251s
+[16:55:51]   ep   2/10  SUCCESS    clr=0.137m  steps=440  t=29.7s  SR=0.50  CR=0.00  ETA=251s
+[INFO] [1779275453.517755769] [daars_gazebo_env]: Respawned at (4.2, 4.6, yaw=-2.78)
+[16:56:14]   ep   3/10  COLLISION  clr=-0.017m  steps=377  t=23.7s  SR=0.33  CR=0.33  ETA=202s
+[16:56:14]   ep   3/10  COLLISION  clr=-0.017m  steps=377  t=23.7s  SR=0.33  CR=0.33  ETA=202s
+[INFO] [1779275477.223893023] [daars_gazebo_env]: Respawned at (7.2, 2.7, yaw=2.74)
+[16:56:30]   ep   4/10  SUCCESS    clr=0.166m  steps=185  t=15.7s  SR=0.50  CR=0.25  ETA=153s
+[16:56:30]   ep   4/10  SUCCESS    clr=0.166m  steps=185  t=15.7s  SR=0.50  CR=0.25  ETA=153s
+[INFO] [1779275492.798845837] [daars_gazebo_env]: Respawned at (1.3, 7.4, yaw=-2.13)
+[16:56:51]   ep   5/10  COLLISION  clr=-0.006m  steps=317  t=20.6s  SR=0.40  CR=0.40  ETA=123s
+[16:56:51]   ep   5/10  COLLISION  clr=-0.006m  steps=317  t=20.6s  SR=0.40  CR=0.40  ETA=123s
+[INFO] [1779275513.536915159] [daars_gazebo_env]: Respawned at (4.9, 6.8, yaw=-1.77)
+[16:57:04]   ep   6/10  COLLISION  clr=-0.009m  steps=183  t=13.2s  SR=0.33  CR=0.50  ETA=91s
+[16:57:04]   ep   6/10  COLLISION  clr=-0.009m  steps=183  t=13.2s  SR=0.33  CR=0.50  ETA=91s
+[INFO] [1779275526.514951761] [daars_gazebo_env]: Respawned at (5.2, 6.3, yaw=0.30)
+[16:57:21]   ep   7/10  SUCCESS    clr=0.238m  steps=252  t=16.7s  SR=0.43  CR=0.43  ETA=65s
+[16:57:21]   ep   7/10  SUCCESS    clr=0.238m  steps=252  t=16.7s  SR=0.43  CR=0.43  ETA=65s
+[INFO] [1779275543.395855394] [daars_gazebo_env]: Respawned at (2.6, 1.9, yaw=1.29)
+[16:57:57]   ep   8/10  COLLISION  clr=-0.000m  steps=496  t=36.4s  SR=0.38  CR=0.50  ETA=47s
+[16:57:57]   ep   8/10  COLLISION  clr=-0.000m  steps=496  t=36.4s  SR=0.38  CR=0.50  ETA=47s
+[INFO] [1779275579.555511528] [daars_gazebo_env]: Respawned at (4.9, 0.7, yaw=3.02)
+[16:58:29]   ep   9/10  SUCCESS    clr=0.038m  steps=491  t=32.4s  SR=0.44  CR=0.44  ETA=25s
+[16:58:29]   ep   9/10  SUCCESS    clr=0.038m  steps=491  t=32.4s  SR=0.44  CR=0.44  ETA=25s
+[INFO] [1779275611.968594275] [daars_gazebo_env]: Respawned at (6.1, 6.8, yaw=-0.24)
+[16:58:35]   ep  10/10  COLLISION  clr=-0.001m  steps= 54  t=5.5s  SR=0.40  CR=0.50  ETA=0s
+[16:58:35]   ep  10/10  COLLISION  clr=-0.001m  steps= 54  t=5.5s  SR=0.40  CR=0.50  ETA=0s
+[16:58:35] 
+[16:58:35] 
+[16:58:35]   DONE in 227s (22.7s/ep)
+[16:58:35]   DONE in 227s (22.7s/ep)
+[16:58:35]   SR=0.400  CR=0.500  Avg-clearance=0.070m
+[16:58:35]   SR=0.400  CR=0.500  Avg-clearance=0.070m
+[16:58:35]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed2.json
+[16:58:35]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed2.json
+[16:58:36]   Completed in 235s | Elapsed: 720s | ETA: ~5280s
+[16:58:36] [4/25] daars/seed3 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[16:58:41] Creating GazeboNavEnv (fast_mode=True)
+[16:58:41] Creating GazeboNavEnv (fast_mode=True)
+[16:58:41] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed3
+[16:58:41] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed3
+[16:58:43] Running 10 episodes in Gazebo...
+[16:58:43] Running 10 episodes in Gazebo...
+[INFO] [1779275625.654248912] [daars_gazebo_env]: Respawned at (2.5, 1.9, yaw=-1.63)
+[16:58:59]   ep   1/10  SUCCESS    clr=0.046m  steps=193  t=16.3s  SR=1.00  CR=0.00  ETA=147s
+[16:58:59]   ep   1/10  SUCCESS    clr=0.046m  steps=193  t=16.3s  SR=1.00  CR=0.00  ETA=147s
+[INFO] [1779275642.004408170] [daars_gazebo_env]: Respawned at (4.6, 7.0, yaw=-1.49)
+[16:59:13]   ep   2/10  COLLISION  clr=-0.017m  steps=191  t=13.4s  SR=0.50  CR=0.50  ETA=119s
+[16:59:13]   ep   2/10  COLLISION  clr=-0.017m  steps=191  t=13.4s  SR=0.50  CR=0.50  ETA=119s
+[INFO] [1779275655.410786971] [daars_gazebo_env]: Respawned at (5.1, 7.5, yaw=-3.08)
+[16:59:31]   ep   3/10  COLLISION  clr=-0.001m  steps=236  t=18.2s  SR=0.33  CR=0.67  ETA=112s
+[16:59:31]   ep   3/10  COLLISION  clr=-0.001m  steps=236  t=18.2s  SR=0.33  CR=0.67  ETA=112s
+[INFO] [1779275673.548317284] [daars_gazebo_env]: Respawned at (0.5, 6.4, yaw=-0.45)
+[16:59:42]   ep   4/10  COLLISION  clr=-0.032m  steps=151  t=11.1s  SR=0.25  CR=0.75  ETA=89s
+[16:59:42]   ep   4/10  COLLISION  clr=-0.032m  steps=151  t=11.1s  SR=0.25  CR=0.75  ETA=89s
+[INFO] [1779275684.750853256] [daars_gazebo_env]: Respawned at (3.1, 2.6, yaw=-2.36)
+[16:59:55]   ep   5/10  SUCCESS    clr=0.164m  steps=188  t=13.3s  SR=0.40  CR=0.60  ETA=72s
+[16:59:55]   ep   5/10  SUCCESS    clr=0.164m  steps=188  t=13.3s  SR=0.40  CR=0.60  ETA=72s
+[INFO] [1779275698.134017914] [daars_gazebo_env]: Respawned at (1.0, 3.8, yaw=1.42)
+[17:00:18]   ep   6/10  SUCCESS    clr=0.069m  steps=316  t=22.7s  SR=0.50  CR=0.50  ETA=63s
+[17:00:18]   ep   6/10  SUCCESS    clr=0.069m  steps=316  t=22.7s  SR=0.50  CR=0.50  ETA=63s
+[INFO] [1779275720.834323878] [daars_gazebo_env]: Respawned at (7.2, 0.7, yaw=-2.19)
+[17:00:45]   ep   7/10  COLLISION  clr=-0.001m  steps=388  t=27.4s  SR=0.43  CR=0.57  ETA=52s
+[17:00:45]   ep   7/10  COLLISION  clr=-0.001m  steps=388  t=27.4s  SR=0.43  CR=0.57  ETA=52s
+[INFO] [1779275748.186280236] [daars_gazebo_env]: Respawned at (2.2, 1.6, yaw=-3.08)
+[17:01:06]   ep   8/10  COLLISION  clr=-0.011m  steps=308  t=20.4s  SR=0.38  CR=0.62  ETA=36s
+[17:01:06]   ep   8/10  COLLISION  clr=-0.011m  steps=308  t=20.4s  SR=0.38  CR=0.62  ETA=36s
+[INFO] [1779275768.591719390] [daars_gazebo_env]: Respawned at (2.4, 4.0, yaw=-0.95)
+[17:01:19]   ep   9/10  COLLISION  clr=-0.006m  steps=137  t=12.9s  SR=0.33  CR=0.67  ETA=17s
+[17:01:19]   ep   9/10  COLLISION  clr=-0.006m  steps=137  t=12.9s  SR=0.33  CR=0.67  ETA=17s
+[INFO] [1779275781.543877055] [daars_gazebo_env]: Respawned at (4.8, 5.8, yaw=2.82)
+[17:01:32]   ep  10/10  SUCCESS    clr=0.087m  steps=183  t=13.0s  SR=0.40  CR=0.60  ETA=0s
+[17:01:32]   ep  10/10  SUCCESS    clr=0.087m  steps=183  t=13.0s  SR=0.40  CR=0.60  ETA=0s
+[17:01:32] 
+[17:01:32] 
+[17:01:32]   DONE in 169s (16.9s/ep)
+[17:01:32]   DONE in 169s (16.9s/ep)
+[17:01:32]   SR=0.400  CR=0.600  Avg-clearance=0.030m
+[17:01:32]   SR=0.400  CR=0.600  Avg-clearance=0.030m
+[17:01:32]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed3.json
+[17:01:32]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed3.json
+[17:01:33]   Completed in 177s | Elapsed: 897s | ETA: ~4704s
+[17:01:33] [5/25] daars/seed4 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:01:37] Creating GazeboNavEnv (fast_mode=True)
+[17:01:37] Creating GazeboNavEnv (fast_mode=True)
+[17:01:38] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed4
+[17:01:38] Loading model: /home/toor/gitProjects/daars-nav/results/models/daars_seed4
+[17:01:40] Running 10 episodes in Gazebo...
+[17:01:40] Running 10 episodes in Gazebo...
+[INFO] [1779275802.782787074] [daars_gazebo_env]: Respawned at (4.5, 0.8, yaw=1.04)
+[17:01:46]   ep   1/10  COLLISION  clr=-0.020m  steps= 47  t=5.6s  SR=0.00  CR=1.00  ETA=50s
+[17:01:46]   ep   1/10  COLLISION  clr=-0.020m  steps= 47  t=5.6s  SR=0.00  CR=1.00  ETA=50s
+[INFO] [1779275811.303881677] [daars_gazebo_env]: Respawned at (1.1, 3.8, yaw=-1.68)
+[17:02:09]   ep   2/10  COLLISION  clr=-0.006m  steps=305  t=23.1s  SR=0.00  CR=1.00  ETA=115s
+[17:02:09]   ep   2/10  COLLISION  clr=-0.006m  steps=305  t=23.1s  SR=0.00  CR=1.00  ETA=115s
+[INFO] [1779275831.514458218] [daars_gazebo_env]: Respawned at (6.9, 3.6, yaw=-0.76)
+[17:02:27]   ep   3/10  SUCCESS    clr=0.071m  steps=222  t=17.9s  SR=0.33  CR=0.67  ETA=109s
+[17:02:27]   ep   3/10  SUCCESS    clr=0.071m  steps=222  t=17.9s  SR=0.33  CR=0.67  ETA=109s
+[INFO] [1779275849.310161968] [daars_gazebo_env]: Respawned at (4.2, 4.5, yaw=-2.88)
+[17:02:43]   ep   4/10  COLLISION  clr=-0.007m  steps=243  t=16.4s  SR=0.25  CR=0.75  ETA=94s
+[17:02:43]   ep   4/10  COLLISION  clr=-0.007m  steps=243  t=16.4s  SR=0.25  CR=0.75  ETA=94s
+[INFO] [1779275865.795874482] [daars_gazebo_env]: Respawned at (7.2, 1.1, yaw=-1.30)
+[17:03:16]   ep   5/10  SUCCESS    clr=0.107m  steps=481  t=32.8s  SR=0.40  CR=0.60  ETA=96s
+[17:03:16]   ep   5/10  SUCCESS    clr=0.107m  steps=481  t=32.8s  SR=0.40  CR=0.60  ETA=96s
+[INFO] [1779275898.558744589] [daars_gazebo_env]: Respawned at (2.7, 2.5, yaw=1.66)
+[17:03:35]   ep   6/10  SUCCESS    clr=0.277m  steps=243  t=18.9s  SR=0.50  CR=0.50  ETA=76s
+[17:03:35]   ep   6/10  SUCCESS    clr=0.277m  steps=243  t=18.9s  SR=0.50  CR=0.50  ETA=76s
+[INFO] [1779275917.714319925] [daars_gazebo_env]: Respawned at (5.6, 0.8, yaw=2.96)
+[17:03:48]   ep   7/10  COLLISION  clr=-0.021m  steps=185  t=13.5s  SR=0.43  CR=0.57  ETA=55s
+[17:03:48]   ep   7/10  COLLISION  clr=-0.021m  steps=185  t=13.5s  SR=0.43  CR=0.57  ETA=55s
+[INFO] [1779275930.988252322] [daars_gazebo_env]: Respawned at (2.5, 3.8, yaw=1.77)
+[17:04:05]   ep   8/10  SUCCESS    clr=0.173m  steps=238  t=16.4s  SR=0.50  CR=0.50  ETA=36s
+[17:04:05]   ep   8/10  SUCCESS    clr=0.173m  steps=238  t=16.4s  SR=0.50  CR=0.50  ETA=36s
+[INFO] [1779275950.224904675] [daars_gazebo_env]: Respawned at (6.8, 3.0, yaw=-0.26)
+[17:04:38]   ep   9/10  SUCCESS    clr=0.101m  steps=485  t=33.0s  SR=0.56  CR=0.44  ETA=20s
+[17:04:38]   ep   9/10  SUCCESS    clr=0.101m  steps=485  t=33.0s  SR=0.56  CR=0.44  ETA=20s
+[INFO] [1779275980.457756288] [daars_gazebo_env]: Respawned at (5.6, 5.1, yaw=0.09)
+[17:04:50]   ep  10/10  COLLISION  clr=-0.010m  steps=120  t=12.1s  SR=0.50  CR=0.50  ETA=0s
+[17:04:50]   ep  10/10  COLLISION  clr=-0.010m  steps=120  t=12.1s  SR=0.50  CR=0.50  ETA=0s
+[17:04:50] 
+[17:04:50] 
+[17:04:50]   DONE in 190s (19.0s/ep)
+[17:04:50]   DONE in 190s (19.0s/ep)
+[17:04:50]   SR=0.500  CR=0.500  Avg-clearance=0.066m
+[17:04:50]   SR=0.500  CR=0.500  Avg-clearance=0.066m
+[17:04:50]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed4.json
+[17:04:50]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/daars_seed4.json
+[17:04:51]   Completed in 198s | Elapsed: 1095s | ETA: ~4380s
+[17:04:51] [6/25] static/seed0 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:04:55] Creating GazeboNavEnv (fast_mode=True)
+[17:04:55] Creating GazeboNavEnv (fast_mode=True)
+[17:04:56] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed0
+[17:04:56] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed0
+[17:04:58] Running 10 episodes in Gazebo...
+[17:04:58] Running 10 episodes in Gazebo...
+[INFO] [1779276000.754824026] [daars_gazebo_env]: Respawned at (1.2, 5.5, yaw=-2.00)
+[17:05:14]   ep   1/10  COLLISION  clr=-0.007m  steps=236  t=16.5s  SR=0.00  CR=1.00  ETA=149s
+[17:05:14]   ep   1/10  COLLISION  clr=-0.007m  steps=236  t=16.5s  SR=0.00  CR=1.00  ETA=149s
+[INFO] [1779276016.925671413] [daars_gazebo_env]: Respawned at (3.4, 6.7, yaw=-0.70)
+[17:05:37]   ep   2/10  SUCCESS    clr=0.069m  steps=297  t=22.3s  SR=0.50  CR=0.50  ETA=155s
+[17:05:37]   ep   2/10  SUCCESS    clr=0.069m  steps=297  t=22.3s  SR=0.50  CR=0.50  ETA=155s
+[INFO] [1779276039.359751853] [daars_gazebo_env]: Respawned at (3.2, 3.9, yaw=2.67)
+[17:05:55]   ep   3/10  SUCCESS    clr=0.056m  steps=234  t=18.4s  SR=0.67  CR=0.33  ETA=134s
+[17:05:55]   ep   3/10  SUCCESS    clr=0.056m  steps=234  t=18.4s  SR=0.67  CR=0.33  ETA=134s
+[INFO] [1779276057.669176114] [daars_gazebo_env]: Respawned at (2.3, 1.6, yaw=-0.30)
+[17:06:04]   ep   4/10  COLLISION  clr=-0.013m  steps=112  t=8.9s  SR=0.50  CR=0.50  ETA=99s
+[17:06:04]   ep   4/10  COLLISION  clr=-0.013m  steps=112  t=8.9s  SR=0.50  CR=0.50  ETA=99s
+[INFO] [1779276066.648248352] [daars_gazebo_env]: Respawned at (3.0, 2.5, yaw=-1.31)
+[17:06:10]   ep   5/10  COLLISION  clr=-0.005m  steps= 65  t=6.4s  SR=0.40  CR=0.60  ETA=73s
+[17:06:10]   ep   5/10  COLLISION  clr=-0.005m  steps= 65  t=6.4s  SR=0.40  CR=0.60  ETA=73s
+[INFO] [1779276072.984875597] [daars_gazebo_env]: Respawned at (3.2, 3.4, yaw=2.46)
+[17:06:34]   ep   6/10  SUCCESS    clr=0.081m  steps=331  t=23.8s  SR=0.50  CR=0.50  ETA=64s
+[17:06:34]   ep   6/10  SUCCESS    clr=0.081m  steps=331  t=23.8s  SR=0.50  CR=0.50  ETA=64s
+[INFO] [1779276096.935450004] [daars_gazebo_env]: Respawned at (3.7, 7.2, yaw=0.80)
+[17:06:53]   ep   7/10  SUCCESS    clr=0.050m  steps=286  t=18.8s  SR=0.57  CR=0.43  ETA=49s
+[17:06:53]   ep   7/10  SUCCESS    clr=0.050m  steps=286  t=18.8s  SR=0.57  CR=0.43  ETA=49s
+[INFO] [1779276115.809323412] [daars_gazebo_env]: Respawned at (7.2, 3.8, yaw=1.88)
+[17:07:09]   ep   8/10  SUCCESS    clr=0.037m  steps=196  t=16.4s  SR=0.62  CR=0.38  ETA=33s
+[17:07:09]   ep   8/10  SUCCESS    clr=0.037m  steps=196  t=16.4s  SR=0.62  CR=0.38  ETA=33s
+[INFO] [1779276132.042852946] [daars_gazebo_env]: Respawned at (3.9, 7.4, yaw=2.41)
+[17:07:43]   ep   9/10  TIMEOUT    clr=0.045m  steps=500  t=33.4s  SR=0.56  CR=0.33  ETA=18s
+[17:07:43]   ep   9/10  TIMEOUT    clr=0.045m  steps=500  t=33.4s  SR=0.56  CR=0.33  ETA=18s
+[INFO] [1779276165.535038368] [daars_gazebo_env]: Respawned at (2.2, 4.9, yaw=2.70)
+[17:07:58]   ep  10/10  COLLISION  clr=-0.007m  steps=227  t=15.5s  SR=0.50  CR=0.40  ETA=0s
+[17:07:58]   ep  10/10  COLLISION  clr=-0.007m  steps=227  t=15.5s  SR=0.50  CR=0.40  ETA=0s
+[17:07:58] 
+[17:07:58] 
+[17:07:58]   DONE in 180s (18.0s/ep)
+[17:07:58]   SR=0.500  CR=0.400  Avg-clearance=0.031m
+[17:07:58]   DONE in 180s (18.0s/ep)
+[17:07:58]   SR=0.500  CR=0.400  Avg-clearance=0.031m
+[17:07:58]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed0.json
+[17:07:58]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed0.json
+[17:08:00]   Completed in 189s | Elapsed: 1284s | ETA: ~4066s
+[17:08:00] [7/25] static/seed1 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:08:04] Creating GazeboNavEnv (fast_mode=True)
+[17:08:04] Creating GazeboNavEnv (fast_mode=True)
+[17:08:04] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed1
+[17:08:04] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed1
+[17:08:06] Running 10 episodes in Gazebo...
+[17:08:06] Running 10 episodes in Gazebo...
+[INFO] [1779276189.245058489] [daars_gazebo_env]: Respawned at (7.4, 5.6, yaw=-1.35)
+[17:08:17]   ep   1/10  COLLISION  clr=-0.016m  steps= 93  t=10.6s  SR=0.00  CR=1.00  ETA=96s
+[17:08:17]   ep   1/10  COLLISION  clr=-0.016m  steps= 93  t=10.6s  SR=0.00  CR=1.00  ETA=96s
+[INFO] [1779276199.748086232] [daars_gazebo_env]: Respawned at (2.9, 2.0, yaw=-2.88)
+[17:08:25]   ep   2/10  COLLISION  clr=-0.003m  steps= 92  t=8.0s  SR=0.00  CR=1.00  ETA=75s
+[17:08:25]   ep   2/10  COLLISION  clr=-0.003m  steps= 92  t=8.0s  SR=0.00  CR=1.00  ETA=75s
+[INFO] [1779276207.943698412] [daars_gazebo_env]: Respawned at (7.2, 0.6, yaw=-1.39)
+[17:08:58]   ep   3/10  TIMEOUT    clr=0.102m  steps=500  t=33.4s  SR=0.00  CR=0.67  ETA=121s
+[17:08:58]   ep   3/10  TIMEOUT    clr=0.102m  steps=500  t=33.4s  SR=0.00  CR=0.67  ETA=121s
+[INFO] [1779276241.285324959] [daars_gazebo_env]: Respawned at (1.1, 6.0, yaw=2.96)
+[17:09:07]   ep   4/10  COLLISION  clr=-0.006m  steps=104  t=8.6s  SR=0.00  CR=0.75  ETA=91s
+[17:09:07]   ep   4/10  COLLISION  clr=-0.006m  steps=104  t=8.6s  SR=0.00  CR=0.75  ETA=91s
+[INFO] [1779276249.866458839] [daars_gazebo_env]: Respawned at (4.8, 2.8, yaw=1.06)
+[17:09:23]   ep   5/10  SUCCESS    clr=0.088m  steps=204  t=16.4s  SR=0.20  CR=0.60  ETA=77s
+[17:09:23]   ep   5/10  SUCCESS    clr=0.088m  steps=204  t=16.4s  SR=0.20  CR=0.60  ETA=77s
+[INFO] [1779276266.353945173] [daars_gazebo_env]: Respawned at (0.7, 0.6, yaw=0.24)
+[17:09:31]   ep   6/10  COLLISION  clr=-0.000m  steps= 76  t=7.1s  SR=0.17  CR=0.67  ETA=56s
+[17:09:31]   ep   6/10  COLLISION  clr=-0.000m  steps= 76  t=7.1s  SR=0.17  CR=0.67  ETA=56s
+[INFO] [1779276273.350504507] [daars_gazebo_env]: Respawned at (7.2, 2.0, yaw=0.74)
+[17:09:51]   ep   7/10  SUCCESS    clr=0.077m  steps=306  t=20.1s  SR=0.29  CR=0.57  ETA=45s
+[17:09:51]   ep   7/10  SUCCESS    clr=0.077m  steps=306  t=20.1s  SR=0.29  CR=0.57  ETA=45s
+[INFO] [1779276293.417275179] [daars_gazebo_env]: Respawned at (4.8, 5.7, yaw=1.85)
+[17:10:00]   ep   8/10  COLLISION  clr=-0.001m  steps= 76  t=9.3s  SR=0.25  CR=0.62  ETA=28s
+[17:10:00]   ep   8/10  COLLISION  clr=-0.001m  steps= 76  t=9.3s  SR=0.25  CR=0.62  ETA=28s
+[INFO] [1779276302.739105750] [daars_gazebo_env]: Respawned at (7.3, 5.9, yaw=-0.82)
+[17:10:08]   ep   9/10  COLLISION  clr=-0.027m  steps= 89  t=7.8s  SR=0.22  CR=0.67  ETA=13s
+[17:10:08]   ep   9/10  COLLISION  clr=-0.027m  steps= 89  t=7.8s  SR=0.22  CR=0.67  ETA=13s
+[INFO] [1779276310.619966533] [daars_gazebo_env]: Respawned at (4.1, 3.6, yaw=1.83)
+[17:10:23]   ep  10/10  COLLISION  clr=-0.010m  steps=211  t=14.8s  SR=0.20  CR=0.70  ETA=0s
+[17:10:23]   ep  10/10  COLLISION  clr=-0.010m  steps=211  t=14.8s  SR=0.20  CR=0.70  ETA=0s
+[17:10:23] 
+[17:10:23] 
+[17:10:23]   DONE in 136s (13.6s/ep)
+[17:10:23]   DONE in 136s (13.6s/ep)
+[17:10:23]   SR=0.200  CR=0.700  Avg-clearance=0.021m
+[17:10:23]   SR=0.200  CR=0.700  Avg-clearance=0.021m
+[17:10:23]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed1.json
+[17:10:23]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed1.json
+[17:10:24]   Completed in 144s | Elapsed: 1428s | ETA: ~3672s
+[17:10:24] [8/25] static/seed2 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:10:28] Creating GazeboNavEnv (fast_mode=True)
+[17:10:28] Creating GazeboNavEnv (fast_mode=True)
+[17:10:28] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed2
+[17:10:28] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed2
+[17:10:33] Running 10 episodes in Gazebo...
+[17:10:33] Running 10 episodes in Gazebo...
+[INFO] [1779276336.059428413] [daars_gazebo_env]: Respawned at (7.2, 5.2, yaw=-2.03)
+[17:10:39]   ep   1/10  COLLISION  clr=-0.024m  steps= 50  t=6.0s  SR=0.00  CR=1.00  ETA=54s
+[17:10:39]   ep   1/10  COLLISION  clr=-0.024m  steps= 50  t=6.0s  SR=0.00  CR=1.00  ETA=54s
+[INFO] [1779276341.911071577] [daars_gazebo_env]: Respawned at (6.6, 7.2, yaw=0.06)
+[17:11:12]   ep   2/10  TIMEOUT    clr=0.248m  steps=500  t=33.3s  SR=0.00  CR=0.50  ETA=157s
+[17:11:12]   ep   2/10  TIMEOUT    clr=0.248m  steps=500  t=33.3s  SR=0.00  CR=0.50  ETA=157s
+[INFO] [1779276375.251330722] [daars_gazebo_env]: Respawned at (1.8, 7.0, yaw=-0.12)
+[17:11:46]   ep   3/10  TIMEOUT    clr=0.037m  steps=500  t=33.6s  SR=0.00  CR=0.33  ETA=170s
+[17:11:46]   ep   3/10  TIMEOUT    clr=0.037m  steps=500  t=33.6s  SR=0.00  CR=0.33  ETA=170s
+[INFO] [1779276408.898283010] [daars_gazebo_env]: Respawned at (4.2, 7.3, yaw=2.82)
+[17:12:01]   ep   4/10  COLLISION  clr=-0.033m  steps=208  t=14.6s  SR=0.00  CR=0.50  ETA=131s
+[17:12:01]   ep   4/10  COLLISION  clr=-0.033m  steps=208  t=14.6s  SR=0.00  CR=0.50  ETA=131s
+[INFO] [1779276423.551386303] [daars_gazebo_env]: Respawned at (2.1, 6.9, yaw=-2.32)
+[17:12:30]   ep   5/10  SUCCESS    clr=0.059m  steps=473  t=29.8s  SR=0.20  CR=0.40  ETA=117s
+[17:12:30]   ep   5/10  SUCCESS    clr=0.059m  steps=473  t=29.8s  SR=0.20  CR=0.40  ETA=117s
+[INFO] [1779276456.495981359] [daars_gazebo_env]: Respawned at (3.5, 5.6, yaw=-1.20)
+[17:13:02]   ep   6/10  COLLISION  clr=-0.007m  steps=447  t=31.5s  SR=0.17  CR=0.50  ETA=99s
+[17:13:02]   ep   6/10  COLLISION  clr=-0.007m  steps=447  t=31.5s  SR=0.17  CR=0.50  ETA=99s
+[INFO] [1779276484.720272783] [daars_gazebo_env]: Respawned at (3.1, 2.6, yaw=-2.06)
+[17:13:13]   ep   7/10  COLLISION  clr=-0.004m  steps=138  t=10.8s  SR=0.14  CR=0.57  ETA=68s
+[17:13:13]   ep   7/10  COLLISION  clr=-0.004m  steps=138  t=10.8s  SR=0.14  CR=0.57  ETA=68s
+[INFO] [1779276495.346270709] [daars_gazebo_env]: Respawned at (4.1, 4.7, yaw=-0.55)
+[17:13:48]   ep   8/10  TIMEOUT    clr=0.115m  steps=500  t=35.0s  SR=0.12  CR=0.50  ETA=49s
+[17:13:48]   ep   8/10  TIMEOUT    clr=0.115m  steps=500  t=35.0s  SR=0.12  CR=0.50  ETA=49s
+[INFO] [1779276530.427643995] [daars_gazebo_env]: Respawned at (4.5, 5.3, yaw=-2.29)
+[17:14:01]   ep   9/10  SUCCESS    clr=0.241m  steps=190  t=13.6s  SR=0.22  CR=0.44  ETA=23s
+[17:14:01]   ep   9/10  SUCCESS    clr=0.241m  steps=190  t=13.6s  SR=0.22  CR=0.44  ETA=23s
+[INFO] [1779276543.976531802] [daars_gazebo_env]: Respawned at (3.3, 7.1, yaw=2.49)
+[17:14:25]   ep  10/10  COLLISION  clr=-0.005m  steps=380  t=24.2s  SR=0.20  CR=0.50  ETA=0s
+[17:14:25]   ep  10/10  COLLISION  clr=-0.005m  steps=380  t=24.2s  SR=0.20  CR=0.50  ETA=0s
+[17:14:25] 
+[17:14:25] 
+[17:14:25]   DONE in 232s (23.2s/ep)
+[17:14:25]   SR=0.200  CR=0.500  Avg-clearance=0.063m
+[17:14:25]   DONE in 232s (23.2s/ep)
+[17:14:25]   SR=0.200  CR=0.500  Avg-clearance=0.063m
+[17:14:25]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed2.json
+[17:14:25]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed2.json
+[17:14:27]   Completed in 243s | Elapsed: 1671s | ETA: ~3536s
+[17:14:27] [9/25] static/seed3 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:14:34] Creating GazeboNavEnv (fast_mode=True)
+[17:14:34] Creating GazeboNavEnv (fast_mode=True)
+[17:14:34] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed3
+[17:14:34] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed3
+[17:14:37] Running 10 episodes in Gazebo...
+[17:14:37] Running 10 episodes in Gazebo...
+[INFO] [1779276580.092764355] [daars_gazebo_env]: Respawned at (4.2, 3.8, yaw=0.53)
+[17:15:00]   ep   1/10  SUCCESS    clr=0.166m  steps=349  t=23.1s  SR=1.00  CR=0.00  ETA=208s
+[17:15:00]   ep   1/10  SUCCESS    clr=0.166m  steps=349  t=23.1s  SR=1.00  CR=0.00  ETA=208s
+[INFO] [1779276602.925870609] [daars_gazebo_env]: Respawned at (6.8, 2.2, yaw=-1.14)
+[17:15:22]   ep   2/10  SUCCESS    clr=0.215m  steps=292  t=21.4s  SR=1.00  CR=0.00  ETA=178s
+[17:15:22]   ep   2/10  SUCCESS    clr=0.215m  steps=292  t=21.4s  SR=1.00  CR=0.00  ETA=178s
+[INFO] [1779276624.402625757] [daars_gazebo_env]: Respawned at (3.1, 5.6, yaw=-2.60)
+[17:15:55]   ep   3/10  TIMEOUT    clr=0.090m  steps=500  t=33.8s  SR=0.67  CR=0.00  ETA=183s
+[17:15:55]   ep   3/10  TIMEOUT    clr=0.090m  steps=500  t=33.8s  SR=0.67  CR=0.00  ETA=183s
+[INFO] [1779276658.285092917] [daars_gazebo_env]: Respawned at (3.3, 0.6, yaw=2.98)
+[17:16:28]   ep   4/10  TIMEOUT    clr=0.041m  steps=500  t=33.1s  SR=0.50  CR=0.00  ETA=167s
+[17:16:28]   ep   4/10  TIMEOUT    clr=0.041m  steps=500  t=33.1s  SR=0.50  CR=0.00  ETA=167s
+[INFO] [1779276691.358390369] [daars_gazebo_env]: Respawned at (2.1, 7.1, yaw=-2.39)
+[17:17:02]   ep   5/10  TIMEOUT    clr=0.038m  steps=500  t=33.9s  SR=0.40  CR=0.00  ETA=145s
+[17:17:02]   ep   5/10  TIMEOUT    clr=0.038m  steps=500  t=33.9s  SR=0.40  CR=0.00  ETA=145s
+[INFO] [1779276725.201993466] [daars_gazebo_env]: Respawned at (7.5, 6.0, yaw=-2.12)
+[17:17:11]   ep   6/10  COLLISION  clr=-0.051m  steps=109  t=8.8s  SR=0.33  CR=0.17  ETA=103s
+[17:17:11]   ep   6/10  COLLISION  clr=-0.051m  steps=109  t=8.8s  SR=0.33  CR=0.17  ETA=103s
+[INFO] [1779276734.172310247] [daars_gazebo_env]: Respawned at (7.3, 2.6, yaw=-0.62)
+[17:17:46]   ep   7/10  SUCCESS    clr=0.015m  steps=495  t=34.5s  SR=0.43  CR=0.14  ETA=81s
+[17:17:46]   ep   7/10  SUCCESS    clr=0.015m  steps=495  t=34.5s  SR=0.43  CR=0.14  ETA=81s
+[INFO] [1779276768.777403904] [daars_gazebo_env]: Respawned at (4.8, 7.3, yaw=2.98)
+[17:17:58]   ep   8/10  COLLISION  clr=-0.014m  steps=163  t=12.6s  SR=0.38  CR=0.25  ETA=50s
+[17:17:58]   ep   8/10  COLLISION  clr=-0.014m  steps=163  t=12.6s  SR=0.38  CR=0.25  ETA=50s
+[INFO] [1779276781.273744137] [daars_gazebo_env]: Respawned at (7.1, 3.8, yaw=2.85)
+[17:18:22]   ep   9/10  SUCCESS    clr=0.072m  steps=344  t=23.3s  SR=0.44  CR=0.22  ETA=25s
+[17:18:22]   ep   9/10  SUCCESS    clr=0.072m  steps=344  t=23.3s  SR=0.44  CR=0.22  ETA=25s
+[INFO] [1779276804.437197897] [daars_gazebo_env]: Respawned at (1.4, 6.5, yaw=1.32)
+[17:18:27]   ep  10/10  COLLISION  clr=-0.003m  steps= 39  t=5.0s  SR=0.40  CR=0.30  ETA=0s
+[17:18:27]   ep  10/10  COLLISION  clr=-0.003m  steps= 39  t=5.0s  SR=0.40  CR=0.30  ETA=0s
+[17:18:27] 
+[17:18:27] 
+[17:18:27]   DONE in 230s (23.0s/ep)
+[17:18:27]   DONE in 230s (23.0s/ep)
+[17:18:27]   SR=0.400  CR=0.300  Avg-clearance=0.057m
+[17:18:27]   SR=0.400  CR=0.300  Avg-clearance=0.057m
+[17:18:27]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed3.json
+[17:18:27]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed3.json
+[17:18:28]   Completed in 241s | Elapsed: 1912s | ETA: ~3392s
+[17:18:28] [10/25] static/seed4 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:18:32] Creating GazeboNavEnv (fast_mode=True)
+[17:18:32] Creating GazeboNavEnv (fast_mode=True)
+[17:18:32] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed4
+[17:18:32] Loading model: /home/toor/gitProjects/daars-nav/results/models/static_seed4
+[17:18:35] Running 10 episodes in Gazebo...
+[17:18:35] Running 10 episodes in Gazebo...
+[INFO] [1779276817.412014032] [daars_gazebo_env]: Respawned at (5.2, 7.5, yaw=-0.80)
+[17:18:58]   ep   1/10  SUCCESS    clr=0.183m  steps=311  t=23.3s  SR=1.00  CR=0.00  ETA=209s
+[17:18:58]   ep   1/10  SUCCESS    clr=0.183m  steps=311  t=23.3s  SR=1.00  CR=0.00  ETA=209s
+[INFO] [1779276840.794847213] [daars_gazebo_env]: Respawned at (0.8, 7.2, yaw=2.89)
+[17:19:30]   ep   2/10  TIMEOUT    clr=0.130m  steps=500  t=31.9s  SR=0.50  CR=0.00  ETA=221s
+[17:19:30]   ep   2/10  TIMEOUT    clr=0.130m  steps=500  t=31.9s  SR=0.50  CR=0.00  ETA=221s
+[INFO] [1779276872.738523945] [daars_gazebo_env]: Respawned at (6.9, 5.3, yaw=-2.89)
+[17:19:35]   ep   3/10  COLLISION  clr=-0.038m  steps= 32  t=4.7s  SR=0.33  CR=0.33  ETA=140s
+[17:19:35]   ep   3/10  COLLISION  clr=-0.038m  steps= 32  t=4.7s  SR=0.33  CR=0.33  ETA=140s
+[INFO] [1779276877.268882630] [daars_gazebo_env]: Respawned at (2.8, 6.2, yaw=-1.56)
+[17:19:42]   ep   4/10  COLLISION  clr=-0.000m  steps= 78  t=7.2s  SR=0.25  CR=0.50  ETA=101s
+[17:19:42]   ep   4/10  COLLISION  clr=-0.000m  steps= 78  t=7.2s  SR=0.25  CR=0.50  ETA=101s
+[INFO] [1779276884.567552050] [daars_gazebo_env]: Respawned at (6.9, 7.4, yaw=0.85)
+[17:20:01]   ep   5/10  COLLISION  clr=-0.001m  steps=254  t=19.7s  SR=0.20  CR=0.60  ETA=87s
+[17:20:01]   ep   5/10  COLLISION  clr=-0.001m  steps=254  t=19.7s  SR=0.20  CR=0.60  ETA=87s
+[INFO] [1779276904.236302396] [daars_gazebo_env]: Respawned at (3.6, 0.8, yaw=1.03)
+[17:20:21]   ep   6/10  COLLISION  clr=-0.029m  steps=292  t=19.3s  SR=0.17  CR=0.67  ETA=71s
+[17:20:21]   ep   6/10  COLLISION  clr=-0.029m  steps=292  t=19.3s  SR=0.17  CR=0.67  ETA=71s
+[INFO] [1779276923.429525269] [daars_gazebo_env]: Respawned at (4.5, 2.7, yaw=-0.49)
+[17:20:49]   ep   7/10  SUCCESS    clr=0.087m  steps=397  t=27.8s  SR=0.29  CR=0.57  ETA=57s
+[17:20:49]   ep   7/10  SUCCESS    clr=0.087m  steps=397  t=27.8s  SR=0.29  CR=0.57  ETA=57s
+[INFO] [1779276951.361633237] [daars_gazebo_env]: Respawned at (4.6, 5.4, yaw=-0.77)
+[17:21:07]   ep   8/10  SUCCESS    clr=0.018m  steps=280  t=18.7s  SR=0.38  CR=0.50  ETA=38s
+[17:21:07]   ep   8/10  SUCCESS    clr=0.018m  steps=280  t=18.7s  SR=0.38  CR=0.50  ETA=38s
+[INFO] [1779276972.131145279] [daars_gazebo_env]: Respawned at (7.1, 3.4, yaw=0.75)
+[17:21:19]   ep   9/10  COLLISION  clr=-0.000m  steps=115  t=11.3s  SR=0.33  CR=0.56  ETA=18s
+[17:21:19]   ep   9/10  COLLISION  clr=-0.000m  steps=115  t=11.3s  SR=0.33  CR=0.56  ETA=18s
+[INFO] [1779276981.325750261] [daars_gazebo_env]: Respawned at (3.1, 2.3, yaw=1.60)
+[17:21:25]   ep  10/10  COLLISION  clr=-0.007m  steps= 65  t=6.4s  SR=0.30  CR=0.60  ETA=0s
+[17:21:25]   ep  10/10  COLLISION  clr=-0.007m  steps= 65  t=6.4s  SR=0.30  CR=0.60  ETA=0s
+[17:21:25] 
+[17:21:25] 
+[17:21:25]   DONE in 170s (17.0s/ep)
+[17:21:25]   DONE in 170s (17.0s/ep)
+[17:21:25]   SR=0.300  CR=0.600  Avg-clearance=0.034m
+[17:21:25]   SR=0.300  CR=0.600  Avg-clearance=0.034m
+[17:21:25]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed4.json
+[17:21:25]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/static_seed4.json
+[17:21:26]   Completed in 178s | Elapsed: 2090s | ETA: ~3135s
+[17:21:26] [11/25] alpha_only/seed0 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:21:30] Creating GazeboNavEnv (fast_mode=True)
+[17:21:30] Creating GazeboNavEnv (fast_mode=True)
+[17:21:31] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed0
+[17:21:31] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed0
+[17:21:33] Running 10 episodes in Gazebo...
+[17:21:33] Running 10 episodes in Gazebo...
+[INFO] [1779276995.276662153] [daars_gazebo_env]: Respawned at (1.9, 3.9, yaw=2.45)
+[17:21:39]   ep   1/10  COLLISION  clr=-0.004m  steps= 66  t=6.2s  SR=0.00  CR=1.00  ETA=56s
+[17:21:39]   ep   1/10  COLLISION  clr=-0.004m  steps= 66  t=6.2s  SR=0.00  CR=1.00  ETA=56s
+[INFO] [1779277001.368450277] [daars_gazebo_env]: Respawned at (4.1, 4.3, yaw=-3.05)
+[17:21:54]   ep   2/10  COLLISION  clr=-0.007m  steps=184  t=15.2s  SR=0.00  CR=1.00  ETA=86s
+[17:21:54]   ep   2/10  COLLISION  clr=-0.007m  steps=184  t=15.2s  SR=0.00  CR=1.00  ETA=86s
+[INFO] [1779277016.594862743] [daars_gazebo_env]: Respawned at (5.3, 5.1, yaw=0.99)
+[17:22:13]   ep   3/10  SUCCESS    clr=0.021m  steps=310  t=18.9s  SR=0.33  CR=0.67  ETA=94s
+[17:22:13]   ep   3/10  SUCCESS    clr=0.021m  steps=310  t=18.9s  SR=0.33  CR=0.67  ETA=94s
+[INFO] [1779277035.564263724] [daars_gazebo_env]: Respawned at (2.2, 1.8, yaw=-1.73)
+[17:22:23]   ep   4/10  COLLISION  clr=-0.021m  steps= 99  t=10.4s  SR=0.25  CR=0.75  ETA=76s
+[17:22:23]   ep   4/10  COLLISION  clr=-0.021m  steps= 99  t=10.4s  SR=0.25  CR=0.75  ETA=76s
+[INFO] [1779277045.870129244] [daars_gazebo_env]: Respawned at (4.3, 3.6, yaw=0.60)
+[17:22:37]   ep   5/10  SUCCESS    clr=0.218m  steps=208  t=13.5s  SR=0.40  CR=0.60  ETA=64s
+[17:22:37]   ep   5/10  SUCCESS    clr=0.218m  steps=208  t=13.5s  SR=0.40  CR=0.60  ETA=64s
+[INFO] [1779277059.378148423] [daars_gazebo_env]: Respawned at (2.9, 0.6, yaw=-2.02)
+[17:22:47]   ep   6/10  COLLISION  clr=-0.015m  steps=144  t=10.1s  SR=0.33  CR=0.67  ETA=50s
+[17:22:47]   ep   6/10  COLLISION  clr=-0.015m  steps=144  t=10.1s  SR=0.33  CR=0.67  ETA=50s
+[INFO] [1779277069.482177165] [daars_gazebo_env]: Respawned at (6.5, 7.5, yaw=-2.79)
+[17:22:58]   ep   7/10  COLLISION  clr=-0.006m  steps=109  t=11.2s  SR=0.29  CR=0.71  ETA=37s
+[17:22:58]   ep   7/10  COLLISION  clr=-0.006m  steps=109  t=11.2s  SR=0.29  CR=0.71  ETA=37s
+[INFO] [1779277080.714347515] [daars_gazebo_env]: Respawned at (6.7, 3.6, yaw=1.63)
+[17:23:10]   ep   8/10  COLLISION  clr=-0.009m  steps=186  t=12.3s  SR=0.25  CR=0.75  ETA=24s
+[17:23:10]   ep   8/10  COLLISION  clr=-0.009m  steps=186  t=12.3s  SR=0.25  CR=0.75  ETA=24s
+[INFO] [1779277093.034373723] [daars_gazebo_env]: Respawned at (4.5, 7.0, yaw=0.65)
+[17:23:25]   ep   9/10  SUCCESS    clr=0.014m  steps=232  t=14.8s  SR=0.33  CR=0.67  ETA=13s
+[17:23:25]   ep   9/10  SUCCESS    clr=0.014m  steps=232  t=14.8s  SR=0.33  CR=0.67  ETA=13s
+[INFO] [1779277107.781228450] [daars_gazebo_env]: Respawned at (6.8, 2.0, yaw=1.42)
+[17:23:57]   ep  10/10  TIMEOUT    clr=0.019m  steps=500  t=31.6s  SR=0.30  CR=0.60  ETA=0s
+[17:23:57]   ep  10/10  TIMEOUT    clr=0.019m  steps=500  t=31.6s  SR=0.30  CR=0.60  ETA=0s
+[17:23:57] 
+[17:23:57] 
+[17:23:57]   DONE in 144s (14.4s/ep)
+[17:23:57]   DONE in 144s (14.4s/ep)
+[17:23:57]   SR=0.300  CR=0.600  Avg-clearance=0.021m
+[17:23:57]   SR=0.300  CR=0.600  Avg-clearance=0.021m
+[17:23:57]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed0.json
+[17:23:57]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed0.json
+[17:23:58]   Completed in 152s | Elapsed: 2242s | ETA: ~2842s
+[17:23:58] [12/25] alpha_only/seed1 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:24:00] Creating GazeboNavEnv (fast_mode=True)
+[17:24:00] Creating GazeboNavEnv (fast_mode=True)
+[17:24:00] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed1
+[17:24:00] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed1
+[17:24:02] Running 10 episodes in Gazebo...
+[17:24:02] Running 10 episodes in Gazebo...
+[INFO] [1779277147.299531473] [daars_gazebo_env]: Respawned at (2.2, 4.4, yaw=-2.97)
+[17:24:31]   ep   1/10  SUCCESS    clr=0.049m  steps=443  t=29.0s  SR=1.00  CR=0.00  ETA=261s
+[17:24:31]   ep   1/10  SUCCESS    clr=0.049m  steps=443  t=29.0s  SR=1.00  CR=0.00  ETA=261s
+[INFO] [1779277173.448078552] [daars_gazebo_env]: Respawned at (1.2, 7.0, yaw=-1.49)
+[17:24:45]   ep   2/10  SUCCESS    clr=0.191m  steps=170  t=14.3s  SR=1.00  CR=0.00  ETA=173s
+[17:24:45]   ep   2/10  SUCCESS    clr=0.191m  steps=170  t=14.3s  SR=1.00  CR=0.00  ETA=173s
+[INFO] [1779277187.769831660] [daars_gazebo_env]: Respawned at (7.4, 5.3, yaw=-0.30)
+[17:25:17]   ep   3/10  TIMEOUT    clr=0.059m  steps=500  t=32.0s  SR=0.67  CR=0.00  ETA=176s
+[17:25:17]   ep   3/10  TIMEOUT    clr=0.059m  steps=500  t=32.0s  SR=0.67  CR=0.00  ETA=176s
+[INFO] [1779277219.844608653] [daars_gazebo_env]: Respawned at (4.8, 2.4, yaw=2.31)
+[17:25:33]   ep   4/10  SUCCESS    clr=0.124m  steps=240  t=15.3s  SR=0.75  CR=0.00  ETA=136s
+[17:25:33]   ep   4/10  SUCCESS    clr=0.124m  steps=240  t=15.3s  SR=0.75  CR=0.00  ETA=136s
+[INFO] [1779277235.173637241] [daars_gazebo_env]: Respawned at (1.1, 7.1, yaw=2.11)
+[17:26:04]   ep   5/10  SUCCESS    clr=0.027m  steps=487  t=31.3s  SR=0.80  CR=0.00  ETA=122s
+[17:26:04]   ep   5/10  SUCCESS    clr=0.027m  steps=487  t=31.3s  SR=0.80  CR=0.00  ETA=122s
+[INFO] [1779277266.379353150] [daars_gazebo_env]: Respawned at (4.8, 5.7, yaw=2.44)
+[17:26:23]   ep   6/10  SUCCESS    clr=0.271m  steps=305  t=18.8s  SR=0.83  CR=0.00  ETA=94s
+[17:26:23]   ep   6/10  SUCCESS    clr=0.271m  steps=305  t=18.8s  SR=0.83  CR=0.00  ETA=94s
+[INFO] [1779277285.109978462] [daars_gazebo_env]: Respawned at (2.9, 3.5, yaw=0.09)
+[17:26:39]   ep   7/10  COLLISION  clr=-0.015m  steps=200  t=16.0s  SR=0.71  CR=0.14  ETA=67s
+[17:26:39]   ep   7/10  COLLISION  clr=-0.015m  steps=200  t=16.0s  SR=0.71  CR=0.14  ETA=67s
+[INFO] [1779277301.128093313] [daars_gazebo_env]: Respawned at (4.8, 3.6, yaw=-2.71)
+[17:26:57]   ep   8/10  SUCCESS    clr=0.036m  steps=302  t=18.6s  SR=0.75  CR=0.12  ETA=44s
+[17:26:57]   ep   8/10  SUCCESS    clr=0.036m  steps=302  t=18.6s  SR=0.75  CR=0.12  ETA=44s
+[INFO] [1779277319.662450199] [daars_gazebo_env]: Respawned at (6.7, 2.0, yaw=-0.00)
+[17:27:14]   ep   9/10  COLLISION  clr=-0.013m  steps=225  t=17.3s  SR=0.67  CR=0.22  ETA=21s
+[17:27:14]   ep   9/10  COLLISION  clr=-0.013m  steps=225  t=17.3s  SR=0.67  CR=0.22  ETA=21s
+[INFO] [1779277337.173947944] [daars_gazebo_env]: Respawned at (7.0, 2.5, yaw=1.55)
+[17:27:30]   ep  10/10  COLLISION  clr=-0.005m  steps=230  t=15.2s  SR=0.60  CR=0.30  ETA=0s
+[17:27:30]   ep  10/10  COLLISION  clr=-0.005m  steps=230  t=15.2s  SR=0.60  CR=0.30  ETA=0s
+[17:27:30] 
+[17:27:30] 
+[17:27:30]   DONE in 208s (20.8s/ep)
+[17:27:30]   DONE in 208s (20.8s/ep)
+[17:27:30]   SR=0.600  CR=0.300  Avg-clearance=0.072m
+[17:27:30]   SR=0.600  CR=0.300  Avg-clearance=0.072m
+[17:27:30]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed1.json
+[17:27:30]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed1.json
+[17:27:31]   Completed in 213s | Elapsed: 2455s | ETA: ~2652s
+[17:27:31] [13/25] alpha_only/seed2 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:27:33] Creating GazeboNavEnv (fast_mode=True)
+[17:27:33] Creating GazeboNavEnv (fast_mode=True)
+[17:27:33] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed2
+[17:27:33] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed2
+[17:27:35] Running 10 episodes in Gazebo...
+[17:27:35] Running 10 episodes in Gazebo...
+[INFO] [1779277359.856059062] [daars_gazebo_env]: Respawned at (2.4, 4.5, yaw=-0.92)
+[17:27:57]   ep   1/10  COLLISION  clr=-0.009m  steps=321  t=22.5s  SR=0.00  CR=1.00  ETA=202s
+[17:27:57]   ep   1/10  COLLISION  clr=-0.009m  steps=321  t=22.5s  SR=0.00  CR=1.00  ETA=202s
+[INFO] [1779277379.813535602] [daars_gazebo_env]: Respawned at (1.5, 3.5, yaw=-2.83)
+[17:28:02]   ep   2/10  COLLISION  clr=-0.035m  steps= 42  t=5.0s  SR=0.00  CR=1.00  ETA=110s
+[17:28:02]   ep   2/10  COLLISION  clr=-0.035m  steps= 42  t=5.0s  SR=0.00  CR=1.00  ETA=110s
+[INFO] [1779277384.727576355] [daars_gazebo_env]: Respawned at (2.8, 3.4, yaw=0.83)
+[17:28:18]   ep   3/10  COLLISION  clr=-0.005m  steps=200  t=16.2s  SR=0.00  CR=1.00  ETA=102s
+[17:28:18]   ep   3/10  COLLISION  clr=-0.005m  steps=200  t=16.2s  SR=0.00  CR=1.00  ETA=102s
+[INFO] [1779277400.898129226] [daars_gazebo_env]: Respawned at (7.1, 7.4, yaw=-1.05)
+[17:28:41]   ep   4/10  SUCCESS    clr=0.122m  steps=377  t=22.7s  SR=0.25  CR=0.75  ETA=99s
+[17:28:41]   ep   4/10  SUCCESS    clr=0.122m  steps=377  t=22.7s  SR=0.25  CR=0.75  ETA=99s
+[INFO] [1779277423.463430215] [daars_gazebo_env]: Respawned at (5.6, 7.3, yaw=2.38)
+[17:29:12]   ep   5/10  TIMEOUT    clr=0.194m  steps=500  t=31.6s  SR=0.20  CR=0.60  ETA=98s
+[17:29:12]   ep   5/10  TIMEOUT    clr=0.194m  steps=500  t=31.6s  SR=0.20  CR=0.60  ETA=98s
+[INFO] [1779277455.067892032] [daars_gazebo_env]: Respawned at (4.5, 3.3, yaw=3.06)
+[17:29:20]   ep   6/10  COLLISION  clr=-0.021m  steps= 87  t=7.2s  SR=0.17  CR=0.67  ETA=70s
+[17:29:20]   ep   6/10  COLLISION  clr=-0.021m  steps= 87  t=7.2s  SR=0.17  CR=0.67  ETA=70s
+[INFO] [1779277465.199080474] [daars_gazebo_env]: Respawned at (7.0, 4.0, yaw=-1.51)
+[17:29:43]   ep   7/10  COLLISION  clr=-0.016m  steps=343  t=23.7s  SR=0.14  CR=0.71  ETA=55s
+[17:29:43]   ep   7/10  COLLISION  clr=-0.016m  steps=343  t=23.7s  SR=0.14  CR=0.71  ETA=55s
+[INFO] [1779277485.928450736] [daars_gazebo_env]: Respawned at (4.7, 2.6, yaw=1.09)
+[17:30:03]   ep   8/10  SUCCESS    clr=0.199m  steps=269  t=19.3s  SR=0.25  CR=0.62  ETA=37s
+[17:30:03]   ep   8/10  SUCCESS    clr=0.199m  steps=269  t=19.3s  SR=0.25  CR=0.62  ETA=37s
+[INFO] [1779277505.228360180] [daars_gazebo_env]: Respawned at (6.1, 4.0, yaw=1.04)
+[17:30:21]   ep   9/10  SUCCESS    clr=0.113m  steps=290  t=17.9s  SR=0.33  CR=0.56  ETA=18s
+[17:30:21]   ep   9/10  SUCCESS    clr=0.113m  steps=290  t=17.9s  SR=0.33  CR=0.56  ETA=18s
+[INFO] [1779277523.145304956] [daars_gazebo_env]: Respawned at (6.7, 2.5, yaw=2.36)
+[17:30:43]   ep  10/10  SUCCESS    clr=0.043m  steps=314  t=22.0s  SR=0.40  CR=0.50  ETA=0s
+[17:30:43]   ep  10/10  SUCCESS    clr=0.043m  steps=314  t=22.0s  SR=0.40  CR=0.50  ETA=0s
+[17:30:43] 
+[17:30:43] 
+[17:30:43]   DONE in 188s (18.8s/ep)
+[17:30:43]   DONE in 188s (18.8s/ep)
+[17:30:43]   SR=0.400  CR=0.500  Avg-clearance=0.058m
+[17:30:43]   SR=0.400  CR=0.500  Avg-clearance=0.058m
+[17:30:43]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed2.json
+[17:30:43]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed2.json
+[17:30:44]   Completed in 193s | Elapsed: 2648s | ETA: ~2436s
+[17:30:44] [14/25] alpha_only/seed3 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:30:46] Creating GazeboNavEnv (fast_mode=True)
+[17:30:46] Creating GazeboNavEnv (fast_mode=True)
+[17:30:47] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed3
+[17:30:47] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed3
+[17:30:48] Running 10 episodes in Gazebo...
+[17:30:48] Running 10 episodes in Gazebo...
+[INFO] [1779277550.674633899] [daars_gazebo_env]: Respawned at (0.6, 7.1, yaw=-2.70)
+[17:31:03]   ep   1/10  COLLISION  clr=-0.003m  steps=230  t=15.2s  SR=0.00  CR=1.00  ETA=137s
+[17:31:03]   ep   1/10  COLLISION  clr=-0.003m  steps=230  t=15.2s  SR=0.00  CR=1.00  ETA=137s
+[INFO] [1779277565.860871963] [daars_gazebo_env]: Respawned at (5.1, 6.1, yaw=0.44)
+[17:31:19]   ep   2/10  COLLISION  clr=-0.006m  steps=204  t=15.9s  SR=0.00  CR=1.00  ETA=124s
+[17:31:19]   ep   2/10  COLLISION  clr=-0.006m  steps=204  t=15.9s  SR=0.00  CR=1.00  ETA=124s
+[INFO] [1779277581.940280881] [daars_gazebo_env]: Respawned at (4.6, 3.4, yaw=-2.77)
+[17:31:35]   ep   3/10  SUCCESS    clr=0.117m  steps=246  t=15.8s  SR=0.33  CR=0.67  ETA=109s
+[17:31:35]   ep   3/10  SUCCESS    clr=0.117m  steps=246  t=15.8s  SR=0.33  CR=0.67  ETA=109s
+[INFO] [1779277597.744807290] [daars_gazebo_env]: Respawned at (7.5, 6.1, yaw=-0.28)
+[17:31:48]   ep   4/10  COLLISION  clr=-0.011m  steps=155  t=13.5s  SR=0.25  CR=0.75  ETA=91s
+[17:31:48]   ep   4/10  COLLISION  clr=-0.011m  steps=155  t=13.5s  SR=0.25  CR=0.75  ETA=91s
+[INFO] [1779277611.083828550] [daars_gazebo_env]: Respawned at (7.5, 5.6, yaw=-1.33)
+[17:31:55]   ep   5/10  COLLISION  clr=-0.001m  steps= 83  t=7.0s  SR=0.20  CR=0.80  ETA=67s
+[17:31:55]   ep   5/10  COLLISION  clr=-0.001m  steps= 83  t=7.0s  SR=0.20  CR=0.80  ETA=67s
+[INFO] [1779277618.045800941] [daars_gazebo_env]: Respawned at (4.4, 5.4, yaw=1.69)
+[17:32:08]   ep   6/10  SUCCESS    clr=0.072m  steps=183  t=12.3s  SR=0.33  CR=0.67  ETA=53s
+[17:32:08]   ep   6/10  SUCCESS    clr=0.072m  steps=183  t=12.3s  SR=0.33  CR=0.67  ETA=53s
+[INFO] [1779277630.374015997] [daars_gazebo_env]: Respawned at (1.2, 5.5, yaw=-3.02)
+[17:32:21]   ep   7/10  COLLISION  clr=-0.000m  steps=196  t=13.0s  SR=0.29  CR=0.71  ETA=40s
+[17:32:21]   ep   7/10  COLLISION  clr=-0.000m  steps=196  t=13.0s  SR=0.29  CR=0.71  ETA=40s
+[INFO] [1779277643.321145178] [daars_gazebo_env]: Respawned at (3.2, 5.9, yaw=-0.46)
+[17:32:39]   ep   8/10  COLLISION  clr=-0.000m  steps=219  t=17.9s  SR=0.25  CR=0.75  ETA=28s
+[17:32:39]   ep   8/10  COLLISION  clr=-0.000m  steps=219  t=17.9s  SR=0.25  CR=0.75  ETA=28s
+[INFO] [1779277661.125761720] [daars_gazebo_env]: Respawned at (1.1, 6.6, yaw=-0.30)
+[17:33:01]   ep   9/10  SUCCESS    clr=0.022m  steps=380  t=22.6s  SR=0.33  CR=0.67  ETA=15s
+[17:33:01]   ep   9/10  SUCCESS    clr=0.022m  steps=380  t=22.6s  SR=0.33  CR=0.67  ETA=15s
+[INFO] [1779277683.875713508] [daars_gazebo_env]: Respawned at (6.2, 3.9, yaw=1.32)
+[17:33:18]   ep  10/10  SUCCESS    clr=0.001m  steps=217  t=16.7s  SR=0.40  CR=0.60  ETA=0s
+[17:33:18]   ep  10/10  SUCCESS    clr=0.001m  steps=217  t=16.7s  SR=0.40  CR=0.60  ETA=0s
+[17:33:18] 
+[17:33:18] 
+[17:33:18]   DONE in 150s (15.0s/ep)
+[17:33:18]   DONE in 150s (15.0s/ep)
+[17:33:18]   SR=0.400  CR=0.600  Avg-clearance=0.019m
+[17:33:18]   SR=0.400  CR=0.600  Avg-clearance=0.019m
+[17:33:18]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed3.json
+[17:33:18]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed3.json
+[17:33:20]   Completed in 156s | Elapsed: 2804s | ETA: ~2200s
+[17:33:20] [15/25] alpha_only/seed4 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:33:24] Creating GazeboNavEnv (fast_mode=True)
+[17:33:24] Creating GazeboNavEnv (fast_mode=True)
+[17:33:24] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed4
+[17:33:24] Loading model: /home/toor/gitProjects/daars-nav/results/models/alpha_only_seed4
+[17:33:27] Running 10 episodes in Gazebo...
+[17:33:27] Running 10 episodes in Gazebo...
+[INFO] [1779277709.739780349] [daars_gazebo_env]: Respawned at (6.7, 3.3, yaw=-1.35)
+[17:33:35]   ep   1/10  COLLISION  clr=-0.002m  steps= 97  t=8.1s  SR=0.00  CR=1.00  ETA=73s
+[17:33:35]   ep   1/10  COLLISION  clr=-0.002m  steps= 97  t=8.1s  SR=0.00  CR=1.00  ETA=73s
+[INFO] [1779277717.793757691] [daars_gazebo_env]: Respawned at (7.1, 0.6, yaw=-2.48)
+[17:34:07]   ep   2/10  TIMEOUT    clr=0.092m  steps=500  t=31.8s  SR=0.00  CR=0.50  ETA=160s
+[17:34:07]   ep   2/10  TIMEOUT    clr=0.092m  steps=500  t=31.8s  SR=0.00  CR=0.50  ETA=160s
+[INFO] [1779277749.635468449] [daars_gazebo_env]: Respawned at (0.8, 3.3, yaw=2.70)
+[17:34:39]   ep   3/10  TIMEOUT    clr=0.053m  steps=500  t=31.8s  SR=0.00  CR=0.33  ETA=168s
+[17:34:39]   ep   3/10  TIMEOUT    clr=0.053m  steps=500  t=31.8s  SR=0.00  CR=0.33  ETA=168s
+[INFO] [1779277781.495931544] [daars_gazebo_env]: Respawned at (1.3, 3.5, yaw=1.45)
+[17:35:07]   ep   4/10  COLLISION  clr=-0.002m  steps=438  t=28.5s  SR=0.00  CR=0.50  ETA=150s
+[17:35:07]   ep   4/10  COLLISION  clr=-0.002m  steps=438  t=28.5s  SR=0.00  CR=0.50  ETA=150s
+[INFO] [1779277809.967533575] [daars_gazebo_env]: Respawned at (7.5, 1.9, yaw=0.12)
+[17:35:25]   ep   5/10  COLLISION  clr=-0.009m  steps=280  t=17.5s  SR=0.00  CR=0.60  ETA=118s
+[17:35:25]   ep   5/10  COLLISION  clr=-0.009m  steps=280  t=17.5s  SR=0.00  CR=0.60  ETA=118s
+[INFO] [1779277827.484751610] [daars_gazebo_env]: Respawned at (2.3, 7.5, yaw=-1.89)
+[17:35:45]   ep   6/10  SUCCESS    clr=0.060m  steps=286  t=20.4s  SR=0.17  CR=0.50  ETA=92s
+[17:35:45]   ep   6/10  SUCCESS    clr=0.060m  steps=286  t=20.4s  SR=0.17  CR=0.50  ETA=92s
+[INFO] [1779277847.842830456] [daars_gazebo_env]: Respawned at (6.7, 7.4, yaw=-0.71)
+[17:36:06]   ep   7/10  SUCCESS    clr=0.027m  steps=295  t=20.8s  SR=0.29  CR=0.43  ETA=68s
+[17:36:06]   ep   7/10  SUCCESS    clr=0.027m  steps=295  t=20.8s  SR=0.29  CR=0.43  ETA=68s
+[INFO] [1779277868.708968536] [daars_gazebo_env]: Respawned at (1.9, 0.6, yaw=-0.48)
+[17:36:23]   ep   8/10  SUCCESS    clr=0.042m  steps=277  t=17.3s  SR=0.38  CR=0.38  ETA=44s
+[17:36:23]   ep   8/10  SUCCESS    clr=0.042m  steps=277  t=17.3s  SR=0.38  CR=0.38  ETA=44s
+[INFO] [1779277885.875042577] [daars_gazebo_env]: Respawned at (4.7, 5.9, yaw=0.78)
+[17:36:48]   ep   9/10  SUCCESS    clr=0.216m  steps=368  t=24.6s  SR=0.44  CR=0.33  ETA=22s
+[17:36:48]   ep   9/10  SUCCESS    clr=0.216m  steps=368  t=24.6s  SR=0.44  CR=0.33  ETA=22s
+[INFO] [1779277910.493876596] [daars_gazebo_env]: Respawned at (0.8, 0.8, yaw=2.55)
+[17:36:55]   ep  10/10  COLLISION  clr=-0.002m  steps= 87  t=7.1s  SR=0.40  CR=0.40  ETA=0s
+[17:36:55]   ep  10/10  COLLISION  clr=-0.002m  steps= 87  t=7.1s  SR=0.40  CR=0.40  ETA=0s
+[17:36:55] 
+[17:36:55] 
+[17:36:55]   DONE in 208s (20.8s/ep)
+[17:36:55]   DONE in 208s (20.8s/ep)
+[17:36:55]   SR=0.400  CR=0.400  Avg-clearance=0.047m
+[17:36:55]   SR=0.400  CR=0.400  Avg-clearance=0.047m
+[17:36:55]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed4.json
+[17:36:55]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/alpha_only_seed4.json
+[17:36:56]   Completed in 216s | Elapsed: 3020s | ETA: ~2010s
+[17:36:56] [16/25] beta_only/seed0 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:36:59] Creating GazeboNavEnv (fast_mode=True)
+[17:36:59] Creating GazeboNavEnv (fast_mode=True)
+[17:36:59] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed0
+[17:36:59] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed0
+[17:37:00] Running 10 episodes in Gazebo...
+[17:37:00] Running 10 episodes in Gazebo...
+[INFO] [1779277923.021354468] [daars_gazebo_env]: Respawned at (3.7, 1.6, yaw=1.12)
+[17:37:22]   ep   1/10  SUCCESS    clr=0.172m  steps=299  t=21.1s  SR=1.00  CR=0.00  ETA=190s
+[17:37:22]   ep   1/10  SUCCESS    clr=0.172m  steps=299  t=21.1s  SR=1.00  CR=0.00  ETA=190s
+[INFO] [1779277944.190450963] [daars_gazebo_env]: Respawned at (7.4, 6.0, yaw=1.00)
+[17:37:30]   ep   2/10  COLLISION  clr=-0.014m  steps=113  t=8.5s  SR=0.50  CR=0.50  ETA=119s
+[17:37:30]   ep   2/10  COLLISION  clr=-0.014m  steps=113  t=8.5s  SR=0.50  CR=0.50  ETA=119s
+[INFO] [1779277952.714533282] [daars_gazebo_env]: Respawned at (7.1, 4.4, yaw=-1.45)
+[17:37:55]   ep   3/10  COLLISION  clr=-0.008m  steps=363  t=24.6s  SR=0.33  CR=0.67  ETA=127s
+[17:37:55]   ep   3/10  COLLISION  clr=-0.008m  steps=363  t=24.6s  SR=0.33  CR=0.67  ETA=127s
+[INFO] [1779277977.367047156] [daars_gazebo_env]: Respawned at (1.1, 6.2, yaw=2.67)
+[17:38:22]   ep   4/10  SUCCESS    clr=0.025m  steps=465  t=27.2s  SR=0.50  CR=0.50  ETA=122s
+[17:38:22]   ep   4/10  SUCCESS    clr=0.025m  steps=465  t=27.2s  SR=0.50  CR=0.50  ETA=122s
+[INFO] [1779278006.579057401] [daars_gazebo_env]: Respawned at (3.2, 6.4, yaw=1.53)
+[17:38:53]   ep   5/10  TIMEOUT    clr=0.147m  steps=500  t=31.2s  SR=0.40  CR=0.40  ETA=113s
+[17:38:53]   ep   5/10  TIMEOUT    clr=0.147m  steps=500  t=31.2s  SR=0.40  CR=0.40  ETA=113s
+[INFO] [1779278035.766670817] [daars_gazebo_env]: Respawned at (0.7, 1.1, yaw=1.01)
+[17:39:03]   ep   6/10  COLLISION  clr=-0.006m  steps= 87  t=9.8s  SR=0.33  CR=0.50  ETA=82s
+[17:39:03]   ep   6/10  COLLISION  clr=-0.006m  steps= 87  t=9.8s  SR=0.33  CR=0.50  ETA=82s
+[INFO] [1779278045.642029936] [daars_gazebo_env]: Respawned at (7.2, 2.5, yaw=-1.23)
+[17:39:17]   ep   7/10  SUCCESS    clr=0.079m  steps=212  t=13.9s  SR=0.43  CR=0.43  ETA=58s
+[17:39:17]   ep   7/10  SUCCESS    clr=0.079m  steps=212  t=13.9s  SR=0.43  CR=0.43  ETA=58s
+[INFO] [1779278059.464244615] [daars_gazebo_env]: Respawned at (5.3, 6.8, yaw=2.85)
+[17:39:49]   ep   8/10  TIMEOUT    clr=0.101m  steps=500  t=32.1s  SR=0.38  CR=0.38  ETA=42s
+[17:39:49]   ep   8/10  TIMEOUT    clr=0.101m  steps=500  t=32.1s  SR=0.38  CR=0.38  ETA=42s
+[INFO] [1779278091.537356837] [daars_gazebo_env]: Respawned at (2.8, 3.1, yaw=1.05)
+[17:40:02]   ep   9/10  SUCCESS    clr=0.033m  steps=199  t=13.1s  SR=0.44  CR=0.33  ETA=20s
+[17:40:02]   ep   9/10  SUCCESS    clr=0.033m  steps=199  t=13.1s  SR=0.44  CR=0.33  ETA=20s
+[INFO] [1779278104.697957498] [daars_gazebo_env]: Respawned at (0.5, 3.7, yaw=2.60)
+[17:40:09]   ep  10/10  COLLISION  clr=-0.005m  steps= 80  t=6.8s  SR=0.40  CR=0.40  ETA=0s
+[17:40:09]   ep  10/10  COLLISION  clr=-0.005m  steps= 80  t=6.8s  SR=0.40  CR=0.40  ETA=0s
+[17:40:09] 
+[17:40:09] 
+[17:40:09]   DONE in 188s (18.8s/ep)
+[17:40:09]   DONE in 188s (18.8s/ep)
+[17:40:09]   SR=0.400  CR=0.400  Avg-clearance=0.053m
+[17:40:09]   SR=0.400  CR=0.400  Avg-clearance=0.053m
+[17:40:09]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed0.json
+[17:40:09]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed0.json
+[17:40:12]   Completed in 196s | Elapsed: 3216s | ETA: ~1809s
+[17:40:12] [17/25] beta_only/seed1 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:40:15] Creating GazeboNavEnv (fast_mode=True)
+[17:40:15] Creating GazeboNavEnv (fast_mode=True)
+[17:40:15] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed1
+[17:40:15] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed1
+[17:40:17] Running 10 episodes in Gazebo...
+[17:40:17] Running 10 episodes in Gazebo...
+[INFO] [1779278119.111630570] [daars_gazebo_env]: Respawned at (0.6, 3.6, yaw=-2.31)
+[17:40:33]   ep   1/10  SUCCESS    clr=0.239m  steps=267  t=16.8s  SR=1.00  CR=0.00  ETA=151s
+[17:40:33]   ep   1/10  SUCCESS    clr=0.239m  steps=267  t=16.8s  SR=1.00  CR=0.00  ETA=151s
+[INFO] [1779278135.868523982] [daars_gazebo_env]: Respawned at (5.2, 5.2, yaw=1.55)
+[17:41:05]   ep   2/10  TIMEOUT    clr=0.188m  steps=500  t=32.1s  SR=0.50  CR=0.00  ETA=196s
+[17:41:05]   ep   2/10  TIMEOUT    clr=0.188m  steps=500  t=32.1s  SR=0.50  CR=0.00  ETA=196s
+[INFO] [1779278168.045220828] [daars_gazebo_env]: Respawned at (4.7, 5.4, yaw=2.96)
+[17:41:22]   ep   3/10  SUCCESS    clr=0.246m  steps=217  t=16.7s  SR=0.67  CR=0.00  ETA=153s
+[17:41:22]   ep   3/10  SUCCESS    clr=0.246m  steps=217  t=16.7s  SR=0.67  CR=0.00  ETA=153s
+[INFO] [1779278184.691901898] [daars_gazebo_env]: Respawned at (0.9, 3.4, yaw=-1.14)
+[17:41:51]   ep   4/10  TIMEOUT    clr=0.097m  steps=500  t=29.0s  SR=0.50  CR=0.00  ETA=142s
+[17:41:51]   ep   4/10  TIMEOUT    clr=0.097m  steps=500  t=29.0s  SR=0.50  CR=0.00  ETA=142s
+[INFO] [1779278213.678504881] [daars_gazebo_env]: Respawned at (3.3, 2.2, yaw=-1.28)
+[17:41:59]   ep   5/10  COLLISION  clr=-0.005m  steps= 49  t=8.0s  SR=0.40  CR=0.20  ETA=103s
+[17:41:59]   ep   5/10  COLLISION  clr=-0.005m  steps= 49  t=8.0s  SR=0.40  CR=0.20  ETA=103s
+[INFO] [1779278221.689191996] [daars_gazebo_env]: Respawned at (7.0, 5.7, yaw=-0.28)
+[17:42:28]   ep   6/10  TIMEOUT    clr=0.048m  steps=500  t=29.0s  SR=0.33  CR=0.17  ETA=88s
+[17:42:28]   ep   6/10  TIMEOUT    clr=0.048m  steps=500  t=29.0s  SR=0.33  CR=0.17  ETA=88s
+[INFO] [1779278253.078596340] [daars_gazebo_env]: Respawned at (5.8, 4.5, yaw=2.36)
+[17:42:51]   ep   7/10  COLLISION  clr=-0.008m  steps=348  t=23.3s  SR=0.29  CR=0.29  ETA=66s
+[17:42:51]   ep   7/10  COLLISION  clr=-0.008m  steps=348  t=23.3s  SR=0.29  CR=0.29  ETA=66s
+[WARN] [1779278281.278323827] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278289.253435496] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:43:11]   ep   8/10  COLLISION  clr=-0.029m  steps=  1  t=19.8s  SR=0.25  CR=0.38  ETA=44s
+[17:43:11]   ep   8/10  COLLISION  clr=-0.029m  steps=  1  t=19.8s  SR=0.25  CR=0.38  ETA=44s
+[WARN] [1779278301.128773376] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278306.142751118] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:43:28]   ep   9/10  COLLISION  clr=-0.029m  steps=  1  t=16.9s  SR=0.22  CR=0.44  ETA=21s
+[17:43:28]   ep   9/10  COLLISION  clr=-0.029m  steps=  1  t=16.9s  SR=0.22  CR=0.44  ETA=21s
+[WARN] [1779278318.017243255] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278325.730176382] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:43:48]   ep  10/10  COLLISION  clr=-0.029m  steps=  1  t=19.6s  SR=0.20  CR=0.50  ETA=0s
+[17:43:48]   ep  10/10  COLLISION  clr=-0.029m  steps=  1  t=19.6s  SR=0.20  CR=0.50  ETA=0s
+[17:43:48] 
+[17:43:48] 
+[17:43:48]   DONE in 211s (21.1s/ep)
+[17:43:48]   DONE in 211s (21.1s/ep)
+[17:43:48]   SR=0.200  CR=0.500  Avg-clearance=0.072m
+[17:43:48]   SR=0.200  CR=0.500  Avg-clearance=0.072m
+[17:43:48]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed1.json
+[17:43:48]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed1.json
+[17:43:49]   Completed in 217s | Elapsed: 3433s | ETA: ~1608s
+[17:43:49] [18/25] beta_only/seed2 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:43:51] Creating GazeboNavEnv (fast_mode=True)
+[17:43:51] Creating GazeboNavEnv (fast_mode=True)
+[17:43:51] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed2
+[17:43:51] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed2
+[17:43:53] Running 10 episodes in Gazebo...
+[17:43:53] Running 10 episodes in Gazebo...
+[WARN] [1779278342.500172917] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278347.515254264] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:44:39]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=416s
+[17:44:39]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=416s
+[WARN] [1779278388.683169271] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278396.342019976] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:45:25]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=46.0s  SR=0.00  CR=0.00  ETA=369s
+[17:45:25]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=46.0s  SR=0.00  CR=0.00  ETA=369s
+[WARN] [1779278437.345135298] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278442.357729038] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:46:14]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=48.9s  SR=0.00  CR=0.00  ETA=329s
+[17:46:14]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=48.9s  SR=0.00  CR=0.00  ETA=329s
+[WARN] [1779278483.564959431] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278488.575869672] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:47:00]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=281s
+[17:47:00]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=281s
+[WARN] [1779278529.766378592] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278537.631476136] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:47:46]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=234s
+[17:47:46]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=234s
+[WARN] [1779278579.078996747] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278584.093412225] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:48:36]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=49.3s  SR=0.00  CR=0.00  ETA=189s
+[17:48:36]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=49.3s  SR=0.00  CR=0.00  ETA=189s
+[WARN] [1779278625.491385456] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278630.504999599] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:49:23]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=47.3s  SR=0.00  CR=0.00  ETA=142s
+[17:49:23]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=47.3s  SR=0.00  CR=0.00  ETA=142s
+[WARN] [1779278672.782705030] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278677.799147064] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:50:10]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.7s  SR=0.00  CR=0.00  ETA=94s
+[17:50:10]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.7s  SR=0.00  CR=0.00  ETA=94s
+[WARN] [1779278719.469331905] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278724.482611154] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:50:55]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.8s  SR=0.00  CR=0.00  ETA=47s
+[17:50:55]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.8s  SR=0.00  CR=0.00  ETA=47s
+[WARN] [1779278765.278903406] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278770.295253020] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:51:42]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=46.9s  SR=0.00  CR=0.00  ETA=0s
+[17:51:42]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=46.9s  SR=0.00  CR=0.00  ETA=0s
+[17:51:42] 
+[17:51:42] 
+[17:51:42]   DONE in 470s (47.0s/ep)
+[17:51:42]   DONE in 470s (47.0s/ep)
+[17:51:42]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[17:51:42]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[17:51:42]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed2.json
+[17:51:42]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed2.json
+[17:51:43]   Completed in 474s | Elapsed: 3907s | ETA: ~1519s
+[17:51:43] [19/25] beta_only/seed3 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:51:46] Creating GazeboNavEnv (fast_mode=True)
+[17:51:46] Creating GazeboNavEnv (fast_mode=True)
+[17:51:46] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed3
+[17:51:46] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed3
+[17:51:48] Running 10 episodes in Gazebo...
+[17:51:48] Running 10 episodes in Gazebo...
+[WARN] [1779278819.327248396] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278824.340757066] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:52:36]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=48.2s  SR=0.00  CR=0.00  ETA=434s
+[17:52:36]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=48.2s  SR=0.00  CR=0.00  ETA=434s
+[WARN] [1779278865.707212451] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278870.723708240] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:53:22]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=376s
+[17:53:22]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=376s
+[WARN] [1779278911.431194731] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278919.020720264] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:54:08]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=326s
+[17:54:08]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=326s
+[WARN] [1779278959.525278136] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779278964.539948886] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:54:55]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=47.7s  SR=0.00  CR=0.00  ETA=281s
+[17:54:55]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=47.7s  SR=0.00  CR=0.00  ETA=281s
+[WARN] [1779279005.059096346] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279010.074388128] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:55:41]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=233s
+[17:55:41]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=233s
+[WARN] [1779279050.594286349] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279057.801335926] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:56:26]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=186s
+[17:56:26]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=186s
+[WARN] [1779279098.699115110] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279103.712055024] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:57:12]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=139s
+[17:57:12]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=139s
+[WARN] [1779279145.552882018] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279150.567935187] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:58:01]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=49.2s  SR=0.00  CR=0.00  ETA=93s
+[17:58:01]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=49.2s  SR=0.00  CR=0.00  ETA=93s
+[WARN] [1779279191.205818499] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279196.219736814] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:58:47]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=47s
+[17:58:47]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=47s
+[WARN] [1779279236.897250528] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279241.914267003] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[17:59:33]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.6s  SR=0.00  CR=0.00  ETA=0s
+[17:59:33]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.6s  SR=0.00  CR=0.00  ETA=0s
+[17:59:33] 
+[17:59:33] 
+[17:59:33]   DONE in 465s (46.5s/ep)
+[17:59:33]   DONE in 465s (46.5s/ep)
+[17:59:33]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[17:59:33]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[17:59:33]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed3.json
+[17:59:33]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed3.json
+[17:59:34]   Completed in 471s | Elapsed: 4378s | ETA: ~1380s
+[17:59:34] [20/25] beta_only/seed4 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[17:59:36] Creating GazeboNavEnv (fast_mode=True)
+[17:59:36] Creating GazeboNavEnv (fast_mode=True)
+[17:59:36] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed4
+[17:59:36] Loading model: /home/toor/gitProjects/daars-nav/results/models/beta_only_seed4
+[17:59:38] Running 10 episodes in Gazebo...
+[17:59:38] Running 10 episodes in Gazebo...
+[WARN] [1779279290.026890448] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279295.041517221] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:00:26]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=48.1s  SR=0.00  CR=0.00  ETA=433s
+[18:00:26]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=48.1s  SR=0.00  CR=0.00  ETA=433s
+[WARN] [1779279335.829396248] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279340.844079128] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:01:12]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=375s
+[18:01:12]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=375s
+[WARN] [1779279381.525083763] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279387.917361493] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:01:56]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=44.7s  SR=0.00  CR=0.00  ETA=323s
+[18:01:56]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=44.7s  SR=0.00  CR=0.00  ETA=323s
+[WARN] [1779279428.860118794] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279433.873487144] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:02:44]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=47.5s  SR=0.00  CR=0.00  ETA=279s
+[18:02:44]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=47.5s  SR=0.00  CR=0.00  ETA=279s
+[WARN] [1779279473.691059214] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279478.706275464] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:03:30]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=232s
+[18:03:30]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=232s
+[WARN] [1779279519.944539386] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279527.237104538] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:04:16]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=45.6s  SR=0.00  CR=0.00  ETA=185s
+[18:04:16]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=45.6s  SR=0.00  CR=0.00  ETA=185s
+[WARN] [1779279568.485631451] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279573.497556529] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:05:02]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=139s
+[18:05:02]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=139s
+[WARN] [1779279615.036743728] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279620.052255915] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:05:51]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=48.7s  SR=0.00  CR=0.00  ETA=93s
+[18:05:51]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=48.7s  SR=0.00  CR=0.00  ETA=93s
+[WARN] [1779279660.535784527] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279665.552235386] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:06:36]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=46s
+[18:06:36]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=46s
+[WARN] [1779279706.005715325] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279711.020024190] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:07:22]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=0s
+[18:07:22]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=0s
+[18:07:22] 
+[18:07:22] 
+[18:07:22]   DONE in 464s (46.4s/ep)
+[18:07:22]   DONE in 464s (46.4s/ep)
+[18:07:22]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:07:22]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:07:22]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed4.json
+[18:07:22]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/beta_only_seed4.json
+[18:07:23]   Completed in 469s | Elapsed: 4847s | ETA: ~1210s
+[18:07:23] [21/25] ppo_lag/seed0 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[18:07:25] Creating GazeboNavEnv (fast_mode=True)
+[18:07:25] Creating GazeboNavEnv (fast_mode=True)
+[18:07:25] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed0
+[18:07:25] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed0
+[18:07:26] Running 10 episodes in Gazebo...
+[18:07:26] Running 10 episodes in Gazebo...
+[WARN] [1779279758.210959062] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279763.226662302] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:08:12]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=409s
+[18:08:12]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=409s
+[WARN] [1779279804.882340963] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279809.897659733] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:09:00]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=48.6s  SR=0.00  CR=0.00  ETA=376s
+[18:09:00]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=48.6s  SR=0.00  CR=0.00  ETA=376s
+[WARN] [1779279850.266097216] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279855.280681308] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:09:46]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=325s
+[18:09:46]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=325s
+[WARN] [1779279895.692715479] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279900.706178659] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:10:31]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=277s
+[18:10:31]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=45.4s  SR=0.00  CR=0.00  ETA=277s
+[WARN] [1779279943.202774528] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279948.218436143] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:11:19]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=47.5s  SR=0.00  CR=0.00  ETA=232s
+[18:11:19]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=47.5s  SR=0.00  CR=0.00  ETA=232s
+[WARN] [1779279988.648007426] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779279993.663321493] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:12:04]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=185s
+[18:12:04]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=185s
+[WARN] [1779280034.104748549] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280039.120283845] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:12:50]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=139s
+[18:12:50]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=45.5s  SR=0.00  CR=0.00  ETA=139s
+[WARN] [1779280081.669642285] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280086.684813901] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:13:37]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=47.6s  SR=0.00  CR=0.00  ETA=93s
+[18:13:37]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=47.6s  SR=0.00  CR=0.00  ETA=93s
+[WARN] [1779280127.154902036] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280132.171220648] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:14:23]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=46s
+[18:14:23]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.7s  SR=0.00  CR=0.00  ETA=46s
+[WARN] [1779280172.843673226] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280177.858689029] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:15:10]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=46.9s  SR=0.00  CR=0.00  ETA=0s
+[18:15:10]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=46.9s  SR=0.00  CR=0.00  ETA=0s
+[18:15:10] 
+[18:15:10] 
+[18:15:10]   DONE in 464s (46.4s/ep)
+[18:15:10]   DONE in 464s (46.4s/ep)
+[18:15:10]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:15:10]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:15:10]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed0.json
+[18:15:10]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed0.json
+[18:15:11]   Completed in 468s | Elapsed: 5315s | ETA: ~1012s
+[18:15:11] [22/25] ppo_lag/seed1 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[18:15:13] Creating GazeboNavEnv (fast_mode=True)
+[18:15:13] Creating GazeboNavEnv (fast_mode=True)
+[18:15:13] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed1
+[18:15:13] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed1
+[18:15:15] Running 10 episodes in Gazebo...
+[18:15:15] Running 10 episodes in Gazebo...
+[WARN] [1779280224.534017572] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280229.549025266] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:16:00]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=45.3s  SR=0.00  CR=0.00  ETA=408s
+[18:16:00]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=45.3s  SR=0.00  CR=0.00  ETA=408s
+[WARN] [1779280272.791075526] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280277.803176433] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:16:49]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=48.5s  SR=0.00  CR=0.00  ETA=375s
+[18:16:49]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=48.5s  SR=0.00  CR=0.00  ETA=375s
+[WARN] [1779280318.383844323] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280323.398347435] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:17:35]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=327s
+[18:17:35]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=327s
+[WARN] [1779280364.672314150] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280369.686852973] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:18:21]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=45.8s  SR=0.00  CR=0.00  ETA=279s
+[18:18:21]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=45.8s  SR=0.00  CR=0.00  ETA=279s
+[WARN] [1779280413.403226217] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280418.417895767] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:19:10]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=49.2s  SR=0.00  CR=0.00  ETA=235s
+[18:19:10]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=49.2s  SR=0.00  CR=0.00  ETA=235s
+[WARN] [1779280459.648989404] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280464.663195029] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:19:56]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=188s
+[18:19:56]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=188s
+[WARN] [1779280505.906778763] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280510.922035946] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:20:42]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=45.8s  SR=0.00  CR=0.00  ETA=140s
+[18:20:42]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=45.8s  SR=0.00  CR=0.00  ETA=140s
+[WARN] [1779280554.209196032] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280559.225668938] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:21:30]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=48.4s  SR=0.00  CR=0.00  ETA=94s
+[18:21:30]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=48.4s  SR=0.00  CR=0.00  ETA=94s
+[WARN] [1779280600.066029735] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280605.079021436] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:22:16]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=47s
+[18:22:16]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=47s
+[WARN] [1779280646.008098152] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280651.024302505] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:23:02]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=0s
+[18:23:02]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=0s
+[18:23:02] 
+[18:23:02] 
+[18:23:02]   DONE in 467s (46.7s/ep)
+[18:23:02]   DONE in 467s (46.7s/ep)
+[18:23:02]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:23:02]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:23:02]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed1.json
+[18:23:02]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed1.json
+[18:23:03]   Completed in 472s | Elapsed: 5787s | ETA: ~789s
+[18:23:03] [23/25] ppo_lag/seed2 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[18:23:09] Creating GazeboNavEnv (fast_mode=True)
+[18:23:09] Creating GazeboNavEnv (fast_mode=True)
+[18:23:09] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed2
+[18:23:09] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed2
+[18:23:11] Running 10 episodes in Gazebo...
+[18:23:11] Running 10 episodes in Gazebo...
+[WARN] [1779280700.564877945] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280705.577873441] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:23:57]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=418s
+[18:23:57]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=418s
+[WARN] [1779280747.045061879] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280752.059755699] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:24:44]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=371s
+[18:24:44]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=371s
+[WARN] [1779280796.021703106] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280801.037809866] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:25:33]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=49.0s  SR=0.00  CR=0.00  ETA=331s
+[18:25:33]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=49.0s  SR=0.00  CR=0.00  ETA=331s
+[WARN] [1779280842.376018350] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280847.392051786] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:26:19]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=282s
+[18:26:19]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=282s
+[WARN] [1779280888.588542506] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280893.602692713] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:27:05]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=234s
+[18:27:05]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=234s
+[WARN] [1779280937.235168295] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280942.250609161] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:27:54]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=49.0s  SR=0.00  CR=0.00  ETA=189s
+[18:27:54]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=49.0s  SR=0.00  CR=0.00  ETA=189s
+[WARN] [1779280983.936457127] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779280988.949719714] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:28:40]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=141s
+[18:28:40]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=141s
+[WARN] [1779281030.147564617] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281035.162329495] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:29:27]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=94s
+[18:29:27]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=94s
+[WARN] [1779281078.912009282] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281083.927375823] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:30:15]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=48.3s  SR=0.00  CR=0.00  ETA=47s
+[18:30:15]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=48.3s  SR=0.00  CR=0.00  ETA=47s
+[WARN] [1779281124.799515119] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281129.814607017] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:31:01]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=0s
+[18:31:01]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=0s
+[18:31:01] 
+[18:31:01] 
+[18:31:01]   DONE in 470s (47.0s/ep)
+[18:31:01]   DONE in 470s (47.0s/ep)
+[18:31:01]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:31:01]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:31:01]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed2.json
+[18:31:01]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed2.json
+[18:31:02]   Completed in 479s | Elapsed: 6266s | ETA: ~544s
+[18:31:02] [24/25] ppo_lag/seed3 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[18:31:05] Creating GazeboNavEnv (fast_mode=True)
+[18:31:05] Creating GazeboNavEnv (fast_mode=True)
+[18:31:05] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed3
+[18:31:05] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed3
+[18:31:07] Running 10 episodes in Gazebo...
+[18:31:07] Running 10 episodes in Gazebo...
+[WARN] [1779281176.811362732] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281184.301033105] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:31:55]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=48.5s  SR=0.00  CR=0.00  ETA=436s
+[18:31:55]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=48.5s  SR=0.00  CR=0.00  ETA=436s
+[WARN] [1779281225.263106692] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281230.277390522] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:32:41]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=378s
+[18:32:41]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=378s
+[WARN] [1779281271.205831273] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281276.221143283] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:33:27]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=327s
+[18:33:27]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=45.9s  SR=0.00  CR=0.00  ETA=327s
+[WARN] [1779281317.144232801] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281324.657084818] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:34:16]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=48.4s  SR=0.00  CR=0.00  ETA=283s
+[18:34:16]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=48.4s  SR=0.00  CR=0.00  ETA=283s
+[WARN] [1779281365.592469232] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281370.606703927] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:35:02]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.0s  SR=0.00  CR=0.00  ETA=235s
+[18:35:02]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.0s  SR=0.00  CR=0.00  ETA=235s
+[WARN] [1779281411.565340781] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281416.579637705] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:35:48]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=46.1s  SR=0.00  CR=0.00  ETA=187s
+[18:35:48]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=46.1s  SR=0.00  CR=0.00  ETA=187s
+[WARN] [1779281457.633999872] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281465.278849586] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:36:37]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=48.9s  SR=0.00  CR=0.00  ETA=141s
+[18:36:37]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=48.9s  SR=0.00  CR=0.00  ETA=141s
+[WARN] [1779281506.501160021] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281511.516522661] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:37:23]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.0s  SR=0.00  CR=0.00  ETA=94s
+[18:37:23]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.0s  SR=0.00  CR=0.00  ETA=94s
+[WARN] [1779281552.536094629] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281557.551523360] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:38:09]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=47s
+[18:38:09]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=46.2s  SR=0.00  CR=0.00  ETA=47s
+[WARN] [1779281601.591873319] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281606.603072819] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:38:58]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=49.1s  SR=0.00  CR=0.00  ETA=0s
+[18:38:58]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=49.1s  SR=0.00  CR=0.00  ETA=0s
+[18:38:58] 
+[18:38:58] 
+[18:38:58]   DONE in 471s (47.1s/ep)
+[18:38:58]   DONE in 471s (47.1s/ep)
+[18:38:58]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:38:58]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:38:58]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed3.json
+[18:38:58]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed3.json
+[18:38:59]   Completed in 477s | Elapsed: 6743s | ETA: ~280s
+[18:38:59] [25/25] ppo_lag/seed4 (10 eps)...
+/home/toor/.local/lib/python3.10/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[18:39:02] Creating GazeboNavEnv (fast_mode=True)
+[18:39:02] Creating GazeboNavEnv (fast_mode=True)
+[18:39:02] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed4
+[18:39:02] Loading model: /home/toor/gitProjects/daars-nav/results/models/ppo_lag_seed4
+[18:39:03] Running 10 episodes in Gazebo...
+[18:39:03] Running 10 episodes in Gazebo...
+[WARN] [1779281653.060053402] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281658.074497258] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:39:50]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=418s
+[18:39:50]   ep   1/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=418s
+[WARN] [1779281699.538762232] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281704.554783346] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:40:36]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=371s
+[18:40:36]   ep   2/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=371s
+[WARN] [1779281748.841365109] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281753.853713441] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:41:25]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=49.3s  SR=0.00  CR=0.00  ETA=331s
+[18:41:25]   ep   3/10  TIMEOUT    clr=3.320m  steps=500  t=49.3s  SR=0.00  CR=0.00  ETA=331s
+[WARN] [1779281795.114285174] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281800.125315233] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:42:12]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=283s
+[18:42:12]   ep   4/10  TIMEOUT    clr=3.320m  steps=500  t=46.5s  SR=0.00  CR=0.00  ETA=283s
+[WARN] [1779281841.583731158] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281846.598402023] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:42:58]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=235s
+[18:42:58]   ep   5/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=235s
+[WARN] [1779281891.082328426] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281896.095584731] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:43:48]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=49.6s  SR=0.00  CR=0.00  ETA=190s
+[18:43:48]   ep   6/10  TIMEOUT    clr=3.320m  steps=500  t=49.6s  SR=0.00  CR=0.00  ETA=190s
+[WARN] [1779281937.425357476] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281942.440216123] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:44:34]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=142s
+[18:44:34]   ep   7/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=142s
+[WARN] [1779281983.852354165] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779281991.860696540] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:45:20]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=94s
+[18:45:20]   ep   8/10  TIMEOUT    clr=3.320m  steps=500  t=46.4s  SR=0.00  CR=0.00  ETA=94s
+[WARN] [1779282033.152916728] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779282038.167555041] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:46:10]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=49.2s  SR=0.00  CR=0.00  ETA=47s
+[18:46:10]   ep   9/10  TIMEOUT    clr=3.320m  steps=500  t=49.2s  SR=0.00  CR=0.00  ETA=47s
+[WARN] [1779282079.473219094] [daars_gazebo_env]: Spawn failed, falling back to subprocess
+[WARN] [1779282084.486853319] [daars_gazebo_env]: Teleport subprocess failed: Command '['ros2', 'service', 'call', '/delete_entity', 'gazebo_msgs/srv/DeleteEntity', "{name: 'burger'}"]' timed out after 5 seconds
+[18:46:56]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=0s
+[18:46:56]   ep  10/10  TIMEOUT    clr=3.320m  steps=500  t=46.3s  SR=0.00  CR=0.00  ETA=0s
+[18:46:56] 
+[18:46:56] 
+[18:46:56]   DONE in 473s (47.3s/ep)
+[18:46:56]   DONE in 473s (47.3s/ep)
+[18:46:56]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:46:56]   SR=0.000  CR=0.000  Avg-clearance=3.320m
+[18:46:56]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed4.json
+[18:46:56]   Results saved → /home/toor/gitProjects/daars-nav/results/gazebo/ppo_lag_seed4.json
+[18:46:57]   Completed in 478s | Elapsed: 7221s | ETA: ~0s
+[18:46:57] ========================================
+[18:46:57]   ALL DONE
+[18:46:57]   Total time: 7221s
+[18:46:57]   Jobs run: 25/25 (skipped: 0)
+[18:46:57]   Results: /home/toor/gitProjects/daars-nav/results/gazebo/
+[18:46:57]   Log: /home/toor/gitProjects/daars-nav/results/gazebo/run.log
+[18:46:57] ========================================
+[18:46:57] 
+[18:46:57] Run analysis with: python3 scripts/analyze_gazebo.py
+[18:46:57] Cleaning up...
