@@ -104,6 +104,10 @@ def train_agent(
             model, callback = make_daars_lagrangian(env, config, lagrangian, seed)
         else:
             model, callback = make_ppo_lagrangian(env, config, lagrangian, seed)
+    elif reward_type == "focops":
+        from daars.agents.focops import make_focops_agent
+        model, focops_cb = make_focops_agent(env, config, seed, total_ts)
+        callback = focops_cb
     elif reward_type == "learned":
         from daars.training.learned_callback import LearnedDAARSCallback
         callback = LearnedDAARSCallback(modulator_mgr, reward_type="learned",
