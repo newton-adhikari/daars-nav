@@ -75,4 +75,9 @@ ablation:
   eval_scenario: "complex"
   num_envs: 4
   num_ablation_seeds: 5
+
+# Extended training for convergence verification
+extended_training:
+  total_timesteps: 1000000   # 1M steps for convergence analysis
+  checkpoint_interval: 50000  # save every 50k for curve analysis
  
