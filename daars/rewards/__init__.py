@@ -10,6 +10,7 @@ REWARD_FUNCTIONS = {
     "ppo_lag":     task_reward,
     "sac_lag":     task_reward,
     "daars_lag":   daars_reward,
+    "focops":      task_reward,  # FOCOPS uses task reward + constraint projection
 }
 
 COST_FUNCTIONS = {
