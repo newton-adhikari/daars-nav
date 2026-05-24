@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "n_seeds": 5,
+    "episodes_per_seed": 20,
+    "methods": [
+      "daars",
+      "static",
+      "alpha_only",
+      "beta_only",
+      "ppo_lag",
+      "focops"
+    ]
+  },
+  "summaries": {
+    "daars": {
+      "success_rate": {
+        "mean": 0.5700000000000001,
+        "std": 0.10368220676663858
+      },
+      "collision_rate": {
+        "mean": 0.27999999999999997,
+        "std": 0.09082951062292474
+      },
+      "clearance": {
+        "mean": 0.07862828612327577,
+        "std": 0.013774212488416716
+      }
+    },
+    "static": {
+      "success_rate": {
+        "mean": 0.5,
+        "std": 0.11726039399558574
+      },
+      "collision_rate": {
+        "mean": 0.35000000000000003,
+        "std": 0.12747548783981966
+      },
+      "clearance": {
+        "mean": 0.06393182918429377,
+        "std": 0.017115329403237154
+      }
+    },
+    "alpha_only": {
+      "success_rate": {
+        "mean": 0.49000000000000005,
+        "std": 0.0651920240520265
+      },
+      "collision_rate": {
+        "mean": 0.38,
+        "std": 0.09082951062292476
+      },
+      "clearance": {
+        "mean": 0.06801234304904939,
+        "std": 0.019540704882954833
+      }
+    },
+    "beta_only": {
+      "success_rate": {
+        "mean": 0.45999999999999996,
+        "std": 0.1140175425099138
+      },
+      "collision_rate": {
+        "mean": 0.35,
+        "std": 0.12247448713915891
+      },
+      "clearance": {
+        "mean": 0.05860256403684618,
+        "std": 0.021355982401980497
+      }
+    },
+    "ppo_lag": {
+      "success_rate": {
+        "mean": 0.38,
+        "std": 0.1753567791675018
+      },
+      "collision_rate": {
+        "mean": 0.54,
+        "std": 0.14747881203752627
+      },
+      "clearance": {
+        "mean": 0.042281322926282894,
+        "std": 0.026297037419639714
+      }
+    },
+    "focops": {
+      "success_rate": {
+        "mean": 0.42000000000000004,
+        "std": 0.12041594578792297
+      },
+      "collision_rate": {
+        "mean": 0.47000000000000003,
+        "std": 0.130384048104053
+      },
+      "clearance": {
+        "mean": 0.04782707467675211,
+        "std": 0.012211698293378563
+      }
+    }
+  },
+  "comparisons": {
+    "daars_vs_static": {
+      "cr": {
+        "daars_mean": 0.27999999999999997,
+        "other_mean": 0.35000000000000003,
+        "p_value": 0.625,
+        "cohens_d": -0.37022011954775735,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "sr": {
+        "daars_mean": 0.5700000000000001,
+        "other_mean": 0.5,
+        "p_value": 1.0,
+        "cohens_d": 0.32288592266117366,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "clearance": {
+        "daars_mean": 0.07862828612327577,
+        "other_mean": 0.06393182918429377,
+        "p_value": 0.4375,
+        "cohens_d": 0.5717222277075846,
+        "significant": false,
+        "direction": "DAARS better"
+      }
+    },
+    "daars_vs_alpha_only": {
+      "cr": {
+        "daars_mean": 0.27999999999999997,
+        "other_mean": 0.38,
+        "p_value": 0.25,
+        "cohens_d": -0.7844645399373513,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "sr": {
+        "daars_mean": 0.5700000000000001,
+        "other_mean": 0.49000000000000005,
+        "p_value": 0.25,
+        "cohens_d": 0.9561828863246579,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "clearance": {
+        "daars_mean": 0.07862828612327577,
+        "other_mean": 0.06801234304904939,
+        "p_value": 0.4375,
+        "cohens_d": 0.5251490087351842,
+        "significant": false,
+        "direction": "DAARS better"
+      }
+    },
+    "daars_vs_beta_only": {
+      "cr": {
+        "daars_mean": 0.27999999999999997,
+        "other_mean": 0.35,
+        "p_value": 0.5,
+        "cohens_d": -0.5368754917813945,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "sr": {
+        "daars_mean": 0.5700000000000001,
+        "other_mean": 0.45999999999999996,
+        "p_value": 0.375,
+        "cohens_d": 0.5642880933573611,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "clearance": {
+        "daars_mean": 0.07862828612327577,
+        "other_mean": 0.05860256403684618,
+        "p_value": 0.0625,
+        "cohens_d": 1.8229891666805236,
+        "significant": false,
+        "direction": "DAARS better"
+      }
+    },
+    "daars_vs_ppo_lag": {
+      "cr": {
+        "daars_mean": 0.27999999999999997,
+        "other_mean": 0.54,
+        "p_value": 0.0625,
+        "cohens_d": -1.8739499210561126,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "sr": {
+        "daars_mean": 0.5700000000000001,
+        "other_mean": 0.38,
+        "p_value": 0.125,
+        "cohens_d": 0.9162613616819227,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "clearance": {
+        "daars_mean": 0.07862828612327577,
+        "other_mean": 0.042281322926282894,
+        "p_value": 0.1875,
+        "cohens_d": 0.9889288666140438,
+        "significant": false,
+        "direction": "DAARS better"
+      }
+    },
+    "daars_vs_focops": {
+      "cr": {
+        "daars_mean": 0.27999999999999997,
+        "other_mean": 0.47000000000000003,
+        "p_value": 0.125,
+        "cohens_d": -1.026652130666024,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "sr": {
+        "daars_mean": 0.5700000000000001,
+        "other_mean": 0.42000000000000004,
+        "p_value": 0.25,
+        "cohens_d": 0.7071067808532141,
+        "significant": false,
+        "direction": "DAARS better"
+      },
+      "clearance": {
+        "daars_mean": 0.07862828612327577,
+        "other_mean": 0.04782707467675211,
+        "p_value": 0.0625,
+        "cohens_d": 1.7225609910329354,
+        "significant": false,
+        "direction": "DAARS better"
+      }
+    }
+  }
+}

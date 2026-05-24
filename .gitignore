@@ -37,3 +37,9 @@ paper/*.out
  
 # models
 *.zip
+
+# paper
+paper/main.tex
+paper/references.bib
+paper/main.pdf
+paper/figures/*

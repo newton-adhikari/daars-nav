@@ -17,18 +17,21 @@ from tqdm import tqdm
 
 from daars.training.train      import train_agent, train_all_parallel
 from daars.evaluation.evaluate import evaluate_agent
-from daars.analysis.statistics import compute_statistics, print_results_table
+from daars.analysis.statistics import (
+    compute_statistics, print_results_table,
+    analyze_convergence, analyze_seed_variance,
+)
 from daars.analysis.plots      import generate_all_figures
 
 # these are the baselines
-ALL_METHODS = ["static", "alpha_only", "daars", "beta_only", "ppo_lag"]
+ALL_METHODS = ["static", "alpha_only", "daars", "beta_only", "ppo_lag", "focops"]
 
 def load_config(path=None):
     if path is None:
         path = os.path.join(os.path.dirname(__file__), "config", "default.yaml")
     with open(path) as f:
         return yaml.safe_load(f)
-    
+
 def _load(p):
     return json.load(open(p)) if os.path.exists(p) else {}
 
@@ -215,7 +218,28 @@ def run_ablation(config, output_dir, max_workers=None):
         for e in errors: print(f"   {e}")
     return abl
 
-# Safety-Gymnasium benchmark phase [will be added later if our method passes all benchmark]
+# Safety-Gymnasium benchmark phase
+def run_safety_gym_benchmark_phase(config, output_dir, max_workers=None, force_retrain=False):
+    """Run Safety-Gymnasium standard benchmark for reviewer comparison."""
+    from daars.evaluation.safety_gym_benchmark import (
+        run_safety_gym_benchmark, SAFETY_GYM_AVAILABLE,
+    )
+    if not SAFETY_GYM_AVAILABLE:
+        print("\n!! safety-gymnasium not installed — skipping benchmark.")
+        print("   Install: pip install safety-gymnasium")
+        return {}
+
+    sg_cfg = config.get("safety_gym", {})
+    num_seeds = int(sg_cfg.get("num_seeds", 10))
+    total_ts = int(sg_cfg.get("timesteps", 1_000_000))
+    num_envs = int(sg_cfg.get("num_envs", 4))
+    return run_safety_gym_benchmark(
+        config, output_dir,
+        num_seeds=num_seeds,
+        total_timesteps=total_ts,
+        num_envs=num_envs,
+        force_retrain=force_retrain,
+    )
 
 
 # verify the novelty
@@ -235,6 +259,19 @@ def run_plotting(config, output_dir):
         print("No evaluation results — run evaluate first.")
         return
     stats = compute_statistics(results)
+
+    # Add convergence analysis (reviewer: "convergence unclear")
+    if curves:
+        stats["convergence_analysis"] = analyze_convergence(curves)
+
+    # Add variance analysis (reviewer: "extremely high variance")
+    variance = analyze_seed_variance(stats)
+    stats["variance_analysis"] = variance
+    if variance["warnings"]:
+        print("\n  ⚠ High-variance scenarios:")
+        for w in variance["warnings"]:
+            print(f"    {w}")
+
     _save(stats, os.path.join(output_dir, "statistics.json"))
     generate_all_figures(stats, curves, ablation,
                          os.path.join(output_dir, "figures"), config=config)
@@ -248,10 +285,14 @@ def main():
         choices=["all","train","evaluate","ablation","theory","plot","safetygym"])
     parser.add_argument("--fast",    action="store_true",
         help="Smoke test: 2 seeds, 20k steps, 20 eps, 2 envs")
+    parser.add_argument("--extended", action="store_true",
+        help="Extended training: 1M steps for convergence verification")
     parser.add_argument("--workers", type=int, default=None,
         help="Override max_parallel_jobs")
     parser.add_argument("--envs",    type=int, default=None,
         help="Override num_envs")
+    parser.add_argument("--force-retrain", action="store_true",
+        help="Force retrain Safety-Gym models (ignore existing .zip files)")
     args = parser.parse_args()
 
     config = load_config(args.config)
@@ -268,7 +309,16 @@ def main():
         config["ablation"]["ks_values"]       = [1.0, 1.5]
         config["ablation"]["dsafe_values"]    = [0.8, 1.0]
         config["ablation"]["eval_episodes"]   = 5
+        # Safety-Gym fast mode
+        config.setdefault("safety_gym", {})
+        config["safety_gym"]["timesteps"]     = 20_000
+        config["safety_gym"]["num_seeds"]     = 2
+        config["safety_gym"]["num_envs"]      = 2
         print("*** FAST MODE (smoke test) ***\n")
+
+    if args.extended:
+        config["training"]["total_timesteps"] = 1_000_000
+        print("*** EXTENDED MODE (1M steps for convergence) ***\n")
 
     if args.phase in ("all", "train"):
         run_training(config, args.output, args.workers, args.envs)
@@ -278,6 +328,9 @@ def main():
         run_ablation(config, args.output, args.workers)
     if args.phase in ("all", "theory"):
         run_theory(config, args.output)
+    if args.phase in ("all", "safetygym"):
+        run_safety_gym_benchmark_phase(config, args.output, args.workers,
+                                       force_retrain=args.force_retrain)
     if args.phase in ("all", "plot"):
         run_plotting(config, args.output)
 

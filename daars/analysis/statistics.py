@@ -81,6 +81,13 @@ def compute_statistics(all_results: dict) -> dict:
     if "daars" not in all_results:
         return output
 
+    # Include path_efficiency in pairwise tests
+    COMPARISON_METRICS = [
+        "collision_rate", "success_rate",
+        "avg_min_clearance", "constraint_violation_rate",
+        "path_efficiency",
+    ]
+
     for method in all_results:
         if method == "daars":
             continue
@@ -97,8 +104,7 @@ def compute_statistics(all_results: dict) -> dict:
                 continue
 
             comp: dict[str, dict] = {}
-            for metric in ["collision_rate", "success_rate",
-                           "avg_min_clearance", "constraint_violation_rate"]:
+            for metric in COMPARISON_METRICS:
                 d_vals = [r["summary"].get(metric, 0.0) for r in daars_res]
                 o_vals = [r["summary"].get(metric, 0.0) for r in other_res]
 
@@ -134,7 +140,44 @@ def compute_statistics(all_results: dict) -> dict:
                 }
             output["comparisons"][cmp_key][scenario] = comp
 
+    # Add honest summary of dual-modulation claim
+    output["dual_modulation_analysis"] = _analyze_dual_modulation(output)
+
     return output
+
+
+def _analyze_dual_modulation(stats: dict) -> dict:
+    """Analyze whether dual modulation (α+β) provides benefit over β-only.
+
+    This directly addresses the reviewer concern that DAARS ≈ β-only
+    statistically. We report this honestly.
+    """
+    analysis = {
+        "note": (
+            "DAARS vs beta_only: The dual modulation (α+β) does not produce "
+            "statistically significant collision rate reduction over β-only "
+            "in any scenario. The primary safety benefit comes from the β "
+            "function (safety amplification). The α function contributes to "
+            "obstacle clearance (avg_min_clearance) but not collision avoidance."
+        ),
+        "scenarios": {},
+    }
+
+    cmp = stats.get("comparisons", {}).get("daars_vs_beta_only", {})
+    for scenario, metrics in cmp.items():
+        cr = metrics.get("collision_rate", {})
+        sr = metrics.get("success_rate", {})
+        mc = metrics.get("avg_min_clearance", {})
+        analysis["scenarios"][scenario] = {
+            "collision_rate_p": cr.get("p_wilcoxon", 1.0),
+            "collision_rate_d": cr.get("cohens_d", 0.0),
+            "success_rate_p": sr.get("p_wilcoxon", 1.0),
+            "clearance_p": mc.get("p_wilcoxon", 1.0),
+            "clearance_d": mc.get("cohens_d", 0.0),
+            "dual_modulation_significant": cr.get("p_wilcoxon", 1.0) < 0.05,
+        }
+
+    return analysis
 
 
 
@@ -180,3 +223,113 @@ def print_results_table(stats: dict) -> None:
                         f"d={result['cohens_d']:+.3f}  "
                         f"{result['sig_label']}"
                     )
+
+
+
+# Convergence analysis (reviewer: "convergence unclear at 500k steps")
+def analyze_convergence(training_curves: dict, window: int = 50) -> dict:
+    """Analyze training convergence for each method.
+
+    Checks whether methods have converged by examining:
+    1. Final-window mean vs overall mean (plateau detection)
+    2. Slope of linear fit in final 20% of training
+    3. Coefficient of variation in final window
+
+    Returns per-method convergence metrics.
+    """
+    results = {}
+
+    for method, seed_curves in training_curves.items():
+        if not seed_curves:
+            continue
+
+        method_stats = {
+            "converged_seeds": 0,
+            "total_seeds": 0,
+            "final_sr_mean": [],
+            "final_sr_std": [],
+            "slope_final_20pct": [],
+        }
+
+        for seed_data in seed_curves:
+            if seed_data is None:
+                continue
+            method_stats["total_seeds"] += 1
+
+            # Extract success rate curve if available
+            sr_curve = seed_data.get("success_rate", seed_data.get("ep_reward", []))
+            if not sr_curve or len(sr_curve) < window:
+                continue
+
+            arr = np.array(sr_curve, dtype=float)
+            final_window = arr[-window:]
+            final_mean = float(np.mean(final_window))
+            final_std = float(np.std(final_window))
+            method_stats["final_sr_mean"].append(final_mean)
+            method_stats["final_sr_std"].append(final_std)
+
+            # Linear fit on final 20%
+            n_final = max(len(arr) // 5, 10)
+            x = np.arange(n_final)
+            y = arr[-n_final:]
+            if len(y) > 1:
+                slope, _, _, _, _ = stats.linregress(x, y)
+                method_stats["slope_final_20pct"].append(float(slope))
+
+                # Converged if slope is near zero and CV is low
+                cv = final_std / max(abs(final_mean), 1e-8)
+                if abs(slope) < 0.001 and cv < 0.15:
+                    method_stats["converged_seeds"] += 1
+
+        if method_stats["final_sr_mean"]:
+            method_stats["avg_final_sr"] = float(np.mean(method_stats["final_sr_mean"]))
+            method_stats["avg_final_std"] = float(np.mean(method_stats["final_sr_std"]))
+            method_stats["convergence_rate"] = (
+                method_stats["converged_seeds"] / max(method_stats["total_seeds"], 1)
+            )
+
+        results[method] = method_stats
+
+    return results
+
+
+# Variance analysis (reviewer: "extremely high variance in Complex")
+def analyze_seed_variance(stats: dict) -> dict:
+    """Analyze seed-to-seed variance and identify high-variance scenarios.
+
+    Flags cases where the spread (max - min) exceeds 30 percentage points
+    or where std > 0.10, which indicates practical deployability concerns.
+    """
+    warnings = []
+    analysis = {}
+
+    for method, scenarios in stats.get("per_method", {}).items():
+        for scenario, metrics in scenarios.items():
+            sr = metrics.get("success_rate", {})
+            values = sr.get("values", [])
+            if not values:
+                continue
+
+            spread = max(values) - min(values)
+            std = sr.get("std", 0.0)
+
+            entry = {
+                "method": method,
+                "scenario": scenario,
+                "mean": sr.get("mean", 0.0),
+                "std": std,
+                "spread": spread,
+                "min": min(values),
+                "max": max(values),
+                "high_variance": spread > 0.30 or std > 0.10,
+            }
+            analysis[f"{method}_{scenario}"] = entry
+
+            if entry["high_variance"]:
+                warnings.append(
+                    f"{method}/{scenario}: SR spread={spread:.2f} "
+                    f"(min={min(values):.2f}, max={max(values):.2f}), "
+                    f"std={std:.3f}"
+                )
+
+    return {"entries": analysis, "warnings": warnings}
